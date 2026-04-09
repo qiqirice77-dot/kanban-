@@ -1,6 +1,6 @@
 name: Update Kanban Data                                                                                              
    
-  on:                                                                                                                   
+  "on":                                                                                                                 
     schedule:                                               
       - cron: '0 16 * * *'
     workflow_dispatch:
@@ -37,3 +37,4 @@ name: Update Kanban Data
             git add index.html
             git diff --staged --quiet || git commit -m "Auto update: $(date +'%Y-%m-%d')"
             git push
+
