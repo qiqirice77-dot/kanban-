@@ -652,7 +652,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
     </select>
     <div id="day-picker-wrap" class="day-picker-wrap">
       <span style="font-size:12px;color:var(--text3)">日期</span>
-      <input type="date" id="day-picker" value="2026-04-08" min="2026-04-01" max="2026-04-30" onchange="setDate(this.value)">
+      <input type="date" id="day-picker" value="2026-04-09" min="2026-04-01" max="2026-04-30" onchange="setDate(this.value)">
     </div>
     <button class="rf-btn" id="rf-btn" onclick="forceRefresh()">
       <span class="rf-icon">↻</span>手动刷新
@@ -1257,8 +1257,7 @@ const MOCK_DATA = {
       },
       "totalActual": 7453403,
       "totalTarget": 23500000,
-      "expireToday": [],
-      "expireSoon": [
+      "expireToday": [
         {
           "client": "杯莫停",
           "group": "色虎 八产品打包炮药周测50a （ 4.3-4.9）",
@@ -1267,7 +1266,7 @@ const MOCK_DATA = {
           "amount": 96526,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1278,7 +1277,7 @@ const MOCK_DATA = {
           "amount": 94084,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1289,7 +1288,7 @@ const MOCK_DATA = {
           "amount": 68907,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1300,7 +1299,7 @@ const MOCK_DATA = {
           "amount": 58239,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1311,7 +1310,7 @@ const MOCK_DATA = {
           "amount": 41372,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1322,7 +1321,7 @@ const MOCK_DATA = {
           "amount": 18935,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1333,7 +1332,7 @@ const MOCK_DATA = {
           "amount": 17819,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1344,7 +1343,7 @@ const MOCK_DATA = {
           "amount": 4118,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1355,7 +1354,7 @@ const MOCK_DATA = {
           "amount": 24132,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1366,7 +1365,7 @@ const MOCK_DATA = {
           "amount": 23521,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1377,7 +1376,7 @@ const MOCK_DATA = {
           "amount": 17227,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1388,7 +1387,7 @@ const MOCK_DATA = {
           "amount": 14560,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1399,7 +1398,7 @@ const MOCK_DATA = {
           "amount": 10343,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1410,7 +1409,7 @@ const MOCK_DATA = {
           "amount": 4733,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1421,7 +1420,7 @@ const MOCK_DATA = {
           "amount": 4455,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1432,7 +1431,7 @@ const MOCK_DATA = {
           "amount": 1029,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "杯莫停"
         },
         {
@@ -1443,7 +1442,7 @@ const MOCK_DATA = {
           "amount": 6249,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1454,7 +1453,7 @@ const MOCK_DATA = {
           "amount": 4697,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1465,7 +1464,7 @@ const MOCK_DATA = {
           "amount": 4083,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1476,7 +1475,7 @@ const MOCK_DATA = {
           "amount": 2916,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1487,7 +1486,7 @@ const MOCK_DATA = {
           "amount": 2377,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1498,7 +1497,7 @@ const MOCK_DATA = {
           "amount": 2317,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1509,7 +1508,7 @@ const MOCK_DATA = {
           "amount": 1697,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1520,7 +1519,7 @@ const MOCK_DATA = {
           "amount": 1434,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1531,7 +1530,7 @@ const MOCK_DATA = {
           "amount": 1019,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1542,7 +1541,7 @@ const MOCK_DATA = {
           "amount": 1020,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1553,7 +1552,7 @@ const MOCK_DATA = {
           "amount": 710,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1564,7 +1563,7 @@ const MOCK_DATA = {
           "amount": 466,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1575,7 +1574,7 @@ const MOCK_DATA = {
           "amount": 204,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1586,7 +1585,7 @@ const MOCK_DATA = {
           "amount": 439,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1597,7 +1596,7 @@ const MOCK_DATA = {
           "amount": 148,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1608,7 +1607,7 @@ const MOCK_DATA = {
           "amount": 101,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1619,7 +1618,7 @@ const MOCK_DATA = {
           "amount": 69,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1630,7 +1629,7 @@ const MOCK_DATA = {
           "amount": 54,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "棒子"
         },
         {
@@ -1641,9 +1640,11 @@ const MOCK_DATA = {
           "amount": 20000,
           "type": "普通",
           "expireDate": "2026-04-09",
-          "daysLeft": 1,
+          "renewProb": "中",
           "contact": "胖子"
-        },
+        }
+      ],
+      "expireSoon": [
         {
           "client": "DAL",
           "group": "56.hx cps约炮合作群",
@@ -1652,7 +1653,7 @@ const MOCK_DATA = {
           "amount": 30555,
           "type": "普通",
           "expireDate": "2026-04-10",
-          "daysLeft": 2,
+          "daysLeft": 1,
           "contact": "DAL"
         },
         {
@@ -1663,7 +1664,7 @@ const MOCK_DATA = {
           "amount": 427652,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1674,7 +1675,7 @@ const MOCK_DATA = {
           "amount": 150835,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1685,7 +1686,7 @@ const MOCK_DATA = {
           "amount": 98540,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1696,7 +1697,7 @@ const MOCK_DATA = {
           "amount": 1655,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1707,7 +1708,7 @@ const MOCK_DATA = {
           "amount": 1318,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1718,7 +1719,7 @@ const MOCK_DATA = {
           "amount": 106913,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1729,7 +1730,7 @@ const MOCK_DATA = {
           "amount": 37709,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1740,7 +1741,7 @@ const MOCK_DATA = {
           "amount": 24635,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1751,7 +1752,7 @@ const MOCK_DATA = {
           "amount": 410,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
         },
         {
@@ -1762,8 +1763,228 @@ const MOCK_DATA = {
           "amount": 330,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 5,
+          "daysLeft": 4,
           "contact": "飞驰"
+        },
+        {
+          "client": "男帝",
+          "group": "好妻网 周测20a (4.8-4.14)",
+          "displayName": "好妻网 周测20a (4.8-4.14)",
+          "sales": "吴挺",
+          "amount": 200000,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "男帝"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 18565,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 6548,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 4922,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 4278,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 3056,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 2491,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 2428,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 1778,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 1503,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 1068,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 1068,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 744,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 489,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 214,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 460,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 155,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 106,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 72,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
+        },
+        {
+          "client": "元宇宙",
+          "group": "小米视频 周测5A 保底2.5",
+          "displayName": "小米视频 周测5A 保底2.5",
+          "sales": "吴挺",
+          "amount": 55,
+          "type": "普通",
+          "expireDate": "2026-04-14",
+          "daysLeft": 5,
+          "contact": "元宇宙"
         }
       ],
       "adTable": [
@@ -8798,13 +9019,25 @@ const MOCK_DATA = {
       "totalTarget": 19859010,
       "expireToday": [
         {
-          "client": "随风",
-          "group": "铁粉空间-随风",
-          "displayName": "铁粉空间-随风",
-          "sales": "卢登",
-          "amount": 51050,
+          "client": "天下第一",
+          "group": "天下第一棋牌合作群",
+          "displayName": "天下第一棋牌合作群",
+          "sales": "陈亦凡",
+          "amount": 299995,
           "type": "普通",
-          "expireDate": "2026-04-08",
+          "expireDate": "2026-04-09",
+          "source": "三月",
+          "tier": "观察客户",
+          "daysLeft": 0
+        },
+        {
+          "client": "v",
+          "group": "P站 快播懂片帝多站同步",
+          "displayName": "P站 快播懂片帝多站同步",
+          "sales": "卢登",
+          "amount": 160000,
+          "type": "普通",
+          "expireDate": "2026-04-09",
           "source": "三月",
           "tier": "观察客户",
           "daysLeft": 0
@@ -8821,7 +9054,7 @@ const MOCK_DATA = {
           "expireDate": "2026-04-13",
           "source": "三月",
           "tier": "观察客户",
-          "daysLeft": 5
+          "daysLeft": 4
         },
         {
           "client": "v",
@@ -8831,6 +9064,18 @@ const MOCK_DATA = {
           "amount": 500000,
           "type": "普通",
           "expireDate": "2026-04-13",
+          "source": "三月",
+          "tier": "观察客户",
+          "daysLeft": 4
+        },
+        {
+          "client": "v",
+          "group": "25站组合打包+短视频间隔",
+          "displayName": "25站组合打包+短视频间隔",
+          "sales": "卢登",
+          "amount": 900000,
+          "type": "普通",
+          "expireDate": "2026-04-14",
           "source": "三月",
           "tier": "观察客户",
           "daysLeft": 5
@@ -20653,6 +20898,24 @@ const MOCK_DATA = {
       "convertCount": 0,
       "convertRate": 0,
       "recoverCNY": 0
+    },
+    {
+      "client": "胖子",
+      "sales": "郭永正",
+      "roi": 0,
+      "regCount": 941,
+      "convertCount": 0,
+      "convertRate": 0.0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "天下第一",
+      "sales": "陈亦凡",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
     }
   ],
   "tierData": [
@@ -26102,7 +26365,7 @@ function avEl(name, color, sz=30){
 // ╚══════════════════════════════════════════════════════════════╝
 let viewMode     = 'month';      // 'month' | 'day'
 let currentMonth = 'apr';        // 'apr' | 'mar' | 'feb'
-let selectedDate = '2026-04-08'; // 单日视角选中日期
+let selectedDate = '2026-04-09'; // 单日视角选中日期
 
 const MONTH_META = {
   mar: { year:2026, month:3, days:31, label:"2026年3月", defaultDate:"2026-03-27" },
