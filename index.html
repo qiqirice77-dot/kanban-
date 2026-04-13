@@ -652,7 +652,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
     </select>
     <div id="day-picker-wrap" class="day-picker-wrap">
       <span style="font-size:12px;color:var(--text3)">日期</span>
-      <input type="date" id="day-picker" value="2026-04-10" min="2026-04-01" max="2026-04-30" onchange="setDate(this.value)">
+      <input type="date" id="day-picker" value="2026-04-13" min="2026-04-01" max="2026-04-30" onchange="setDate(this.value)">
     </div>
     <button class="rf-btn" id="rf-btn" onclick="forceRefresh()">
       <span class="rf-icon">↻</span>手动刷新
@@ -967,42 +967,42 @@ const MOCK_DATA = {
       "salesList": [
         {
           "name": "卢登",
-          "actual": 2769996,
+          "actual": 3031046,
           "target": 6900000,
           "newOrders": 2,
-          "oldClients": 46,
+          "oldClients": 51,
           "color": "#1E88E5"
         },
         {
           "name": "黄凯悦",
-          "actual": 1170000,
+          "actual": 1400000,
           "target": 3500000,
-          "newOrders": 14,
+          "newOrders": 41,
           "oldClients": 16,
           "color": "#FF9100"
         },
         {
           "name": "吴挺",
-          "actual": 2675873,
+          "actual": 2725873,
           "target": 4800000,
           "newOrders": 94,
-          "oldClients": 47,
+          "oldClients": 48,
           "color": "#00BCD4"
         },
         {
           "name": "郭永正",
-          "actual": 1269271,
+          "actual": 2269265,
           "target": 4400000,
           "newOrders": 60,
-          "oldClients": 4,
+          "oldClients": 20,
           "color": "#7C4DFF"
         },
         {
           "name": "陈亦凡",
-          "actual": 1210265,
+          "actual": 2310266,
           "target": 3900000,
-          "newOrders": 0,
-          "oldClients": 31,
+          "newOrders": 14,
+          "oldClients": 41,
           "color": "#00E676"
         }
       ],
@@ -1011,12 +1011,12 @@ const MOCK_DATA = {
           "name": "卢登",
           "newActual": 100000,
           "newTarget": 2500000,
-          "renewActual": 2669996,
+          "renewActual": 2931046,
           "renewTarget": 4400000
         },
         {
           "name": "黄凯悦",
-          "newActual": 430000,
+          "newActual": 660000,
           "newTarget": 1500000,
           "renewActual": 740000,
           "renewTarget": 2000000
@@ -1025,21 +1025,21 @@ const MOCK_DATA = {
           "name": "吴挺",
           "newActual": 1460000,
           "newTarget": 2600000,
-          "renewActual": 1215873,
+          "renewActual": 1265873,
           "renewTarget": 2200000
         },
         {
           "name": "郭永正",
           "newActual": 1189279,
           "newTarget": 2400000,
-          "renewActual": 79992,
+          "renewActual": 1079986,
           "renewTarget": 2000000
         },
         {
           "name": "陈亦凡",
-          "newActual": 0,
+          "newActual": 250001,
           "newTarget": 1800000,
-          "renewActual": 1210265,
+          "renewActual": 2060265,
           "renewTarget": 2100000
         }
       ],
@@ -1048,9 +1048,9 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 8371967,
-            "target": 9209163,
-            "mom": -55.8,
+            "actual": 11013012,
+            "target": 12114313,
+            "mom": -41.8,
             "icon": "⏱️",
             "color": "#1E88E5"
           },
@@ -1076,17 +1076,24 @@ const MOCK_DATA = {
         "industries": [
           {
             "name": "棋牌",
-            "actual": 4139999,
-            "target": 4553998,
-            "mom": -63.1,
-            "clients": 10
+            "actual": 5531043,
+            "target": 6084147,
+            "mom": -50.6,
+            "clients": 12
+          },
+          {
+            "name": "约炮",
+            "actual": 2430266,
+            "target": 2673292,
+            "mom": -35.2,
+            "clients": 7
           },
           {
             "name": "播放器",
-            "actual": 1567300,
-            "target": 1724030,
-            "mom": -70.1,
-            "clients": 11
+            "actual": 1717300,
+            "target": 1889030,
+            "mom": -67.2,
+            "clients": 12
           },
           {
             "name": "直播",
@@ -1096,17 +1103,10 @@ const MOCK_DATA = {
             "clients": 6
           },
           {
-            "name": "约炮",
-            "actual": 1500265,
-            "target": 1650291,
-            "mom": -60.0,
-            "clients": 6
-          },
-          {
             "name": "春药",
-            "actual": 269997,
-            "target": 296996,
-            "mom": -35.7,
+            "actual": 439997,
+            "target": 483996,
+            "mom": 4.8,
             "clients": 2
           },
           {
@@ -1123,15 +1123,15 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "棋牌",
-              "amount": 2769996,
-              "orders": 48
+              "amount": 3031046,
+              "orders": 53
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 2769996,
-              "orders": 48
+              "amount": 3031046,
+              "orders": 53
             }
           ],
           "clients": []
@@ -1140,15 +1140,20 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "棋牌",
-              "amount": 1170000,
-              "orders": 30
+              "amount": 1300000,
+              "orders": 33
+            },
+            {
+              "industry": "播放器",
+              "amount": 100000,
+              "orders": 24
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 1170000,
-              "orders": 30
+              "amount": 1400000,
+              "orders": 57
             }
           ],
           "clients": []
@@ -1157,8 +1162,8 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "播放器",
-              "amount": 1360000,
-              "orders": 100
+              "amount": 1410000,
+              "orders": 101
             },
             {
               "industry": "约炮",
@@ -1184,8 +1189,8 @@ const MOCK_DATA = {
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 2320000,
-              "orders": 121
+              "amount": 2370000,
+              "orders": 122
             },
             {
               "mode": "CPA",
@@ -1208,6 +1213,11 @@ const MOCK_DATA = {
               "orders": 42
             },
             {
+              "industry": "棋牌",
+              "amount": 999994,
+              "orders": 16
+            },
+            {
               "industry": "播放器",
               "amount": 207299,
               "orders": 19
@@ -1221,8 +1231,8 @@ const MOCK_DATA = {
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 1061971,
-              "orders": 45
+              "amount": 2061965,
+              "orders": 61
             },
             {
               "mode": "CPA",
@@ -1236,25 +1246,25 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "约炮",
-              "amount": 840265,
-              "orders": 7
+              "amount": 1770266,
+              "orders": 26
+            },
+            {
+              "industry": "春药",
+              "amount": 339997,
+              "orders": 10
             },
             {
               "industry": "棋牌",
               "amount": 200003,
               "orders": 19
-            },
-            {
-              "industry": "春药",
-              "amount": 169997,
-              "orders": 5
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 1050000,
-              "orders": 29
+              "amount": 2150001,
+              "orders": 53
             },
             {
               "mode": "CPS",
@@ -1265,22 +1275,9 @@ const MOCK_DATA = {
           "clients": []
         }
       },
-      "totalActual": 9095405,
+      "totalActual": 11736450,
       "totalTarget": 23500000,
       "expireToday": [
-        {
-          "client": "DAL",
-          "group": "56.hx cps约炮合作群",
-          "displayName": "56.hx cps约炮合作群",
-          "sales": "陈亦凡",
-          "amount": 30555,
-          "type": "普通",
-          "expireDate": "2026-04-10",
-          "renewProb": "中",
-          "contact": "DAL"
-        }
-      ],
-      "expireSoon": [
         {
           "client": "飞驰",
           "group": "P-X-T-PRO-PlUS",
@@ -1289,7 +1286,7 @@ const MOCK_DATA = {
           "amount": 427652,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1300,7 +1297,7 @@ const MOCK_DATA = {
           "amount": 150835,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1311,7 +1308,7 @@ const MOCK_DATA = {
           "amount": 98540,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1322,7 +1319,7 @@ const MOCK_DATA = {
           "amount": 1655,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1333,7 +1330,7 @@ const MOCK_DATA = {
           "amount": 1318,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1344,7 +1341,7 @@ const MOCK_DATA = {
           "amount": 106913,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1355,7 +1352,7 @@ const MOCK_DATA = {
           "amount": 37709,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1366,7 +1363,7 @@ const MOCK_DATA = {
           "amount": 24635,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1377,7 +1374,7 @@ const MOCK_DATA = {
           "amount": 410,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
         },
         {
@@ -1388,9 +1385,11 @@ const MOCK_DATA = {
           "amount": 330,
           "type": "普通",
           "expireDate": "2026-04-13",
-          "daysLeft": 3,
+          "renewProb": "中",
           "contact": "飞驰"
-        },
+        }
+      ],
+      "expireSoon": [
         {
           "client": "男帝",
           "group": "好妻网 周测20a (4.8-4.14)",
@@ -1399,7 +1398,7 @@ const MOCK_DATA = {
           "amount": 200000,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "男帝"
         },
         {
@@ -1410,7 +1409,7 @@ const MOCK_DATA = {
           "amount": 18565,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1421,7 +1420,7 @@ const MOCK_DATA = {
           "amount": 6548,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1432,7 +1431,7 @@ const MOCK_DATA = {
           "amount": 4922,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1443,7 +1442,7 @@ const MOCK_DATA = {
           "amount": 4278,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1454,7 +1453,7 @@ const MOCK_DATA = {
           "amount": 3056,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1465,7 +1464,7 @@ const MOCK_DATA = {
           "amount": 2491,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1476,7 +1475,7 @@ const MOCK_DATA = {
           "amount": 2428,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1487,7 +1486,7 @@ const MOCK_DATA = {
           "amount": 1778,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1498,7 +1497,7 @@ const MOCK_DATA = {
           "amount": 1503,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1509,7 +1508,7 @@ const MOCK_DATA = {
           "amount": 1068,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1520,7 +1519,7 @@ const MOCK_DATA = {
           "amount": 1068,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1531,7 +1530,7 @@ const MOCK_DATA = {
           "amount": 744,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1542,7 +1541,7 @@ const MOCK_DATA = {
           "amount": 489,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1553,7 +1552,7 @@ const MOCK_DATA = {
           "amount": 214,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1564,7 +1563,7 @@ const MOCK_DATA = {
           "amount": 460,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1575,7 +1574,7 @@ const MOCK_DATA = {
           "amount": 155,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1586,7 +1585,7 @@ const MOCK_DATA = {
           "amount": 106,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1597,7 +1596,7 @@ const MOCK_DATA = {
           "amount": 72,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         },
         {
@@ -1608,7 +1607,7 @@ const MOCK_DATA = {
           "amount": 55,
           "type": "普通",
           "expireDate": "2026-04-14",
-          "daysLeft": 4,
+          "daysLeft": 1,
           "contact": "元宇宙"
         }
       ],
@@ -3702,7 +3701,7 @@ const MOCK_DATA = {
           "expireDate": "2026-05-09"
         },
         {
-          "client": "V",
+          "client": "v",
           "group": "P站 快播懂片帝多站同步",
           "displayName": "P站 快播懂片帝多站同步",
           "sales": "卢登",
@@ -3891,7 +3890,7 @@ const MOCK_DATA = {
           "expireDate": "2026-05-07"
         },
         {
-          "client": "小跟班",
+          "client": "小跟班a",
           "group": "金牌-社区帖子",
           "displayName": "金牌-社区帖子",
           "sales": "吴挺",
@@ -3900,7 +3899,7 @@ const MOCK_DATA = {
           "expireDate": "2026-05-07"
         },
         {
-          "client": "小跟班",
+          "client": "小跟班a",
           "group": "金牌-社区帖子",
           "displayName": "金牌-社区帖子",
           "sales": "吴挺",
@@ -3909,7 +3908,7 @@ const MOCK_DATA = {
           "expireDate": "2026-05-07"
         },
         {
-          "client": "小跟班",
+          "client": "小跟班a",
           "group": "金牌-社区帖子",
           "displayName": "金牌-社区帖子",
           "sales": "吴挺",
@@ -3918,7 +3917,7 @@ const MOCK_DATA = {
           "expireDate": "2026-05-07"
         },
         {
-          "client": "小跟班",
+          "client": "小跟班a",
           "group": "金牌-社区帖子",
           "displayName": "金牌-社区帖子",
           "sales": "吴挺",
@@ -4096,6 +4095,663 @@ const MOCK_DATA = {
           "amount": 229,
           "type": "普通",
           "expireDate": "2026-05-10"
+        },
+        {
+          "client": "冬日",
+          "group": "PXT三站图标+banner",
+          "displayName": "PXT三站图标+banner",
+          "sales": "黄凯悦",
+          "amount": 70000,
+          "type": "普通",
+          "expireDate": "2026-05-10"
+        },
+        {
+          "client": "冬日",
+          "group": "PXT三站图标+banner",
+          "displayName": "PXT三站图标+banner",
+          "sales": "黄凯悦",
+          "amount": 40000,
+          "type": "普通",
+          "expireDate": "2026-05-10"
+        },
+        {
+          "client": "冬日",
+          "group": "PXT三站图标+banner",
+          "displayName": "PXT三站图标+banner",
+          "sales": "黄凯悦",
+          "amount": 20000,
+          "type": "普通",
+          "expireDate": "2026-05-10"
+        },
+        {
+          "client": "Chris",
+          "group": "0910 677娱乐 0158（10 11 12）12.10",
+          "displayName": "0910 677娱乐 0158（10 11 12）12.10",
+          "sales": "卢登",
+          "amount": 50000,
+          "type": "普通",
+          "expireDate": "2026-05-10"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 60080,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 37301,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 30404,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 29635,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 21705,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 18344,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 13031,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 13043,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 9082,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 5964,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 2607,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 5613,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 1895,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "fafa",
+          "group": "系统公告+视频流80a",
+          "displayName": "系统公告+视频流80a",
+          "sales": "陈亦凡",
+          "amount": 1297,
+          "type": "普通",
+          "expireDate": "2026-04-22"
+        },
+        {
+          "client": "龙五",
+          "group": "子龙周测（t：4.9-5.9）",
+          "displayName": "子龙周测（t：4.9-5.9）",
+          "sales": "卢登",
+          "amount": 60000,
+          "type": "普通",
+          "expireDate": "2026-05-11"
+        },
+        {
+          "client": "一个真正的曼",
+          "group": "韩-xvideo-包月",
+          "displayName": "韩-xvideo-包月",
+          "sales": "吴挺",
+          "amount": 50000,
+          "type": "普通",
+          "expireDate": "2026-05-11"
+        },
+        {
+          "client": "花开无期",
+          "group": "P站+抖音Plus 15A",
+          "displayName": "P站+抖音Plus 15A",
+          "sales": "卢登",
+          "amount": 99680,
+          "type": "普通",
+          "expireDate": "2026-05-12"
+        },
+        {
+          "client": "花开无期",
+          "group": "P站+抖音Plus 15A",
+          "displayName": "P站+抖音Plus 15A",
+          "sales": "卢登",
+          "amount": 320,
+          "type": "普通",
+          "expireDate": "2026-05-12"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 46406,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 17828,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 9165,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 6722,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 4182,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 3852,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 2677,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 1258,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 1373,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 1397,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 1174,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 638,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 551,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 473,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 439,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 387,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 194,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 180,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 159,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 144,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 153,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 138,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 134,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "联盛集团（顺顺）无限收量",
+          "group": "117群-打包图标+横幅-10w/半月",
+          "displayName": "117群-打包图标+横幅-10w/半月",
+          "sales": "黄凯悦",
+          "amount": 376,
+          "type": "普通",
+          "expireDate": "2026-04-27"
+        },
+        {
+          "client": "随风",
+          "group": "铁粉空间-随风",
+          "displayName": "铁粉空间-随风",
+          "sales": "卢登",
+          "amount": 51050,
+          "type": "普通",
+          "expireDate": "2026-05-08"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 427652,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 150835,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 98540,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 1655,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 1318,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 106913,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 37709,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 24635,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 413,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "飞驰",
+          "group": "P-X-T-PRO-PlUS",
+          "displayName": "P-X-T-PRO-PlUS",
+          "sales": "陈亦凡",
+          "amount": 330,
+          "type": "普通",
+          "expireDate": "2026-04-23"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 185000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 125000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 125000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 10000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 10000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 15000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 15000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 15000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 25000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 25000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 75000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 75000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 95000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 135000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 35000,
+          "type": "普通",
+          "expireDate": "2026-05-13"
+        },
+        {
+          "client": "V",
+          "group": "60a打包+40a打包",
+          "displayName": "60a打包+40a打包",
+          "sales": "郭永正",
+          "amount": 34994,
+          "type": "普通",
+          "expireDate": "2026-05-13"
         }
       ],
       "dailyByDate": {
@@ -4187,9 +4843,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -4215,17 +4871,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -4235,17 +4898,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -4346,9 +5002,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -4374,17 +5030,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -4394,17 +5057,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -4505,9 +5161,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -4533,17 +5189,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -4553,17 +5216,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -4664,9 +5320,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -4692,17 +5348,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -4712,17 +5375,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -4823,9 +5479,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -4851,17 +5507,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -4871,17 +5534,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -4982,9 +5638,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5010,17 +5666,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5030,17 +5693,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5141,9 +5797,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5169,17 +5825,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5189,17 +5852,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5300,9 +5956,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5328,17 +5984,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5348,17 +6011,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5459,9 +6115,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5487,17 +6143,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5507,17 +6170,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5618,9 +6274,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5646,17 +6302,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5666,17 +6329,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5694,26 +6350,26 @@ const MOCK_DATA = {
           "salesList": [
             {
               "name": "卢登",
-              "actual": 0,
+              "actual": 110000,
               "target": 230000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 2,
               "color": "#1E88E5"
             },
             {
               "name": "黄凯悦",
-              "actual": 0,
+              "actual": 130000,
               "target": 116666,
-              "newOrders": 0,
+              "newOrders": 3,
               "oldClients": 0,
               "color": "#FF9100"
             },
             {
               "name": "吴挺",
-              "actual": 0,
+              "actual": 50000,
               "target": 160000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 1,
               "color": "#00BCD4"
             },
             {
@@ -5726,9 +6382,9 @@ const MOCK_DATA = {
             },
             {
               "name": "陈亦凡",
-              "actual": 0,
+              "actual": 250001,
               "target": 130000,
-              "newOrders": 0,
+              "newOrders": 14,
               "oldClients": 0,
               "color": "#00E676"
             }
@@ -5738,12 +6394,12 @@ const MOCK_DATA = {
               "name": "卢登",
               "newActual": 0,
               "newTarget": 83333,
-              "renewActual": 0,
+              "renewActual": 110000,
               "renewTarget": 146666
             },
             {
               "name": "黄凯悦",
-              "newActual": 0,
+              "newActual": 130000,
               "newTarget": 50000,
               "renewActual": 0,
               "renewTarget": 66666
@@ -5752,7 +6408,7 @@ const MOCK_DATA = {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 86666,
-              "renewActual": 0,
+              "renewActual": 50000,
               "renewTarget": 73333
             },
             {
@@ -5764,22 +6420,22 @@ const MOCK_DATA = {
             },
             {
               "name": "陈亦凡",
-              "newActual": 0,
+              "newActual": 250001,
               "newTarget": 60000,
               "renewActual": 0,
               "renewTarget": 70000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 540001,
           "totalTarget": 783333,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5805,17 +6461,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5825,17 +6488,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -5853,10 +6509,10 @@ const MOCK_DATA = {
           "salesList": [
             {
               "name": "卢登",
-              "actual": 0,
+              "actual": 100000,
               "target": 230000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 2,
               "color": "#1E88E5"
             },
             {
@@ -5897,7 +6553,7 @@ const MOCK_DATA = {
               "name": "卢登",
               "newActual": 0,
               "newTarget": 83333,
-              "renewActual": 0,
+              "renewActual": 100000,
               "renewTarget": 146666
             },
             {
@@ -5929,16 +6585,16 @@ const MOCK_DATA = {
               "renewTarget": 70000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 100000,
           "totalTarget": 783333,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -5964,17 +6620,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -5984,17 +6647,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6012,17 +6668,17 @@ const MOCK_DATA = {
           "salesList": [
             {
               "name": "卢登",
-              "actual": 0,
+              "actual": 51050,
               "target": 230000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 1,
               "color": "#1E88E5"
             },
             {
               "name": "黄凯悦",
-              "actual": 0,
+              "actual": 100000,
               "target": 116666,
-              "newOrders": 0,
+              "newOrders": 24,
               "oldClients": 0,
               "color": "#FF9100"
             },
@@ -6036,18 +6692,18 @@ const MOCK_DATA = {
             },
             {
               "name": "郭永正",
-              "actual": 0,
+              "actual": 999994,
               "target": 146666,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 16,
               "color": "#7C4DFF"
             },
             {
               "name": "陈亦凡",
-              "actual": 0,
+              "actual": 850000,
               "target": 130000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 10,
               "color": "#00E676"
             }
           ],
@@ -6056,12 +6712,12 @@ const MOCK_DATA = {
               "name": "卢登",
               "newActual": 0,
               "newTarget": 83333,
-              "renewActual": 0,
+              "renewActual": 51050,
               "renewTarget": 146666
             },
             {
               "name": "黄凯悦",
-              "newActual": 0,
+              "newActual": 100000,
               "newTarget": 50000,
               "renewActual": 0,
               "renewTarget": 66666
@@ -6077,27 +6733,27 @@ const MOCK_DATA = {
               "name": "郭永正",
               "newActual": 0,
               "newTarget": 80000,
-              "renewActual": 0,
+              "renewActual": 999994,
               "renewTarget": 66666
             },
             {
               "name": "陈亦凡",
               "newActual": 0,
               "newTarget": 60000,
-              "renewActual": 0,
+              "renewActual": 850000,
               "renewTarget": 70000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 2001044,
           "totalTarget": 783333,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6123,17 +6779,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6143,17 +6806,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6254,9 +6910,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6282,17 +6938,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6302,17 +6965,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6413,9 +7069,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6441,17 +7097,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6461,17 +7124,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6572,9 +7228,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6600,17 +7256,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6620,17 +7283,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6731,9 +7387,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6759,17 +7415,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6779,17 +7442,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -6890,9 +7546,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -6918,17 +7574,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -6938,17 +7601,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7049,9 +7705,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7077,17 +7733,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7097,17 +7760,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7208,9 +7864,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7236,17 +7892,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7256,17 +7919,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7367,9 +8023,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7395,17 +8051,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7415,17 +8078,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7526,9 +8182,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7554,17 +8210,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7574,17 +8237,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7685,9 +8341,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7713,17 +8369,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7733,17 +8396,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -7844,9 +8500,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7872,17 +8528,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -7892,17 +8555,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8003,9 +8659,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8031,17 +8687,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8051,17 +8714,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8162,9 +8818,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8190,17 +8846,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8210,17 +8873,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8321,9 +8977,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8349,17 +9005,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8369,17 +9032,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8480,9 +9136,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8508,17 +9164,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8528,17 +9191,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8639,9 +9295,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8667,17 +9323,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8687,17 +9350,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -8798,9 +9454,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 8371967,
-                "target": 9209163,
-                "mom": -55.8,
+                "actual": 11013012,
+                "target": 12114313,
+                "mom": -41.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8826,17 +9482,24 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 4139999,
-                "target": 4553998,
-                "mom": -63.1,
-                "clients": 10
+                "actual": 5531043,
+                "target": 6084147,
+                "mom": -50.6,
+                "clients": 12
+              },
+              {
+                "name": "约炮",
+                "actual": 2430266,
+                "target": 2673292,
+                "mom": -35.2,
+                "clients": 7
               },
               {
                 "name": "播放器",
-                "actual": 1567300,
-                "target": 1724030,
-                "mom": -70.1,
-                "clients": 11
+                "actual": 1717300,
+                "target": 1889030,
+                "mom": -67.2,
+                "clients": 12
               },
               {
                 "name": "直播",
@@ -8846,17 +9509,10 @@ const MOCK_DATA = {
                 "clients": 6
               },
               {
-                "name": "约炮",
-                "actual": 1500265,
-                "target": 1650291,
-                "mom": -60.0,
-                "clients": 6
-              },
-              {
                 "name": "春药",
-                "actual": 269997,
-                "target": 296996,
-                "mom": -35.7,
+                "actual": 439997,
+                "target": 483996,
+                "mom": 4.8,
                 "clients": 2
               },
               {
@@ -9211,20 +9867,6 @@ const MOCK_DATA = {
       "totalTarget": 19859010,
       "expireToday": [
         {
-          "client": "Chris",
-          "group": "0910 677娱乐 0158（10 11 12）12.10",
-          "displayName": "0910 677娱乐 0158（10 11 12）12.10",
-          "sales": "卢登",
-          "amount": 50000,
-          "type": "普通",
-          "expireDate": "2026-04-10",
-          "source": "三月",
-          "tier": "观察客户",
-          "daysLeft": 0
-        }
-      ],
-      "expireSoon": [
-        {
           "client": "v",
           "group": "60a打包+50a打包",
           "displayName": "60a打包+50a打包",
@@ -9234,7 +9876,7 @@ const MOCK_DATA = {
           "expireDate": "2026-04-13",
           "source": "三月",
           "tier": "观察客户",
-          "daysLeft": 3
+          "daysLeft": 0
         },
         {
           "client": "v",
@@ -9246,8 +9888,34 @@ const MOCK_DATA = {
           "expireDate": "2026-04-13",
           "source": "三月",
           "tier": "观察客户",
-          "daysLeft": 3
+          "daysLeft": 0
         },
+        {
+          "client": "钱多多",
+          "group": "CCASDV/cpt-华",
+          "displayName": "CCASDV/cpt-华",
+          "sales": "吴挺",
+          "amount": 131502,
+          "type": "普通",
+          "expireDate": "2026-04-13",
+          "source": "三月",
+          "tier": "观察客户",
+          "daysLeft": 0
+        },
+        {
+          "client": "宋锦瑟",
+          "group": "小红书-哆啦A漫-3站到期3.13",
+          "displayName": "小红书-哆啦A漫-3站到期3.13",
+          "sales": "吴挺",
+          "amount": 90000,
+          "type": "普通",
+          "expireDate": "2026-04-13",
+          "source": "三月",
+          "tier": "观察客户",
+          "daysLeft": 0
+        }
+      ],
+      "expireSoon": [
         {
           "client": "v",
           "group": "25站组合打包+短视频间隔",
@@ -9258,7 +9926,19 @@ const MOCK_DATA = {
           "expireDate": "2026-04-14",
           "source": "三月",
           "tier": "观察客户",
-          "daysLeft": 4
+          "daysLeft": 1
+        },
+        {
+          "client": "v",
+          "group": "50A打包-弹窗第2位+图标位",
+          "displayName": "50A打包-弹窗第2位+图标位",
+          "sales": "郭永正",
+          "amount": 500000,
+          "type": "普通",
+          "expireDate": "2026-04-18",
+          "source": "三月",
+          "tier": "观察客户",
+          "daysLeft": 5
         }
       ],
       "adTable": [
@@ -20815,7 +21495,7 @@ const MOCK_DATA = {
         "weekly": {
           "submitted": false,
           "submitTime": "",
-          "period": "第15周周报",
+          "period": "第16周周报",
           "onTime": false
         },
         "monthly": {
@@ -20830,7 +21510,7 @@ const MOCK_DATA = {
         "weekly": {
           "submitted": false,
           "submitTime": "",
-          "period": "第15周周报",
+          "period": "第16周周报",
           "onTime": false
         },
         "monthly": {
@@ -20845,7 +21525,7 @@ const MOCK_DATA = {
         "weekly": {
           "submitted": false,
           "submitTime": "",
-          "period": "第15周周报",
+          "period": "第16周周报",
           "onTime": false
         },
         "monthly": {
@@ -20860,7 +21540,7 @@ const MOCK_DATA = {
         "weekly": {
           "submitted": false,
           "submitTime": "",
-          "period": "第15周周报",
+          "period": "第16周周报",
           "onTime": false
         },
         "monthly": {
@@ -20875,7 +21555,7 @@ const MOCK_DATA = {
         "weekly": {
           "submitted": false,
           "submitTime": "",
-          "period": "第15周周报",
+          "period": "第16周周报",
           "onTime": false
         },
         "monthly": {
@@ -20886,7 +21566,7 @@ const MOCK_DATA = {
         }
       }
     ],
-    "weeklyDeadline": "04月07日 18:00",
+    "weeklyDeadline": "04月14日 18:00",
     "monthlyDeadline": "04月02日 18:00"
   },
   "roiData": [
@@ -21186,6 +21866,69 @@ const MOCK_DATA = {
       "convertCount": 0,
       "convertRate": 0,
       "recoverCNY": 0
+    },
+    {
+      "client": "龙五",
+      "sales": "卢登",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "花开无期",
+      "sales": "卢登",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "V",
+      "sales": "郭永正",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "V",
+      "sales": "郭永正",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "飞驰",
+      "sales": "陈亦凡",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "宋锦瑟",
+      "sales": "吴挺",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
+    },
+    {
+      "client": "钱多多",
+      "sales": "吴挺",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0,
+      "recoverCNY": 0
     }
   ],
   "tierData": [
@@ -21207,8 +21950,8 @@ const MOCK_DATA = {
       "adType": "春药/约炮",
       "sales": "卢登/陈亦凡",
       "tier": "重点客户",
-      "contracts": 14,
-      "totalRevenue": 2699997,
+      "contracts": 24,
+      "totalRevenue": 3549997,
       "firstDate": "2026-03-11"
     },
     {
@@ -21284,8 +22027,8 @@ const MOCK_DATA = {
       "adType": "棋牌",
       "sales": "卢登/黄凯悦",
       "tier": "重点客户",
-      "contracts": 8,
-      "totalRevenue": 1140000,
+      "contracts": 9,
+      "totalRevenue": 1200000,
       "firstDate": "2026-02-09"
     },
     {
@@ -21312,6 +22055,17 @@ const MOCK_DATA = {
     },
     {
       "id": 12,
+      "name": "60a打包+40a打包",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "郭永正",
+      "tier": "成长客户",
+      "contracts": 16,
+      "totalRevenue": 999994,
+      "firstDate": "2026-04-13"
+    },
+    {
+      "id": 13,
       "name": "Pxt三站打包半月测",
       "tg": "",
       "adType": "棋牌",
@@ -21322,7 +22076,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-05"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "yp-男帝 五站周测40a 保底2.6",
       "tg": "",
       "adType": "约炮",
@@ -21333,7 +22087,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-05"
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "25站组合打包+短视频间隔",
       "tg": "",
       "adType": "棋牌",
@@ -21344,7 +22098,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-13"
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "my-01-yp-小猫直播 周测 30a (3.5-3.12)",
       "tg": "",
       "adType": "直播",
@@ -21355,7 +22109,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-05"
     },
     {
-      "id": 16,
+      "id": 17,
       "name": "hx cps约炮合作群",
       "tg": "",
       "adType": "约炮",
@@ -21366,7 +22120,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-24"
     },
     {
-      "id": 17,
+      "id": 18,
       "name": "330a海角半月测试",
       "tg": "",
       "adType": "春药/约炮",
@@ -21377,7 +22131,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-03"
     },
     {
-      "id": 18,
+      "id": 19,
       "name": "全套首位大弹窗",
       "tg": "",
       "adType": "棋牌",
@@ -21388,7 +22142,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-23"
     },
     {
-      "id": 19,
+      "id": 20,
       "name": "天下第一棋牌合作群",
       "tg": "",
       "adType": "棋牌",
@@ -21399,7 +22153,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-23"
     },
     {
-      "id": 20,
+      "id": 21,
       "name": "通铺CPA2.5测试",
       "tg": "",
       "adType": "播放器",
@@ -21410,7 +22164,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-10"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "（澳门皇冠）12.13—04.13",
       "tg": "",
       "adType": "棋牌",
@@ -21421,7 +22175,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-16"
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "hx 博彩 cpt 32a 2-3",
       "tg": "",
       "adType": "棋牌",
@@ -21432,7 +22186,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-04"
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "金沙直播-17站点-80a-4.9-5.12",
       "tg": "",
       "adType": "直播",
@@ -21443,7 +22197,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-09"
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "拉斯维加斯-qq17站4/22 -75A-12.28",
       "tg": "",
       "adType": "棋牌",
@@ -21454,7 +22208,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-24"
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "yp-男帝 五站起飞",
       "tg": "",
       "adType": "春药/约炮",
@@ -21465,7 +22219,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-09"
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "50A打包-弹窗第2位+图标位",
       "tg": "",
       "adType": "棋牌",
@@ -21476,7 +22230,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-18"
     },
     {
-      "id": 27,
+      "id": 28,
       "name": "色虎 八产品打包炮药周测50a （ 4.3-4.9）",
       "tg": "",
       "adType": "春药/约炮",
@@ -21487,7 +22241,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-02"
     },
     {
-      "id": 28,
+      "id": 29,
       "name": "21站打包图标位",
       "tg": "",
       "adType": "棋牌",
@@ -21498,7 +22252,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-10"
     },
     {
-      "id": 29,
+      "id": 30,
       "name": "hx 棋牌 50a 1-30",
       "tg": "",
       "adType": "棋牌",
@@ -21509,7 +22263,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-28"
     },
     {
-      "id": 30,
+      "id": 31,
       "name": "拉斯维加斯-qq17站4/22 -55A-4.3",
       "tg": "",
       "adType": "棋牌",
@@ -21520,7 +22274,18 @@ const MOCK_DATA = {
       "firstDate": "2026-04-03"
     },
     {
-      "id": 31,
+      "id": 32,
+      "name": "P站+抖音Plus 15A",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "卢登",
+      "tier": "常规客户",
+      "contracts": 6,
+      "totalRevenue": 440000,
+      "firstDate": "2026-02-09"
+    },
+    {
+      "id": 33,
       "name": "hx 天马合作",
       "tg": "",
       "adType": "约炮",
@@ -21531,7 +22296,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-21"
     },
     {
-      "id": 32,
+      "id": 34,
       "name": "全站打包-播放器-40a\n广告名称：播放器",
       "tg": "",
       "adType": "播放器",
@@ -21542,7 +22307,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-25"
     },
     {
-      "id": 33,
+      "id": 35,
       "name": "快手/p站/40a",
       "tg": "",
       "adType": "播放器",
@@ -21553,7 +22318,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-21"
     },
     {
-      "id": 34,
+      "id": 36,
       "name": "全站打包-播放器-40a",
       "tg": "",
       "adType": "播放器",
@@ -21564,7 +22329,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-27"
     },
     {
-      "id": 35,
+      "id": 37,
       "name": "优优直播 大P站通铺- （CPA10）\r\n广告名称：富婆直播 龙凤直播",
       "tg": "",
       "adType": "直播",
@@ -21575,7 +22340,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-27"
     },
     {
-      "id": 36,
+      "id": 38,
       "name": "hx-2 3 组 蜜糖直播 秀秀直播 cpa10\n广告名称：直播",
       "tg": "",
       "adType": "直播",
@@ -21586,7 +22351,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-27"
     },
     {
-      "id": 37,
+      "id": 39,
       "name": "通铺CPA2.5测试\r\n广告名称：播放器",
       "tg": "",
       "adType": "播放器",
@@ -21597,18 +22362,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-14"
     },
     {
-      "id": 38,
-      "name": "P站+抖音Plus 15A",
-      "tg": "",
-      "adType": "棋牌",
-      "sales": "卢登",
-      "tier": "常规客户",
-      "contracts": 4,
-      "totalRevenue": 340000,
-      "firstDate": "2026-02-09"
-    },
-    {
-      "id": 39,
+      "id": 40,
       "name": "yp-宝马视频-全站图标 30a （2.7-3.7）",
       "tg": "",
       "adType": "播放器",
@@ -21619,7 +22373,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-06"
     },
     {
-      "id": 40,
+      "id": 41,
       "name": "全同步 5PGv打包 11/22-12/22",
       "tg": "",
       "adType": "棋牌",
@@ -21630,7 +22384,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-23"
     },
     {
-      "id": 41,
+      "id": 42,
       "name": "v总60",
       "tg": "",
       "adType": "棋牌",
@@ -21641,7 +22395,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-28"
     },
     {
-      "id": 42,
+      "id": 43,
       "name": "yp-七猫社区图标通铺 30a（3.6-4.6）",
       "tg": "",
       "adType": "播放器",
@@ -21652,7 +22406,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-06"
     },
     {
-      "id": 43,
+      "id": 44,
       "name": "my-01-yp-小猫直播 周测 30a (3.5-4.5)\n广告名称：小猫直播",
       "tg": "",
       "adType": "直播",
@@ -21663,7 +22417,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-14"
     },
     {
-      "id": 44,
+      "id": 45,
       "name": "cvb382/MD-全产品-图标+九宫格",
       "tg": "",
       "adType": "直播",
@@ -21674,7 +22428,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-04"
     },
     {
-      "id": 45,
+      "id": 46,
       "name": "CCASDV/cpt-华",
       "tg": "",
       "adType": "播放器",
@@ -21685,7 +22439,18 @@ const MOCK_DATA = {
       "firstDate": "2026-02-16"
     },
     {
-      "id": 46,
+      "id": 47,
+      "name": "系统公告+视频流80a",
+      "tg": "",
+      "adType": "约炮",
+      "sales": "陈亦凡",
+      "tier": "常规客户",
+      "contracts": 14,
+      "totalRevenue": 250001,
+      "firstDate": "2026-04-11"
+    },
+    {
+      "id": 48,
       "name": "小红书独家周测炮台",
       "tg": "",
       "adType": "约炮",
@@ -21696,7 +22461,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-07"
     },
     {
-      "id": 47,
+      "id": 49,
       "name": "韩商言-优酷视频 19站打包 25a（3.10-4.10",
       "tg": "",
       "adType": "播放器",
@@ -21707,7 +22472,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-10"
     },
     {
-      "id": 48,
+      "id": 50,
       "name": "12站 PG790",
       "tg": "",
       "adType": "棋牌",
@@ -21718,7 +22483,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-08"
     },
     {
-      "id": 49,
+      "id": 51,
       "name": "t站 12a 三个产品（2.7-3.7）",
       "tg": "",
       "adType": "播放器",
@@ -21729,7 +22494,18 @@ const MOCK_DATA = {
       "firstDate": "2026-02-07"
     },
     {
-      "id": 50,
+      "id": 52,
+      "name": "PXT三站图标+banner",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "黄凯悦",
+      "tier": "常规客户",
+      "contracts": 4,
+      "totalRevenue": 230000,
+      "firstDate": "2026-03-26"
+    },
+    {
+      "id": 53,
       "name": "周春富P站播放器CPT11A",
       "tg": "",
       "adType": "直播",
@@ -21740,7 +22516,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-09"
     },
     {
-      "id": 51,
+      "id": 54,
       "name": "播放器CPA2.5-两个产品",
       "tg": "",
       "adType": "播放器",
@@ -21751,7 +22527,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-07"
     },
     {
-      "id": 52,
+      "id": 55,
       "name": "P-韩-免费精选-包月",
       "tg": "",
       "adType": "播放器",
@@ -21762,7 +22538,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-19"
     },
     {
-      "id": 53,
+      "id": 56,
       "name": "韩商言-宝马视频-全站图标 20a",
       "tg": "",
       "adType": "播放器",
@@ -21773,7 +22549,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-24"
     },
     {
-      "id": 54,
+      "id": 57,
       "name": "yp- 多乐视频-20a(4.5-5.5)",
       "tg": "",
       "adType": "播放器",
@@ -21784,7 +22560,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-06"
     },
     {
-      "id": 55,
+      "id": 58,
       "name": "好妻网 周测20a (4.8-4.14)",
       "tg": "",
       "adType": "约炮",
@@ -21795,7 +22571,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-07"
     },
     {
-      "id": 56,
+      "id": 59,
       "name": "韩商言-优酷视频 19站打包 25a（3.10-4.10）",
       "tg": "",
       "adType": "播放器",
@@ -21806,7 +22582,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-10"
     },
     {
-      "id": 57,
+      "id": 60,
       "name": "四站打包 10a （PG电子打包）10a 1/4",
       "tg": "",
       "adType": "棋牌",
@@ -21817,7 +22593,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-04"
     },
     {
-      "id": 58,
+      "id": 61,
       "name": "4站打包—可乐-澳门新葡京 8a 每个月20号",
       "tg": "",
       "adType": "棋牌",
@@ -21828,7 +22604,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-20"
     },
     {
-      "id": 59,
+      "id": 62,
       "name": "p站社区发帖周测2.5w",
       "tg": "",
       "adType": "约炮",
@@ -21839,7 +22615,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 60,
+      "id": 63,
       "name": "56.hx cps约炮合作群",
       "tg": "",
       "adType": "约炮",
@@ -21850,7 +22626,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-01"
     },
     {
-      "id": 61,
+      "id": 64,
       "name": "调教师cpt8A",
       "tg": "",
       "adType": "直播",
@@ -21861,7 +22637,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-07"
     },
     {
-      "id": 62,
+      "id": 65,
       "name": "xt打包图标位3.5a周测（12.12-12.18）",
       "tg": "",
       "adType": "棋牌",
@@ -21872,7 +22648,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-21"
     },
     {
-      "id": 63,
+      "id": 66,
       "name": "47-50pxts 56p包-免费大全-P站-3.22",
       "tg": "",
       "adType": "播放器",
@@ -21883,7 +22659,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-24"
     },
     {
-      "id": 64,
+      "id": 67,
       "name": "201-包月p-全网片源 3.3",
       "tg": "",
       "adType": "播放器",
@@ -21894,7 +22670,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 65,
+      "id": 68,
       "name": "包月-娜娜子8a 成人免费3.3 茄子视频 3.2",
       "tg": "",
       "adType": "播放器",
@@ -21905,7 +22681,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 66,
+      "id": 69,
       "name": "泽元-娜娜子8a 成人免费3.3 茄子视频 3.2",
       "tg": "",
       "adType": "播放器",
@@ -21916,7 +22692,29 @@ const MOCK_DATA = {
       "firstDate": "2026-04-07"
     },
     {
-      "id": 67,
+      "id": 70,
+      "name": "铁粉空间-随风",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "卢登",
+      "tier": "培育客户",
+      "contracts": 3,
+      "totalRevenue": 153150,
+      "firstDate": "2026-02-07"
+    },
+    {
+      "id": 71,
+      "name": "0910 677娱乐 0158（10 11 12）12.10到期 3223（6）12.12",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "卢登",
+      "tier": "培育客户",
+      "contracts": 3,
+      "totalRevenue": 150000,
+      "firstDate": "2026-02-10"
+    },
+    {
+      "id": 72,
       "name": "小红书独家周测炮台\n广告名称：约炮",
       "tg": "",
       "adType": "约炮",
@@ -21927,7 +22725,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-14"
     },
     {
-      "id": 68,
+      "id": 73,
       "name": "h365-hx三站合作群cpt4w",
       "tg": "",
       "adType": "成人游戏/棋牌",
@@ -21938,7 +22736,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-02"
     },
     {
-      "id": 69,
+      "id": 74,
       "name": "hx cps约炮合作群\n广告名称：约炮",
       "tg": "",
       "adType": "约炮",
@@ -21949,7 +22747,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-25"
     },
     {
-      "id": 70,
+      "id": 75,
       "name": "yp- 抖音图标位通铺 周测13a",
       "tg": "",
       "adType": "播放器",
@@ -21960,7 +22758,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-11"
     },
     {
-      "id": 71,
+      "id": 76,
       "name": "P站图标2排2",
       "tg": "",
       "adType": "棋牌",
@@ -21971,7 +22769,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-02"
     },
     {
-      "id": 72,
+      "id": 77,
       "name": "titok-3站 CPT-2.1",
       "tg": "",
       "adType": "播放器",
@@ -21982,7 +22780,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-03"
     },
     {
-      "id": 73,
+      "id": 78,
       "name": "i幼 3号位 糜竺棋牌 1.6 到期",
       "tg": "",
       "adType": "棋牌",
@@ -21993,7 +22791,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-06"
     },
     {
-      "id": 74,
+      "id": 79,
       "name": "t站 12a 三个产品 香蕉 timi 姨太坊\n广告名称： 香蕉  timi  姨太坊",
       "tg": "",
       "adType": "播放器",
@@ -22004,7 +22802,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-25"
     },
     {
-      "id": 75,
+      "id": 80,
       "name": "ttitok-3站 CPT-4.1\n广告名称：51看片  性巴克 91看片",
       "tg": "",
       "adType": "播放器",
@@ -22015,7 +22813,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-28"
     },
     {
-      "id": 76,
+      "id": 81,
       "name": "X站3产品打包-灵儿-CPT12a(2.28-3.30)\n广告名称：51看片  性巴克 91看片",
       "tg": "",
       "adType": "播放器",
@@ -22026,7 +22824,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-28"
     },
     {
-      "id": 77,
+      "id": 82,
       "name": "金牌-社区帖子",
       "tg": "",
       "adType": "约炮",
@@ -22037,7 +22835,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-11"
     },
     {
-      "id": 78,
+      "id": 83,
       "name": "新 t站 12a 三个产品 香蕉 timi 姨太坊",
       "tg": "",
       "adType": "播放器",
@@ -22048,7 +22846,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-26"
     },
     {
-      "id": 79,
+      "id": 84,
       "name": "X站3产品打包-灵儿-CPT12a(2.28-3.30)\n\n广告名称：性巴克 51看片 91看片",
       "tg": "",
       "adType": "播放器",
@@ -22059,7 +22857,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-30"
     },
     {
-      "id": 80,
+      "id": 85,
       "name": "titok-3站 CPT-4.1\r\n\r\n广告名称：性巴克 夸克视频  91看片",
       "tg": "",
       "adType": "播放器",
@@ -22070,7 +22868,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-31"
     },
     {
-      "id": 81,
+      "id": 86,
       "name": "新 t站 12a 三个产品（3.7-4.7）",
       "tg": "",
       "adType": "播放器",
@@ -22081,7 +22879,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-09"
     },
     {
-      "id": 82,
+      "id": 87,
       "name": "小红书（8-金沙国际-可乐）（9-pg娱乐-煎饼狗子）3a/个 10/18到期",
       "tg": "",
       "adType": "棋牌",
@@ -22092,7 +22890,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-19"
     },
     {
-      "id": 83,
+      "id": 88,
       "name": "无极划账逸品",
       "tg": "",
       "adType": "成人游戏",
@@ -22103,7 +22901,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-31"
     },
     {
-      "id": 84,
+      "id": 89,
       "name": "P站-22号位+九宫格弹窗\n广告名称：直播",
       "tg": "",
       "adType": "直播",
@@ -22114,7 +22912,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-26"
     },
     {
-      "id": 85,
+      "id": 90,
       "name": "P站-22号位+九宫格弹窗",
       "tg": "",
       "adType": "直播",
@@ -22125,7 +22923,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-27"
     },
     {
-      "id": 86,
+      "id": 91,
       "name": "P站-4月3日-5月3日",
       "tg": "",
       "adType": "直播",
@@ -22136,18 +22934,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-03"
     },
     {
-      "id": 87,
-      "name": "铁粉空间-随风",
-      "tg": "",
-      "adType": "棋牌",
-      "sales": "卢登",
-      "tier": "培育客户",
-      "contracts": 2,
-      "totalRevenue": 102100,
-      "firstDate": "2026-02-07"
-    },
-    {
-      "id": 88,
+      "id": 92,
       "name": "CPA10-通铺底部位置-10a",
       "tg": "",
       "adType": "直播",
@@ -22158,18 +22945,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-04"
     },
     {
-      "id": 89,
-      "name": "0910 677娱乐 0158（10 11 12）12.10到期 3223（6）12.12",
-      "tg": "",
-      "adType": "棋牌",
-      "sales": "卢登",
-      "tier": "培育客户",
-      "contracts": 2,
-      "totalRevenue": 100000,
-      "firstDate": "2026-02-10"
-    },
-    {
-      "id": 90,
+      "id": 93,
       "name": "23站bc首位图标",
       "tg": "",
       "adType": "棋牌",
@@ -22180,7 +22956,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-13"
     },
     {
-      "id": 91,
+      "id": 94,
       "name": "#VALUE!",
       "tg": "",
       "adType": "棋牌",
@@ -22191,18 +22967,29 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 92,
-      "name": "PXT三站图标+banner",
+      "id": 95,
+      "name": "韩-xvideo-包月",
       "tg": "",
-      "adType": "棋牌",
-      "sales": "黄凯悦",
+      "adType": "播放器",
+      "sales": "吴挺",
       "tier": "培育客户",
-      "contracts": 1,
+      "contracts": 2,
       "totalRevenue": 100000,
-      "firstDate": "2026-03-26"
+      "firstDate": "2026-03-11"
     },
     {
-      "id": 93,
+      "id": 96,
+      "name": "117群-打包图标+横幅-10w/半月",
+      "tg": "",
+      "adType": "播放器",
+      "sales": "黄凯悦",
+      "tier": "培育客户",
+      "contracts": 24,
+      "totalRevenue": 100000,
+      "firstDate": "2026-04-13"
+    },
+    {
+      "id": 97,
       "name": "小红书-哆啦A漫-3站到期2.13",
       "tg": "",
       "adType": "播放器",
@@ -22213,7 +23000,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-16"
     },
     {
-      "id": 94,
+      "id": 98,
       "name": "色虎/懂片帝-第一直播 周测2.5a(2.11）\r\n广告名称：第一直播",
       "tg": "",
       "adType": "直播",
@@ -22224,7 +23011,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-27"
     },
     {
-      "id": 95,
+      "id": 99,
       "name": "小红书-哆啦A漫-3站到期3.13",
       "tg": "",
       "adType": "播放器",
@@ -22235,7 +23022,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-13"
     },
     {
-      "id": 96,
+      "id": 100,
       "name": "hx-拨阴-三排最后一位",
       "tg": "",
       "adType": "直播",
@@ -22246,7 +23033,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-07"
     },
     {
-      "id": 97,
+      "id": 101,
       "name": "201-包月p-全网片源 2.3",
       "tg": "",
       "adType": "播放器",
@@ -22257,7 +23044,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-03"
     },
     {
-      "id": 98,
+      "id": 102,
       "name": "ph站.045 8站包-免费视频-1.10",
       "tg": "",
       "adType": "播放器",
@@ -22268,7 +23055,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-11"
     },
     {
-      "id": 99,
+      "id": 103,
       "name": "涩漫天堂2.5周测",
       "tg": "",
       "adType": "棋牌",
@@ -22279,7 +23066,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-17"
     },
     {
-      "id": 100,
+      "id": 104,
       "name": "045 P站包-免费资源2.25\n广告名称：免费资源",
       "tg": "",
       "adType": "播放器",
@@ -22290,7 +23077,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-26"
     },
     {
-      "id": 101,
+      "id": 105,
       "name": "x站-九宫格4号位+10号下载位",
       "tg": "",
       "adType": "直播",
@@ -22301,7 +23088,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 102,
+      "id": 106,
       "name": "小红书包月-全网片源（3.4-4.4）",
       "tg": "",
       "adType": "播放器",
@@ -22312,7 +23099,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-05"
     },
     {
-      "id": 103,
+      "id": 107,
       "name": "ph站.045 8站包-免费视频-3.10",
       "tg": "",
       "adType": "播放器",
@@ -22323,7 +23110,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-12"
     },
     {
-      "id": 104,
+      "id": 108,
       "name": "P站-白嫖看片8a ( 3.14-4.14)\n广告名称：白嫖看片",
       "tg": "",
       "adType": "播放器",
@@ -22334,7 +23121,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-14"
     },
     {
-      "id": 105,
+      "id": 109,
       "name": "迈凯伦-PH·Prem-炮台周测 3.23-3.29",
       "tg": "",
       "adType": "约炮",
@@ -22345,7 +23132,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-23"
     },
     {
-      "id": 106,
+      "id": 110,
       "name": "045 P站包-免费资源2.25",
       "tg": "",
       "adType": "播放器",
@@ -22356,7 +23143,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-28"
     },
     {
-      "id": 107,
+      "id": 111,
       "name": "色虎/懂片帝-第一直播 周测2.5a(2.11)",
       "tg": "",
       "adType": "直播",
@@ -22367,7 +23154,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-28"
     },
     {
-      "id": 108,
+      "id": 112,
       "name": "263 免费资源 包月8A 韩商言 4.2日",
       "tg": "",
       "adType": "播放器",
@@ -22378,7 +23165,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-01"
     },
     {
-      "id": 109,
+      "id": 113,
       "name": "yp-宝马视频/cpa2.5预付/10000u",
       "tg": "",
       "adType": "播放器",
@@ -22389,7 +23176,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-09"
     },
     {
-      "id": 110,
+      "id": 114,
       "name": "包月-娜娜子8a 成人免费2.3 茄子视频 2.10",
       "tg": "",
       "adType": "播放器",
@@ -22400,7 +23187,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-17"
     },
     {
-      "id": 111,
+      "id": 115,
       "name": "bet365 小红书-煎饼狗子 3a 12/20到期",
       "tg": "",
       "adType": "棋牌",
@@ -22411,7 +23198,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-20"
     },
     {
-      "id": 112,
+      "id": 116,
       "name": "ph站点 3808 5a包月",
       "tg": "",
       "adType": "棋牌",
@@ -22422,7 +23209,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-05"
     },
     {
-      "id": 113,
+      "id": 117,
       "name": "翘臀-大P站/5A包月",
       "tg": "",
       "adType": "直播",
@@ -22433,7 +23220,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-19"
     },
     {
-      "id": 114,
+      "id": 118,
       "name": "v总 44万线路1 到期日期2/12",
       "tg": "",
       "adType": "棋牌",
@@ -22444,7 +23231,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-27"
     },
     {
-      "id": 115,
+      "id": 119,
       "name": "展天马cpa16元",
       "tg": "",
       "adType": "约炮",
@@ -22455,18 +23242,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-03"
     },
     {
-      "id": 116,
-      "name": "韩-xvideo-包月",
-      "tg": "",
-      "adType": "播放器",
-      "sales": "吴挺",
-      "tier": "观察客户",
-      "contracts": 1,
-      "totalRevenue": 50000,
-      "firstDate": "2026-03-11"
-    },
-    {
-      "id": 117,
+      "id": 120,
       "name": "小红书5a图标包月",
       "tg": "",
       "adType": "棋牌",
@@ -22477,7 +23253,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-01"
     },
     {
-      "id": 118,
+      "id": 121,
       "name": "小米视频 周测5A 保底2.5",
       "tg": "",
       "adType": "播放器",
@@ -22488,7 +23264,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-08"
     },
     {
-      "id": 119,
+      "id": 122,
       "name": "小红书包月-韩",
       "tg": "",
       "adType": "播放器",
@@ -22499,7 +23275,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-08"
     },
     {
-      "id": 120,
+      "id": 123,
       "name": "xvideo站点 3808/4.5包月",
       "tg": "",
       "adType": "棋牌",
@@ -22510,7 +23286,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-07"
     },
     {
-      "id": 121,
+      "id": 124,
       "name": "色虎/懂片帝-第一直播 周测2.5a(2.11）",
       "tg": "",
       "adType": "直播",
@@ -22521,7 +23297,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-11"
     },
     {
-      "id": 122,
+      "id": 125,
       "name": "T站-20号位+短视频穿插位\r\n广告名称：色欲直播",
       "tg": "",
       "adType": "直播",
@@ -22532,7 +23308,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-16"
     },
     {
-      "id": 123,
+      "id": 126,
       "name": "领航划账逸品",
       "tg": "",
       "adType": "成人游戏",
@@ -22543,7 +23319,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-05"
     },
     {
-      "id": 124,
+      "id": 127,
       "name": "魅影、RG 半个月测试 4a 第一直播",
       "tg": "",
       "adType": "直播",
@@ -22554,7 +23330,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-03"
     },
     {
-      "id": 125,
+      "id": 128,
       "name": "恒睿内部划账到逸品",
       "tg": "",
       "adType": "棋牌",
@@ -22565,7 +23341,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-13"
     },
     {
-      "id": 126,
+      "id": 129,
       "name": "CPT_TikTok+PH·Prem+拨阴 & H365",
       "tg": "",
       "adType": "成人游戏",
@@ -22576,7 +23352,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-04"
     },
     {
-      "id": 127,
+      "id": 130,
       "name": "v总-40a-2.12",
       "tg": "",
       "adType": "棋牌",
@@ -22587,7 +23363,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-12"
     },
     {
-      "id": 128,
+      "id": 131,
       "name": "2026直播对接，生总",
       "tg": "",
       "adType": "直播",
@@ -22598,7 +23374,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-17"
     },
     {
-      "id": 129,
+      "id": 132,
       "name": "0910 677娱乐 0158（10 11 12）12.10到期 3223（6）12.12到期 棋牌-小红书（CPT ）",
       "tg": "",
       "adType": "棋牌",
@@ -22609,7 +23385,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-13"
     },
     {
-      "id": 130,
+      "id": 133,
       "name": "百花园会馆-楼凤入驻-三站打包周测1.5a（3.19-3.25）",
       "tg": "",
       "adType": "约炮",
@@ -22620,7 +23396,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-19"
     },
     {
-      "id": 131,
+      "id": 134,
       "name": "hx-性欲社-色欲直播 半个月",
       "tg": "",
       "adType": "直播",
@@ -22631,7 +23407,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-09"
     },
     {
-      "id": 132,
+      "id": 135,
       "name": "粉色-播放器韩言商/cpa10",
       "tg": "",
       "adType": "直播",
@@ -22642,7 +23418,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-13"
     },
     {
-      "id": 133,
+      "id": 136,
       "name": "坤坤-向南-cpc 0.3",
       "tg": "",
       "adType": "播放器",
@@ -22653,7 +23429,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-10"
     },
     {
-      "id": 134,
+      "id": 137,
       "name": "CPT_懂片帝+快播+稚嫩学院 & H365",
       "tg": "",
       "adType": "成人游戏",
@@ -22664,7 +23440,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-18"
     },
     {
-      "id": 135,
+      "id": 138,
       "name": "18站-免费大全-周测 3A 4.3-4.9",
       "tg": "",
       "adType": "播放器",
@@ -22675,7 +23451,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-02"
     },
     {
-      "id": 136,
+      "id": 139,
       "name": "色虎/懂片帝-第一直播 周测2.5a(2.8)",
       "tg": "",
       "adType": "直播",
@@ -22686,7 +23462,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-02"
     },
     {
-      "id": 137,
+      "id": 140,
       "name": "yp-撸客/第一直播 cpt周测2.5A （2.8-2.14）",
       "tg": "",
       "adType": "直播",
@@ -22697,7 +23473,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-07"
     },
     {
-      "id": 138,
+      "id": 141,
       "name": "调教师 3808 3排2.5a （1.26-2.26)",
       "tg": "",
       "adType": "棋牌",
@@ -22708,7 +23484,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-20"
     },
     {
-      "id": 139,
+      "id": 142,
       "name": "调教师 3808 3排2.5a （1.26-2.26)\r\n广告名称：新葡京3808",
       "tg": "",
       "adType": "棋牌",
@@ -22719,7 +23495,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-26"
     },
     {
-      "id": 140,
+      "id": 143,
       "name": "小红书/Ph 第一直播",
       "tg": "",
       "adType": "直播",
@@ -22730,7 +23506,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-09"
     },
     {
-      "id": 141,
+      "id": 144,
       "name": "小红书2.5半月测",
       "tg": "",
       "adType": "棋牌",
@@ -22741,7 +23517,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-09"
     },
     {
-      "id": 142,
+      "id": 145,
       "name": "KIMI-3站-cpt6a（11.26-12.26）",
       "tg": "",
       "adType": "播放器",
@@ -22752,7 +23528,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-05"
     },
     {
-      "id": 143,
+      "id": 146,
       "name": "XV 周测",
       "tg": "",
       "adType": "直播",
@@ -22763,7 +23539,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-10"
     },
     {
-      "id": 144,
+      "id": 147,
       "name": "调教师 周测",
       "tg": "",
       "adType": "直播",
@@ -22774,7 +23550,7 @@ const MOCK_DATA = {
       "firstDate": "2026-04-03"
     },
     {
-      "id": 145,
+      "id": 148,
       "name": "黄油cps(铁粉)截止1月31号已结清",
       "tg": "",
       "adType": "成人游戏",
@@ -22785,7 +23561,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-24"
     },
     {
-      "id": 146,
+      "id": 149,
       "name": "西瓜视频-P 五天周测1.5a",
       "tg": "",
       "adType": "播放器",
@@ -22796,7 +23572,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-21"
     },
     {
-      "id": 147,
+      "id": 150,
       "name": "黄油cps(铁粉)截止2月28号已结清",
       "tg": "",
       "adType": "成人游戏",
@@ -22807,7 +23583,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-06"
     },
     {
-      "id": 148,
+      "id": 151,
       "name": "P站-黄游CPS65%",
       "tg": "",
       "adType": "成人游戏",
@@ -22818,7 +23594,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-03"
     },
     {
-      "id": 149,
+      "id": 152,
       "name": "0910 677娱乐 0158（10 11 12）12.10到期 3223（6）12.12到期 棋牌-小红书（CPT ）\r\n广告名称：开元电子",
       "tg": "",
       "adType": "棋牌",
@@ -22829,7 +23605,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-28"
     },
     {
-      "id": 150,
+      "id": 153,
       "name": "hao77AVcpt450u\r\n广告名称：第一直播",
       "tg": "",
       "adType": "直播",
@@ -23014,6 +23790,21 @@ const MOCK_DATA = {
       "product": "全平台",
       "adType": "播放器",
       "desc": "最近几天点击成本上涨到1块，差了50%点击。",
+      "support": "渠道",
+      "direction": "流量扩量优化",
+      "priority": "P1-高",
+      "status": "待处理",
+      "createDate": "",
+      "closeDate": ""
+    },
+    {
+      "id": "FB013",
+      "date": "2026-04-11",
+      "client": "阿忠",
+      "tier": "实力客户",
+      "product": "HX-001 HX-002 HX-003 HX-004 HX-005",
+      "adType": "约炮",
+      "desc": "最近一周数据对比上周少了将近400的注册，产值也是跟不上",
       "support": "渠道",
       "direction": "流量扩量优化",
       "priority": "P1-高",
@@ -27105,6 +27896,955 @@ const MOCK_DATA = {
         "gap": 229.0,
         "payStatus": "已收款",
         "type": "续费"
+      },
+      {
+        "id": "PXT三站图标+banner",
+        "product": "HX-001",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 130000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 70000.0,
+        "gap": -60000.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "PXT三站图标+banner",
+        "product": "HX-003",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 40000.0,
+        "gap": 40000.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "PXT三站图标+banner",
+        "product": "HX-002",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 20000.0,
+        "gap": 20000.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "0910 677娱乐 0158（10 1",
+        "product": "HX-021",
+        "sales": "卢登",
+        "mode": "CPT",
+        "reportCNY": 50000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 50000.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-021",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 250001,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 60080.0,
+        "gap": -189921.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-024",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 37301.0,
+        "gap": 37301.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-035",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 30404.0,
+        "gap": 30404.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-009",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 29635.0,
+        "gap": 29635.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-018",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 21705.0,
+        "gap": 21705.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-016",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 18344.0,
+        "gap": 18344.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-015",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 13031.0,
+        "gap": 13031.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-006",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 13043.0,
+        "gap": 13043.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-013",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 9082.0,
+        "gap": 9082.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-007",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 5964.0,
+        "gap": 5964.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-020",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 2607.0,
+        "gap": 2607.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-017",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 5613.0,
+        "gap": 5613.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-046",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1895.0,
+        "gap": 1895.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "系统公告+视频流80a",
+        "product": "HX-023",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1297.0,
+        "gap": 1297.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "子龙周测（t：4.9-5.9）",
+        "product": "HX-003",
+        "sales": "卢登",
+        "mode": "CPT",
+        "reportCNY": 60000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 60000.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "韩-xvideo-包月",
+        "product": "HX-003",
+        "sales": "吴挺",
+        "mode": "CPT",
+        "reportCNY": 50000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 50000.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P站+抖音Plus 15A",
+        "product": "HX-001",
+        "sales": "卢登",
+        "mode": "CPT",
+        "reportCNY": 100000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 99680.0,
+        "gap": -320.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P站+抖音Plus 15A",
+        "product": "HX-005",
+        "sales": "卢登",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 320.0,
+        "gap": 320.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-001",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 100000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 46406.0,
+        "gap": -53594.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-003",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 17828.0,
+        "gap": 17828.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-002",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 9165.0,
+        "gap": 9165.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-021",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 6722.0,
+        "gap": 6722.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-009",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 4182.0,
+        "gap": 4182.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-024",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 3852.0,
+        "gap": 3852.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-035",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 2677.0,
+        "gap": 2677.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-018",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1258.0,
+        "gap": 1258.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-006",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1373.0,
+        "gap": 1373.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-016",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1397.0,
+        "gap": 1397.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-015",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1174.0,
+        "gap": 1174.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-008",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 638.0,
+        "gap": 638.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-007",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 551.0,
+        "gap": 551.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-013",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 473.0,
+        "gap": 473.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-017",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 439.0,
+        "gap": 439.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-022",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 387.0,
+        "gap": 387.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-020",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 194.0,
+        "gap": 194.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-046",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 180.0,
+        "gap": 180.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-026",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 159.0,
+        "gap": 159.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-004",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 144.0,
+        "gap": 144.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-010",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 153.0,
+        "gap": 153.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-051",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 138.0,
+        "gap": 138.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-023",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 134.0,
+        "gap": 134.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "117群-打包图标+横幅-10w/半月",
+        "product": "HX-050",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 376.0,
+        "gap": 376.0,
+        "payStatus": "已收款",
+        "type": "新增"
+      },
+      {
+        "id": "铁粉空间-随风",
+        "product": "HX-018",
+        "sales": "卢登",
+        "mode": "CPT",
+        "reportCNY": 51050,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 51050.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-001",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 850000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 427652.0,
+        "gap": -422348.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-002",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 150835.0,
+        "gap": 150835.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-003",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 98540.0,
+        "gap": 98540.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-004",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1655.0,
+        "gap": 1655.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-005",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 1318.0,
+        "gap": 1318.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-001",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 106913.0,
+        "gap": 106913.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-002",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 37709.0,
+        "gap": 37709.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-003",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 24635.0,
+        "gap": 24635.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-004",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 413.0,
+        "gap": 413.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "P-X-T-PRO-PlUS",
+        "product": "HX-005",
+        "sales": "陈亦凡",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 330.0,
+        "gap": 330.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-001",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 999994,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 185000.0,
+        "gap": -814994.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-002",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 125000.0,
+        "gap": 125000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-003",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 125000.0,
+        "gap": 125000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-004",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 10000.0,
+        "gap": 10000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-005",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 10000.0,
+        "gap": 10000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-009",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 15000.0,
+        "gap": 15000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-006",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 15000.0,
+        "gap": 15000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-007",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 15000.0,
+        "gap": 15000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-013",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 25000.0,
+        "gap": 25000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-015",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 25000.0,
+        "gap": 25000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-017",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 75000.0,
+        "gap": 75000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-016",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 75000.0,
+        "gap": 75000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-035",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 95000.0,
+        "gap": 95000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-021",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 135000.0,
+        "gap": 135000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-024",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 35000.0,
+        "gap": 35000.0,
+        "payStatus": "已收款",
+        "type": "续费"
+      },
+      {
+        "id": "60a打包+40a打包",
+        "product": "HX-018",
+        "sales": "郭永正",
+        "mode": "CPT",
+        "reportCNY": 0,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 34994.0,
+        "gap": 34994.0,
+        "payStatus": "已收款",
+        "type": "续费"
       }
     ],
     "platformSpend": [
@@ -28235,7 +29975,7 @@ function avEl(name, color, sz=30){
 // ╚══════════════════════════════════════════════════════════════╝
 let viewMode     = 'month';      // 'month' | 'day'
 let currentMonth = 'apr';        // 'apr' | 'mar' | 'feb'
-let selectedDate = '2026-04-10'; // 单日视角选中日期
+let selectedDate = '2026-04-13'; // 单日视角选中日期
 
 const MONTH_META = {
   mar: { year:2026, month:3, days:31, label:"2026年3月", defaultDate:"2026-03-27" },
