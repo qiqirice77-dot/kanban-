@@ -38306,20 +38306,24 @@ function renderGlobalKPIs(){
   // ③ 今日到期
   const expCnt = getMonthData().expireToday.length;
 
-  // ④ 产品日报：本月（4月）累计总日活 / 总新增
+  // ④ 产品日报日活/新增：单日=selectedDate当天，月视角=本月累计
   const drData = MOCK_DATA.dailyReport || {};
   const drLatest = drData.latest || '';
   const drByPlat = drData.byPlatform || {};
   const curMonth = drLatest ? drLatest.slice(0,7) : new Date().toISOString().slice(0,7);
   let totalDAU = 0, totalNew = 0;
-  Object.values(drByPlat).forEach(arr => {
-    arr.forEach(r => {
-      if (r.date.startsWith(curMonth)) {
-        totalDAU += (r.dau || 0);
-        totalNew += (r.newUsers || 0);
-      }
+  if (isDay) {
+    Object.values(drByPlat).forEach(arr => {
+      const e = arr.find(r => r.date === selectedDate);
+      if (e) { totalDAU += (e.dau || 0); totalNew += (e.newUsers || 0); }
     });
-  });
+  } else {
+    Object.values(drByPlat).forEach(arr => {
+      arr.forEach(r => {
+        if (r.date.startsWith(curMonth)) { totalDAU += (r.dau || 0); totalNew += (r.newUsers || 0); }
+      });
+    });
+  }
 
   document.getElementById("g-kpi").innerHTML = `
     <div class="kpi" style="--accent:#1E88E5">
@@ -38330,15 +38334,15 @@ function renderGlobalKPIs(){
     </div>
     <div class="kpi" style="--accent:#06b6d4">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
-      <div class="kpi-label">本月总日活</div>
+      <div class="kpi-label">${isDay?'当日总日活':'本月总日活'}</div>
       <div class="kpi-val" style="color:#06b6d4">${fmtY(totalDAU)}</div>
-      <div class="kpi-sub">全平台累计(4/1起)</div>
+      <div class="kpi-sub">${isDay?selectedDate.slice(5)+'全平台':'全平台累计(4/1起)'}</div>
     </div>
     <div class="kpi" style="--accent:#10b981">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
-      <div class="kpi-label">本月总新增</div>
+      <div class="kpi-label">${isDay?'当日总新增':'本月总新增'}</div>
       <div class="kpi-val" style="color:#10b981">${fmtY(totalNew)}</div>
-      <div class="kpi-sub">全平台累计(4/1起)</div>
+      <div class="kpi-sub">${isDay?selectedDate.slice(5)+'全平台':'全平台累计(4/1起)'}</div>
     </div>
     <div class="kpi" style="--accent:#00BCD4">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
