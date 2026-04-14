@@ -634,6 +634,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
   <button class="nav-btn" onclick="go(8)">💬 广告主反馈</button>
   <button class="nav-btn" onclick="go(9)">💰 收款&amp;消耗</button>
   <button class="nav-btn" onclick="go(10)">📦 补量汇总</button>
+  <button class="nav-btn" onclick="go(11)">📱 产品日报</button>
 </nav>
 
 <!-- Panels -->
@@ -948,6 +949,29 @@ tr:hover td{background:rgba(255,255,255,.03)}
     <div class="card">
       <div class="card-hd"><div class="card-title">补量明细</div></div>
       <div class="tbl-wrap" style="max-height:440px;overflow-y:auto"><table id="t-supply"></table></div>
+    </div>
+  </div>
+
+  <!-- 11 产品日报 -->
+  <div class="panel" id="p11">
+    <div class="g4 mb16" id="dr-kpi"></div>
+    <div class="card mb16">
+      <div class="card-hd">
+        <div class="card-title">平台选择</div>
+      </div>
+      <div id="dr-platform-btns" style="display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px 16px"></div>
+    </div>
+    <div class="card mb16">
+      <div class="card-hd"><div class="card-title" id="dr-trend-title">日活趋势</div></div>
+      <div class="ch ch280" id="c-dr-dau"></div>
+    </div>
+    <div class="card mb16">
+      <div class="card-hd"><div class="card-title">新增用户趋势</div></div>
+      <div class="ch ch240" id="c-dr-new"></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">留存率</div></div>
+      <div class="ch ch240" id="c-dr-ret"></div>
     </div>
   </div>
 
@@ -39700,8 +39724,123 @@ function renderSupply(){
     `<thead><tr><th class="tc">#</th><th>日期</th><th>平台</th><th>编号</th><th>模式</th><th class="tr">金额(CNY)</th><th>备注</th></tr></thead><tbody>${tRows}</tbody>`;
 }
 
-const renders = [renderOverview, renderRanking, renderAdMode, renderExpire, renderReports, renderWorkflow, renderROI, renderTier, renderFeedback, renderPayment, renderSupply];
-const done = Array(11).fill(false);
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  产品日报                                                     ║
+// ╚══════════════════════════════════════════════════════════════╝
+let drPlatform = '全平台';
+
+function renderDailyReport() {
+  const dr = MOCK_DATA.dailyReport || {};
+  const platforms = dr.platforms || [];
+  const dates = dr.dates || [];
+  const byPlatform = dr.byPlatform || {};
+  const latest = dr.latest || {};
+
+  // KPI 汇总（取最新一天全平台数据）
+  let totalDAU = 0, totalNew = 0, totalRecharge = 0;
+  if (latest) {
+    Object.values(latest).forEach(v => {
+      totalDAU += (v.dau || 0);
+      totalNew += (v.newUsers || 0);
+      totalRecharge += (v.recharge || 0);
+    });
+  }
+  const latestDate = dates.length ? dates[dates.length - 1] : '—';
+  document.getElementById('dr-kpi').innerHTML = [
+    { label: '平台数量', value: platforms.length, unit: '个', color: 'var(--pri)' },
+    { label: `日活(${latestDate})`, value: fmtY(totalDAU), unit: '', color: '#06b6d4' },
+    { label: `新增用户(${latestDate})`, value: fmtY(totalNew), unit: '', color: '#10b981' },
+    { label: `充值金额(${latestDate})`, value: fmt(totalRecharge), unit: '', color: '#f59e0b' },
+  ].map(k => `<div class="card kpi-card" style="border-top:3px solid ${k.color}">
+    <div class="kpi-label">${k.label}</div>
+    <div class="kpi-value" style="color:${k.color}">${k.value}${k.unit}</div>
+  </div>`).join('');
+
+  // 平台选择按钮
+  const allBtns = ['全平台', ...platforms].map(p =>
+    `<button class="p-btn${p === drPlatform ? ' on' : ''}" onclick="drSwitch('${p}')">${p}</button>`
+  ).join('');
+  document.getElementById('dr-platform-btns').innerHTML = allBtns;
+
+  drRenderCharts();
+}
+
+function drSwitch(plat) {
+  drPlatform = plat;
+  document.querySelectorAll('#dr-platform-btns .p-btn').forEach(b => {
+    b.classList.toggle('on', b.textContent === plat);
+  });
+  drRenderCharts();
+}
+
+function drRenderCharts() {
+  const dr = MOCK_DATA.dailyReport || {};
+  const dates = dr.dates || [];
+  const byPlatform = dr.byPlatform || {};
+
+  // 聚合数据
+  let rows = [];
+  if (drPlatform === '全平台') {
+    // 按日期汇总所有平台
+    const map = {};
+    Object.values(byPlatform).forEach(arr => {
+      arr.forEach(r => {
+        if (!map[r.date]) map[r.date] = { date: r.date, dau: 0, newUsers: 0, recharge: 0, ret1: [], ret3: [], ret7: [] };
+        map[r.date].dau += r.dau;
+        map[r.date].newUsers += r.newUsers;
+        map[r.date].recharge += r.recharge;
+        if (r.ret1 > 0) map[r.date].ret1.push(r.ret1);
+        if (r.ret3 > 0) map[r.date].ret3.push(r.ret3);
+        if (r.ret7 > 0) map[r.date].ret7.push(r.ret7);
+      });
+    });
+    rows = dates.map(d => {
+      const m = map[d] || { dau: 0, newUsers: 0, recharge: 0, ret1: [], ret3: [], ret7: [] };
+      const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length * 100) / 100 : null;
+      return { date: d, dau: m.dau, newUsers: m.newUsers, recharge: m.recharge, ret1: avg(m.ret1), ret3: avg(m.ret3), ret7: avg(m.ret7) };
+    });
+    document.getElementById('dr-trend-title').textContent = '全平台日活趋势';
+  } else {
+    rows = (byPlatform[drPlatform] || []).sort((a, b) => a.date.localeCompare(b.date));
+    document.getElementById('dr-trend-title').textContent = `${drPlatform} 日活趋势`;
+  }
+
+  const xDates = rows.map(r => r.date.slice(5));
+  const dauVals = rows.map(r => r.dau);
+  const newVals = rows.map(r => r.newUsers);
+  const ret1Vals = rows.map(r => r.ret1 != null ? r.ret1 : null);
+  const ret3Vals = rows.map(r => r.ret3 != null ? r.ret3 : null);
+  const ret7Vals = rows.map(r => r.ret7 != null ? r.ret7 : null);
+
+  // 日活趋势
+  ec('c-dr-dau', ext(BASE('line', xDates, [{ name: '日活', data: dauVals, smooth: true, areaStyle: { opacity: 0.15 } }]), {
+    color: ['#06b6d4'],
+    yAxis: { axisLabel: { formatter: v => v >= 10000 ? (v / 10000).toFixed(1) + 'w' : v } },
+    tooltip: { valueFormatter: v => v == null ? '—' : v.toLocaleString() },
+  }));
+
+  // 新增用户趋势
+  ec('c-dr-new', ext(BASE('bar', xDates, [{ name: '新增用户', data: newVals }]), {
+    color: ['#10b981'],
+    yAxis: { axisLabel: { formatter: v => v >= 10000 ? (v / 10000).toFixed(1) + 'w' : v } },
+    tooltip: { valueFormatter: v => v == null ? '—' : v.toLocaleString() },
+  }));
+
+  // 留存率
+  ec('c-dr-ret', ext(BASE('line', xDates, [
+    { name: '次日留存', data: ret1Vals, smooth: true },
+    { name: '3日留存', data: ret3Vals, smooth: true },
+    { name: '7日留存', data: ret7Vals, smooth: true },
+  ]), {
+    color: ['#8b5cf6', '#f59e0b', '#ef4444'],
+    yAxis: { axisLabel: { formatter: v => v == null ? '' : (v * 100).toFixed(0) + '%' }, max: 1 },
+    tooltip: { valueFormatter: v => v == null ? '—' : (v * 100).toFixed(1) + '%' },
+    legend: { show: true },
+  }));
+}
+
+const renders = [renderOverview, renderRanking, renderAdMode, renderExpire, renderReports, renderWorkflow, renderROI, renderTier, renderFeedback, renderPayment, renderSupply, renderDailyReport];
+const done = Array(12).fill(false);
 
 function go(idx){
   document.querySelectorAll(".nav-btn").forEach((b,i)=>b.classList.toggle("active",i===idx));
