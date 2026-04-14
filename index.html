@@ -38306,14 +38306,19 @@ function renderGlobalKPIs(){
   // ③ 今日到期
   const expCnt = getMonthData().expireToday.length;
 
-  // ④ 产品日报：最新一天全平台日活/新增
+  // ④ 产品日报：本月（4月）累计总日活 / 总新增
   const drData = MOCK_DATA.dailyReport || {};
   const drLatest = drData.latest || '';
   const drByPlat = drData.byPlatform || {};
+  const curMonth = drLatest ? drLatest.slice(0,7) : new Date().toISOString().slice(0,7);
   let totalDAU = 0, totalNew = 0;
   Object.values(drByPlat).forEach(arr => {
-    const e = arr.find(r => r.date === drLatest);
-    if (e) { totalDAU += (e.dau || 0); totalNew += (e.newUsers || 0); }
+    arr.forEach(r => {
+      if (r.date.startsWith(curMonth)) {
+        totalDAU += (r.dau || 0);
+        totalNew += (r.newUsers || 0);
+      }
+    });
   });
 
   document.getElementById("g-kpi").innerHTML = `
@@ -38325,15 +38330,15 @@ function renderGlobalKPIs(){
     </div>
     <div class="kpi" style="--accent:#06b6d4">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
-      <div class="kpi-label">总日活${drLatest?' ('+drLatest.slice(5)+')':''}</div>
+      <div class="kpi-label">本月总日活</div>
       <div class="kpi-val" style="color:#06b6d4">${fmtY(totalDAU)}</div>
-      <div class="kpi-sub">全平台合计</div>
+      <div class="kpi-sub">全平台累计(4/1起)</div>
     </div>
     <div class="kpi" style="--accent:#10b981">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
-      <div class="kpi-label">总新增${drLatest?' ('+drLatest.slice(5)+')':''}</div>
+      <div class="kpi-label">本月总新增</div>
       <div class="kpi-val" style="color:#10b981">${fmtY(totalNew)}</div>
-      <div class="kpi-sub">全平台合计</div>
+      <div class="kpi-sub">全平台累计(4/1起)</div>
     </div>
     <div class="kpi" style="--accent:#00BCD4">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
