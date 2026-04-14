@@ -39734,18 +39734,18 @@ function renderDailyReport() {
   const platforms = dr.platforms || [];
   const dates = dr.dates || [];
   const byPlatform = dr.byPlatform || {};
-  const latest = dr.latest || {};
+  const latestDate = dr.latest || (dates.length ? dates[dates.length - 1] : '—');
 
   // KPI 汇总（取最新一天全平台数据）
   let totalDAU = 0, totalNew = 0, totalRecharge = 0;
-  if (latest) {
-    Object.values(latest).forEach(v => {
-      totalDAU += (v.dau || 0);
-      totalNew += (v.newUsers || 0);
-      totalRecharge += (v.recharge || 0);
-    });
-  }
-  const latestDate = dates.length ? dates[dates.length - 1] : '—';
+  Object.values(byPlatform).forEach(arr => {
+    const entry = arr.find(r => r.date === latestDate);
+    if (entry) {
+      totalDAU += (entry.dau || 0);
+      totalNew += (entry.newUsers || 0);
+      totalRecharge += (entry.recharge || 0);
+    }
+  });
   document.getElementById('dr-kpi').innerHTML = [
     { label: '平台数量', value: platforms.length, unit: '个', color: 'var(--pri)' },
     { label: `日活(${latestDate})`, value: fmtY(totalDAU), unit: '', color: '#06b6d4' },
