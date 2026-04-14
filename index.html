@@ -665,7 +665,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
   </div>
 
   <!-- ░░ 5 Global KPI Cards ░░ -->
-  <div class="g4" id="g-kpi"></div>
+  <div class="g5" id="g-kpi"></div>
 
   <!-- 0 总览 -->
   <div class="panel on" id="p0">
@@ -38297,10 +38297,15 @@ function renderGlobalKPIs(){
   // ③ 今日到期
   const expCnt = getMonthData().expireToday.length;
 
-  // ④ 周报完成率（本周已提交人数 / 总人数）
-  const wrList = MOCK_DATA.weeklyReport.list || [];
-  const wDoneKpi = wrList.filter(r=>r.weekly.submitted).length;
-  const rptRate = pct(wDoneKpi, wrList.length || 5);
+  // ④ 产品日报：最新一天全平台日活/新增
+  const drData = MOCK_DATA.dailyReport || {};
+  const drLatest = drData.latest || '';
+  const drByPlat = drData.byPlatform || {};
+  let totalDAU = 0, totalNew = 0;
+  Object.values(drByPlat).forEach(arr => {
+    const e = arr.find(r => r.date === drLatest);
+    if (e) { totalDAU += (e.dau || 0); totalNew += (e.newUsers || 0); }
+  });
 
   document.getElementById("g-kpi").innerHTML = `
     <div class="kpi" style="--accent:#1E88E5">
@@ -38308,6 +38313,18 @@ function renderGlobalKPIs(){
       <div class="kpi-label">${isDay?"今日实收":"本月总实收"}</div>
       <div class="kpi-val" style="color:#42A5F5">${fmtY(totA)}</div>
       <div class="kpi-sub">目标 ${fmtY(totT)} ${pctPill(totR)}</div>
+    </div>
+    <div class="kpi" style="--accent:#06b6d4">
+      <div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">总日活${drLatest?' ('+drLatest.slice(5)+')':''}</div>
+      <div class="kpi-val" style="color:#06b6d4">${fmtY(totalDAU)}</div>
+      <div class="kpi-sub">全平台合计</div>
+    </div>
+    <div class="kpi" style="--accent:#10b981">
+      <div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">总新增${drLatest?' ('+drLatest.slice(5)+')':''}</div>
+      <div class="kpi-val" style="color:#10b981">${fmtY(totalNew)}</div>
+      <div class="kpi-sub">全平台合计</div>
     </div>
     <div class="kpi" style="--accent:#00BCD4">
       <div class="kpi-accent"></div><div class="kpi-glow"></div>
@@ -38320,12 +38337,6 @@ function renderGlobalKPIs(){
       <div class="kpi-label">今日到期</div>
       <div class="kpi-val" style="color:${expCnt>0?'#FF1744':'#00E676'}">${expCnt}<span style="font-size:16px;font-weight:400"> 单</span></div>
       <div class="kpi-sub">${expCnt>0?`共 ${expCntMoney()} 待续签`:"暂无到期合同"}</div>
-    </div>
-    <div class="kpi" style="--accent:${pctColor(rptRate)}">
-      <div class="kpi-accent"></div><div class="kpi-glow"></div>
-      <div class="kpi-label">周报完成率</div>
-      <div class="kpi-val" style="color:${pctColor(rptRate)}">${rptRate}<span style="font-size:16px;font-weight:400">%</span></div>
-      <div class="kpi-sub">${wDoneKpi}/${wrList.length||5} 人已提交 · ${pctPill(rptRate)}</div>
     </div>`;
 }
 
@@ -39747,13 +39758,15 @@ function renderDailyReport() {
     }
   });
   document.getElementById('dr-kpi').innerHTML = [
-    { label: '平台数量', value: platforms.length, unit: '个', color: 'var(--pri)' },
-    { label: `日活(${latestDate})`, value: fmtY(totalDAU), unit: '', color: '#06b6d4' },
-    { label: `新增用户(${latestDate})`, value: fmtY(totalNew), unit: '', color: '#10b981' },
-    { label: `充值金额(${latestDate})`, value: fmt(totalRecharge), unit: '', color: '#f59e0b' },
-  ].map(k => `<div class="card kpi-card" style="border-top:3px solid ${k.color}">
+    { label: '平台数量',                          value: platforms.length, sub: '个平台',            color: 'var(--pri)',  accent: '#6366f1' },
+    { label: `日活 (${latestDate.slice(5)||'—'})`, value: fmtY(totalDAU),   sub: '全平台合计',        color: '#06b6d4',     accent: '#06b6d4' },
+    { label: `新增 (${latestDate.slice(5)||'—'})`, value: fmtY(totalNew),   sub: '全平台合计',        color: '#10b981',     accent: '#10b981' },
+    { label: `充值 (${latestDate.slice(5)||'—'})`, value: fmt(totalRecharge), sub: 'CNY',             color: '#f59e0b',     accent: '#f59e0b' },
+  ].map(k => `<div class="kpi" style="--accent:${k.accent}">
+    <div class="kpi-accent"></div><div class="kpi-glow"></div>
     <div class="kpi-label">${k.label}</div>
-    <div class="kpi-value" style="color:${k.color}">${k.value}${k.unit}</div>
+    <div class="kpi-val" style="color:${k.color}">${k.value}</div>
+    <div class="kpi-sub">${k.sub}</div>
   </div>`).join('');
 
   // 平台选择按钮
