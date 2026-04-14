@@ -38690,6 +38690,7 @@ function _rerender(){
   [0,1,2,3].forEach(i=>{ done[i]=false; });
   const curIdx = [...document.querySelectorAll(".panel")].findIndex(p=>p.classList.contains("on"));
   if(curIdx>=0 && curIdx!==11){ renders[curIdx](); done[curIdx]=true; }
+  if(curIdx===11){ renderDailyReport(); }
 }
 
 function setView(mode){
@@ -40222,28 +40223,42 @@ function renderDailyReport() {
   const byPlatform = dr.byPlatform || {};
   const latestDate = dr.latest || (dates.length ? dates[dates.length - 1] : '—');
 
-  // KPI：本月全平台累计（用"全平台"汇总行）
+  // KPI：整月累计 or 单日
   const curMonth = latestDate.slice(0, 7);
   const allRows = (byPlatform['全平台'] || []).filter(r => r.date.startsWith(curMonth));
-  let mDAU = 0, mNew = 0, mRecharge = 0, ret1Sum = 0, ret1Cnt = 0;
-  allRows.forEach(r => {
-    mDAU      += (r.dau || 0);
-    mNew      += (r.newUsers || 0);
-    mRecharge += (r.recharge || 0);
-    if (r.ret1 > 0) { ret1Sum += r.ret1; ret1Cnt++; }
-  });
-  const avgRet1 = ret1Cnt ? (ret1Sum / ret1Cnt * 100).toFixed(1) : '—';
-  // 最新一天日活（单独展示）
-  const todayRow = (byPlatform['全平台'] || []).find(r => r.date === latestDate);
-  const todayDAU = todayRow ? todayRow.dau : 0;
+  const isDay = viewMode === 'day';
 
-  document.getElementById('dr-kpi').innerHTML = [
-    { label: '本月累计日活',                        value: fmtY(mDAU),       sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
-    { label: '本月累计新增',                        value: fmtY(mNew),       sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
-    { label: '本月累计充值',                        value: fmt(mRecharge),   sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
-    { label: `昨日日活 (${latestDate.slice(5)})`,   value: fmtY(todayDAU),   sub: '全平台最新',         color: '#8b5cf6', accent: '#8b5cf6' },
-    { label: '平均次日留存',                        value: avgRet1 + (avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
-  ].map(k => `<div class="kpi" style="--accent:${k.accent}">
+  let kpiCards;
+  if (isDay) {
+    // 单日：显示 selectedDate 当天全平台数据
+    const dayRow = (byPlatform['全平台'] || []).find(r => r.date === selectedDate) || {};
+    kpiCards = [
+      { label: `日活 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.dau||0),      sub: '全平台',  color: '#06b6d4', accent: '#06b6d4' },
+      { label: `新增 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.newUsers||0), sub: '全平台',  color: '#10b981', accent: '#10b981' },
+      { label: `充值 (${selectedDate.slice(5)})`,   value: fmt(dayRow.recharge||0),  sub: 'CNY',     color: '#f59e0b', accent: '#f59e0b' },
+      { label: `次日留存 (${selectedDate.slice(5)})`, value: dayRow.ret1 ? (dayRow.ret1*100).toFixed(1)+'%' : '—', sub: '', color: '#ef4444', accent: '#ef4444' },
+      { label: '平台数量',                           value: platforms.filter(p=>p!=='全平台').length, sub: '个平台', color: '#8b5cf6', accent: '#8b5cf6' },
+    ];
+  } else {
+    // 整月累计
+    let mDAU = 0, mNew = 0, mRecharge = 0, ret1Sum = 0, ret1Cnt = 0;
+    allRows.forEach(r => {
+      mDAU      += (r.dau || 0);
+      mNew      += (r.newUsers || 0);
+      mRecharge += (r.recharge || 0);
+      if (r.ret1 > 0) { ret1Sum += r.ret1; ret1Cnt++; }
+    });
+    const avgRet1 = ret1Cnt ? (ret1Sum / ret1Cnt * 100).toFixed(1) : '—';
+    const todayRow = (byPlatform['全平台'] || []).find(r => r.date === latestDate);
+    kpiCards = [
+      { label: '本月累计日活',   value: fmtY(mDAU),      sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
+      { label: '本月累计新增',   value: fmtY(mNew),      sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
+      { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
+      { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: '全平台', color: '#8b5cf6', accent: '#8b5cf6' },
+      { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
+    ];
+  }
+  document.getElementById('dr-kpi').innerHTML = kpiCards.map(k => `<div class="kpi" style="--accent:${k.accent}">
     <div class="kpi-accent"></div><div class="kpi-glow"></div>
     <div class="kpi-label">${k.label}</div>
     <div class="kpi-val" style="color:${k.color}">${k.value}</div>
