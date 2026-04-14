@@ -21965,6 +21965,15 @@ const MOCK_DATA = {
       "convertCount": 0,
       "convertRate": 0,
       "recoverCNY": 0
+    },
+    {
+      "client": "V",
+      "sales": "卢登",
+      "roi": 21.0,
+      "regCount": 2756,
+      "convertCount": 1421,
+      "convertRate": 51.6,
+      "recoverCNY": 189433
     }
   ],
   "tierData": [
@@ -39826,29 +39835,38 @@ function drRenderCharts() {
   const ret7Vals = rows.map(r => r.ret7 != null ? r.ret7 : null);
 
   // 日活趋势
-  ec('c-dr-dau', ext(BASE('line', xDates, [{ name: '日活', data: dauVals, smooth: true, areaStyle: { opacity: 0.15 } }]), {
-    color: ['#06b6d4'],
-    yAxis: { axisLabel: { formatter: v => v >= 10000 ? (v / 10000).toFixed(1) + 'w' : v } },
-    tooltip: { valueFormatter: v => v == null ? '—' : v.toLocaleString() },
+  ec('c-dr-dau')?.setOption(ext({
+    color:['#06b6d4'],
+    tooltip:{...BASE.tooltip, trigger:'axis'},
+    grid:{left:12,right:12,top:12,bottom:8,containLabel:true},
+    xAxis:{...BASE.xAxis, type:'category', data:xDates, axisLabel:{color:'#94a3b8',fontSize:11}},
+    yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
+    series:[{type:'line',name:'日活',data:dauVals,smooth:true,areaStyle:{opacity:0.15},lineStyle:{width:2}}],
   }));
 
   // 新增用户趋势
-  ec('c-dr-new', ext(BASE('bar', xDates, [{ name: '新增用户', data: newVals }]), {
-    color: ['#10b981'],
-    yAxis: { axisLabel: { formatter: v => v >= 10000 ? (v / 10000).toFixed(1) + 'w' : v } },
-    tooltip: { valueFormatter: v => v == null ? '—' : v.toLocaleString() },
+  ec('c-dr-new')?.setOption(ext({
+    color:['#10b981'],
+    tooltip:{...BASE.tooltip, trigger:'axis'},
+    grid:{left:12,right:12,top:12,bottom:8,containLabel:true},
+    xAxis:{...BASE.xAxis, type:'category', data:xDates, axisLabel:{color:'#94a3b8',fontSize:11}},
+    yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
+    series:[{type:'bar',name:'新增用户',data:newVals,barMaxWidth:20}],
   }));
 
   // 留存率
-  ec('c-dr-ret', ext(BASE('line', xDates, [
-    { name: '次日留存', data: ret1Vals, smooth: true },
-    { name: '3日留存', data: ret3Vals, smooth: true },
-    { name: '7日留存', data: ret7Vals, smooth: true },
-  ]), {
-    color: ['#8b5cf6', '#f59e0b', '#ef4444'],
-    yAxis: { axisLabel: { formatter: v => v == null ? '' : (v * 100).toFixed(0) + '%' }, max: 1 },
-    tooltip: { valueFormatter: v => v == null ? '—' : (v * 100).toFixed(1) + '%' },
-    legend: { show: true },
+  ec('c-dr-ret')?.setOption(ext({
+    color:['#8b5cf6','#f59e0b','#ef4444'],
+    tooltip:{...BASE.tooltip, trigger:'axis', formatter:params=>params[0].name+'<br>'+params.filter(p=>p.value!=null).map(p=>`${p.marker}${p.seriesName}: <b>${(p.value*100).toFixed(1)}%</b>`).join('<br>')},
+    legend:{show:true, textStyle:{color:'#94a3b8'}, bottom:0},
+    grid:{left:12,right:12,top:12,bottom:30,containLabel:true},
+    xAxis:{...BASE.xAxis, type:'category', data:xDates, axisLabel:{color:'#94a3b8',fontSize:11}},
+    yAxis:{...BASE.yAxis, max:1, axisLabel:{color:'#94a3b8', formatter:v=>(v*100).toFixed(0)+'%'}},
+    series:[
+      {type:'line',name:'次日留存',data:ret1Vals,smooth:true,lineStyle:{width:2},connectNulls:false},
+      {type:'line',name:'3日留存', data:ret3Vals,smooth:true,lineStyle:{width:2},connectNulls:false},
+      {type:'line',name:'7日留存', data:ret7Vals,smooth:true,lineStyle:{width:2},connectNulls:false},
+    ],
   }));
 }
 
