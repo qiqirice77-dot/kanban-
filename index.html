@@ -38689,7 +38689,7 @@ function _rerender(){
   renderGlobalKPIs();
   [0,1,2,3].forEach(i=>{ done[i]=false; });
   const curIdx = [...document.querySelectorAll(".panel")].findIndex(p=>p.classList.contains("on"));
-  if(curIdx>=0){ renders[curIdx](); done[curIdx]=true; }
+  if(curIdx>=0 && curIdx!==11){ renders[curIdx](); done[curIdx]=true; }
 }
 
 function setView(mode){
@@ -40263,33 +40263,21 @@ function drSwitch(plat) {
 
 function drRenderCharts() {
   const dr = MOCK_DATA.dailyReport || {};
-  const dates = dr.dates || [];
   const byPlatform = dr.byPlatform || {};
+  const curMonth = (dr.latest || '').slice(0, 7);  // 只显示本月
 
   // 聚合数据
   let rows = [];
   if (drPlatform === '全平台') {
-    // 按日期汇总所有平台
-    const map = {};
-    Object.values(byPlatform).forEach(arr => {
-      arr.forEach(r => {
-        if (!map[r.date]) map[r.date] = { date: r.date, dau: 0, newUsers: 0, recharge: 0, ret1: [], ret3: [], ret7: [] };
-        map[r.date].dau += r.dau;
-        map[r.date].newUsers += r.newUsers;
-        map[r.date].recharge += r.recharge;
-        if (r.ret1 > 0) map[r.date].ret1.push(r.ret1);
-        if (r.ret3 > 0) map[r.date].ret3.push(r.ret3);
-        if (r.ret7 > 0) map[r.date].ret7.push(r.ret7);
-      });
-    });
-    rows = dates.map(d => {
-      const m = map[d] || { dau: 0, newUsers: 0, recharge: 0, ret1: [], ret3: [], ret7: [] };
-      const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length * 100) / 100 : null;
-      return { date: d, dau: m.dau, newUsers: m.newUsers, recharge: m.recharge, ret1: avg(m.ret1), ret3: avg(m.ret3), ret7: avg(m.ret7) };
-    });
+    // 直接用 Excel 里的"全平台"汇总行，避免重复累加
+    rows = (byPlatform['全平台'] || [])
+      .filter(r => r.date.startsWith(curMonth))
+      .sort((a, b) => a.date.localeCompare(b.date));
     document.getElementById('dr-trend-title').textContent = '全平台日活趋势';
   } else {
-    rows = (byPlatform[drPlatform] || []).sort((a, b) => a.date.localeCompare(b.date));
+    rows = (byPlatform[drPlatform] || [])
+      .filter(r => r.date.startsWith(curMonth))
+      .sort((a, b) => a.date.localeCompare(b.date));
     document.getElementById('dr-trend-title').textContent = `${drPlatform} 日活趋势`;
   }
 
