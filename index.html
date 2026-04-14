@@ -40330,6 +40330,7 @@ const done = Array(12).fill(false);
 function go(idx){
   document.querySelectorAll(".nav-btn").forEach((b,i)=>b.classList.toggle("active",i===idx));
   document.querySelectorAll(".panel").forEach((p,i)=>p.classList.toggle("on",i===idx));
+  document.getElementById("g-kpi").style.display = idx===11 ? "none" : "";
   if(!done[idx]){ renders[idx](); done[idx]=true; }
 }
 
