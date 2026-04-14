@@ -955,7 +955,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
 
   <!-- 11 产品日报 -->
   <div class="panel" id="p11">
-    <div class="g4 mb16" id="dr-kpi"></div>
+    <div class="g5 mb16" id="dr-kpi"></div>
     <div class="card mb16">
       <div class="card-hd">
         <div class="card-title">平台选择</div>
@@ -40222,21 +40222,27 @@ function renderDailyReport() {
   const byPlatform = dr.byPlatform || {};
   const latestDate = dr.latest || (dates.length ? dates[dates.length - 1] : '—');
 
-  // KPI 汇总（取最新一天全平台数据）
-  let totalDAU = 0, totalNew = 0, totalRecharge = 0;
-  Object.values(byPlatform).forEach(arr => {
-    const entry = arr.find(r => r.date === latestDate);
-    if (entry) {
-      totalDAU += (entry.dau || 0);
-      totalNew += (entry.newUsers || 0);
-      totalRecharge += (entry.recharge || 0);
-    }
+  // KPI：本月全平台累计（用"全平台"汇总行）
+  const curMonth = latestDate.slice(0, 7);
+  const allRows = (byPlatform['全平台'] || []).filter(r => r.date.startsWith(curMonth));
+  let mDAU = 0, mNew = 0, mRecharge = 0, ret1Sum = 0, ret1Cnt = 0;
+  allRows.forEach(r => {
+    mDAU      += (r.dau || 0);
+    mNew      += (r.newUsers || 0);
+    mRecharge += (r.recharge || 0);
+    if (r.ret1 > 0) { ret1Sum += r.ret1; ret1Cnt++; }
   });
+  const avgRet1 = ret1Cnt ? (ret1Sum / ret1Cnt * 100).toFixed(1) : '—';
+  // 最新一天日活（单独展示）
+  const todayRow = (byPlatform['全平台'] || []).find(r => r.date === latestDate);
+  const todayDAU = todayRow ? todayRow.dau : 0;
+
   document.getElementById('dr-kpi').innerHTML = [
-    { label: '平台数量',                          value: platforms.length, sub: '个平台',            color: 'var(--pri)',  accent: '#6366f1' },
-    { label: `日活 (${latestDate.slice(5)||'—'})`, value: fmtY(totalDAU),   sub: '全平台合计',        color: '#06b6d4',     accent: '#06b6d4' },
-    { label: `新增 (${latestDate.slice(5)||'—'})`, value: fmtY(totalNew),   sub: '全平台合计',        color: '#10b981',     accent: '#10b981' },
-    { label: `充值 (${latestDate.slice(5)||'—'})`, value: fmt(totalRecharge), sub: 'CNY',             color: '#f59e0b',     accent: '#f59e0b' },
+    { label: '本月累计日活',                        value: fmtY(mDAU),       sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
+    { label: '本月累计新增',                        value: fmtY(mNew),       sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
+    { label: '本月累计充值',                        value: fmt(mRecharge),   sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
+    { label: `昨日日活 (${latestDate.slice(5)})`,   value: fmtY(todayDAU),   sub: '全平台最新',         color: '#8b5cf6', accent: '#8b5cf6' },
+    { label: '平均次日留存',                        value: avgRet1 + (avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
   ].map(k => `<div class="kpi" style="--accent:${k.accent}">
     <div class="kpi-accent"></div><div class="kpi-glow"></div>
     <div class="kpi-label">${k.label}</div>
