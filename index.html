@@ -629,7 +629,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
   <button class="nav-btn" onclick="go(2)">📈 拓新/续费透视</button>
   <button class="nav-btn" onclick="go(3)">🔍 个人底裤深扒</button>
   <button class="nav-btn" onclick="go(4)">⚠️ 到期预警</button>
-  <button class="nav-btn" onclick="go(5)">📋 周报月报</button>
+  <button class="nav-btn" onclick="go(5)" style="display:none">📋 周报月报</button>
   <button class="nav-btn" onclick="go(6)">💹 ROI分析</button>
   <button class="nav-btn" onclick="go(7)">👥 客户分层</button>
   <button class="nav-btn" onclick="go(8)">💬 广告主反馈</button>
@@ -1000,10 +1000,10 @@ const MOCK_DATA = {
         },
         {
           "name": "黄凯悦",
-          "actual": 2470000,
+          "actual": 2650000,
           "target": 3500000,
           "newOrders": 41,
-          "oldClients": 27,
+          "oldClients": 28,
           "color": "#FF9100"
         },
         {
@@ -1043,7 +1043,7 @@ const MOCK_DATA = {
           "name": "黄凯悦",
           "newActual": 660000,
           "newTarget": 1500000,
-          "renewActual": 1810000,
+          "renewActual": 1990000,
           "renewTarget": 2000000
         },
         {
@@ -1073,9 +1073,9 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 15569755,
-            "target": 17126730,
-            "mom": -17.8,
+            "actual": 15749755,
+            "target": 17324730,
+            "mom": -16.8,
             "icon": "⏱️",
             "color": "#1E88E5"
           },
@@ -1101,10 +1101,10 @@ const MOCK_DATA = {
         "industries": [
           {
             "name": "棋牌",
-            "actual": 9306038,
-            "target": 10236641,
-            "mom": -17.0,
-            "clients": 17
+            "actual": 9486038,
+            "target": 10434641,
+            "mom": -15.3,
+            "clients": 18
           },
           {
             "name": "播放器",
@@ -1165,8 +1165,8 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "棋牌",
-              "amount": 2370000,
-              "orders": 44
+              "amount": 2550000,
+              "orders": 45
             },
             {
               "industry": "播放器",
@@ -1177,8 +1177,8 @@ const MOCK_DATA = {
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 2470000,
-              "orders": 68
+              "amount": 2650000,
+              "orders": 69
             }
           ],
           "clients": []
@@ -1305,7 +1305,7 @@ const MOCK_DATA = {
           "clients": []
         }
       },
-      "totalActual": 16649603,
+      "totalActual": 16829603,
       "totalTarget": 23500000,
       "expireToday": [],
       "expireSoon": [
@@ -6957,6 +6957,15 @@ const MOCK_DATA = {
           "amount": 60000,
           "type": "普通",
           "expireDate": "2026-05-19"
+        },
+        {
+          "client": "潇洒",
+          "group": "（澳门皇冠）12.13—04.13",
+          "displayName": "（澳门皇冠）12.13—04.13",
+          "sales": "黄凯悦",
+          "amount": 180000,
+          "type": "普通",
+          "expireDate": "2026-05-21"
         }
       ],
       "dailyByDate": {
@@ -7048,9 +7057,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7076,10 +7085,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -7207,9 +7216,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7235,10 +7244,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -7366,9 +7375,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7394,10 +7403,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -7525,9 +7534,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7553,10 +7562,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -7684,9 +7693,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7712,10 +7721,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -7843,9 +7852,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -7871,10 +7880,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8002,9 +8011,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8030,10 +8039,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8161,9 +8170,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8189,10 +8198,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8320,9 +8329,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8348,10 +8357,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8479,9 +8488,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8507,10 +8516,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8638,9 +8647,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8666,10 +8675,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8797,9 +8806,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8825,10 +8834,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -8956,9 +8965,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -8984,10 +8993,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9115,9 +9124,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9143,10 +9152,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9274,9 +9283,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9302,10 +9311,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9433,9 +9442,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9461,10 +9470,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9592,9 +9601,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9620,10 +9629,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9751,9 +9760,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9779,10 +9788,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -9910,9 +9919,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -9938,10 +9947,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10069,9 +10078,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10097,10 +10106,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10153,10 +10162,10 @@ const MOCK_DATA = {
             },
             {
               "name": "黄凯悦",
-              "actual": 0,
+              "actual": 180000,
               "target": 116666,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 1,
               "color": "#FF9100"
             },
             {
@@ -10196,7 +10205,7 @@ const MOCK_DATA = {
               "name": "黄凯悦",
               "newActual": 0,
               "newTarget": 50000,
-              "renewActual": 0,
+              "renewActual": 180000,
               "renewTarget": 66666
             },
             {
@@ -10221,16 +10230,16 @@ const MOCK_DATA = {
               "renewTarget": 70000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 180000,
           "totalTarget": 783333,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10256,10 +10265,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10387,9 +10396,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10415,10 +10424,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10546,9 +10555,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10574,10 +10583,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10705,9 +10714,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10733,10 +10742,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -10864,9 +10873,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -10892,10 +10901,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -11023,9 +11032,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -11051,10 +11060,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -11182,9 +11191,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -11210,10 +11219,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -11341,9 +11350,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -11369,10 +11378,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -11500,9 +11509,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -11528,10 +11537,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -11659,9 +11668,9 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 15569755,
-                "target": 17126730,
-                "mom": -17.8,
+                "actual": 15749755,
+                "target": 17324730,
+                "mom": -16.8,
                 "icon": "⏱️",
                 "color": "#1E88E5"
               },
@@ -11687,10 +11696,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 9306038,
-                "target": 10236641,
-                "mom": -17.0,
-                "clients": 17
+                "actual": 9486038,
+                "target": 10434641,
+                "mom": -15.3,
+                "clients": 18
               },
               {
                 "name": "播放器",
@@ -24442,6 +24451,17 @@ const MOCK_DATA = {
     },
     {
       "id": 19,
+      "name": "（澳门皇冠）12.13—04.13",
+      "tg": "",
+      "adType": "棋牌",
+      "sales": "黄凯悦",
+      "tier": "成长客户",
+      "contracts": 7,
+      "totalRevenue": 840000,
+      "firstDate": "2026-02-16"
+    },
+    {
+      "id": 20,
       "name": "hx cps约炮合作群",
       "tg": "",
       "adType": "约炮",
@@ -24452,7 +24472,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-24"
     },
     {
-      "id": 20,
+      "id": 21,
       "name": "330a海角半月测试",
       "tg": "",
       "adType": "春药/约炮",
@@ -24463,7 +24483,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-03"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "全套首位大弹窗",
       "tg": "",
       "adType": "棋牌",
@@ -24474,7 +24494,7 @@ const MOCK_DATA = {
       "firstDate": "2026-03-23"
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "天下第一棋牌合作群",
       "tg": "",
       "adType": "棋牌",
@@ -24485,7 +24505,7 @@ const MOCK_DATA = {
       "firstDate": "2026-02-23"
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "通铺CPA2.5测试",
       "tg": "",
       "adType": "播放器",
@@ -24494,17 +24514,6 @@ const MOCK_DATA = {
       "contracts": 2,
       "totalRevenue": 700000,
       "firstDate": "2026-03-10"
-    },
-    {
-      "id": 24,
-      "name": "（澳门皇冠）12.13—04.13",
-      "tg": "",
-      "adType": "棋牌",
-      "sales": "黄凯悦",
-      "tier": "成长客户",
-      "contracts": 6,
-      "totalRevenue": 660000,
-      "firstDate": "2026-02-16"
     },
     {
       "id": 25,
@@ -33956,6 +33965,19 @@ const MOCK_DATA = {
         "gap": 0.0,
         "payStatus": "已收款",
         "type": "续费"
+      },
+      {
+        "id": "（澳门皇冠）12.13—04.13",
+        "product": "HX-001",
+        "sales": "黄凯悦",
+        "mode": "CPT",
+        "reportCNY": 180000,
+        "recvUSD": 0.0,
+        "rate": 0.0,
+        "recvCNY": 180000.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "type": "续费"
       }
     ],
     "platformSpend": [
@@ -35894,11 +35916,11 @@ const MOCK_DATA = {
         "platform": "抖阴Plus",
         "platformId": "HX-005",
         "mode": "补量",
-        "amount": 43,
+        "amount": 41,
         "note": ""
       }
     ],
-    "total": 169639,
+    "total": 169637,
     "platformCount": 19
   },
   "dailyReport": {
