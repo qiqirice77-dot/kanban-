@@ -970,55 +970,9 @@ tr:hover td{background:rgba(255,255,255,.03)}
       <div class="card-hd"><div class="card-title">新增用户趋势</div></div>
       <div class="ch ch240" id="c-dr-new"></div>
     </div>
-    <div class="card mb16">
+    <div class="card">
       <div class="card-hd"><div class="card-title">留存率</div></div>
       <div class="ch ch240" id="c-dr-ret"></div>
-    </div>
-    <div class="card">
-      <div class="card-hd">
-        <div class="card-title">日活环比详细分析 (3月 vs 4月)</div>
-        <div id="dr-hb-summary" style="font-size:12px;color:var(--text3);margin-left:auto;padding-right:16px"></div>
-      </div>
-      <div class="ch ch280" id="c-dr-hb"></div>
-      <div style="padding:0 16px 16px">
-        <div style="max-height:280px;overflow-y:auto;border:1px solid rgba(255,255,255,0.06);border-radius:8px">
-          <table id="dr-hb-table" style="width:100%;border-collapse:collapse;font-size:12px">
-            <thead style="position:sticky;top:0;background:#1c1c1c;z-index:1">
-              <tr style="text-align:left;color:#94a3b8">
-                <th style="padding:10px 12px;font-weight:500">日期</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">3月日活</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">4月日活</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">环比</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:center">趋势</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="card mt16">
-      <div class="card-hd">
-        <div class="card-title">新增用户环比详细分析 (3月 vs 4月)</div>
-        <div id="dr-new-hb-summary" style="font-size:12px;color:var(--text3);margin-left:auto;padding-right:16px"></div>
-      </div>
-      <div class="ch ch280" id="c-dr-new-hb"></div>
-      <div style="padding:0 16px 16px">
-        <div style="max-height:280px;overflow-y:auto;border:1px solid rgba(255,255,255,0.06);border-radius:8px">
-          <table id="dr-new-hb-table" style="width:100%;border-collapse:collapse;font-size:12px">
-            <thead style="position:sticky;top:0;background:#1c1c1c;z-index:1">
-              <tr style="text-align:left;color:#94a3b8">
-                <th style="padding:10px 12px;font-weight:500">日期</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">3月新增</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">4月新增</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:right">环比</th>
-                <th style="padding:10px 12px;font-weight:500;text-align:center">趋势</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1045,20 +999,20 @@ const MOCK_DATA = {
           "color": "#1E88E5"
         },
         {
+          "name": "吴挺",
+          "actual": 4142587,
+          "target": 3900000,
+          "newOrders": 189,
+          "oldClients": 73,
+          "color": "#00BCD4"
+        },
+        {
           "name": "郭永正",
           "actual": 3939251,
           "target": 3700000,
           "newOrders": 91,
           "oldClients": 58,
           "color": "#7C4DFF"
-        },
-        {
-          "name": "吴挺",
-          "actual": 3922586,
-          "target": 3900000,
-          "newOrders": 189,
-          "oldClients": 53,
-          "color": "#00BCD4"
         },
         {
           "name": "黄凯悦",
@@ -1086,18 +1040,18 @@ const MOCK_DATA = {
           "renewTarget": 4000000
         },
         {
+          "name": "吴挺",
+          "newActual": 2314974,
+          "newTarget": 1900000,
+          "renewActual": 1827612,
+          "renewTarget": 2000000
+        },
+        {
           "name": "郭永正",
           "newActual": 1949272,
           "newTarget": 1800000,
           "renewActual": 1989979,
           "renewTarget": 1900000
-        },
-        {
-          "name": "吴挺",
-          "newActual": 2314974,
-          "newTarget": 1900000,
-          "renewActual": 1607612,
-          "renewTarget": 2000000
         },
         {
           "name": "黄凯悦",
@@ -1119,8 +1073,8 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 19864612,
-            "target": 18968846,
+            "actual": 20084613,
+            "target": 18979565,
             "mom": 0,
             "icon": "⏱️",
             "color": "#1E88E5"
@@ -1129,7 +1083,7 @@ const MOCK_DATA = {
             "mode": "CPA",
             "label": "按行为计费",
             "actual": 902300,
-            "target": 861612,
+            "target": 852656,
             "mom": 0,
             "icon": "🖱️",
             "color": "#7C4DFF"
@@ -1138,7 +1092,7 @@ const MOCK_DATA = {
             "mode": "CPS",
             "label": "按销售提成",
             "actual": 177548,
-            "target": 169542,
+            "target": 167779,
             "mom": 0,
             "icon": "💰",
             "color": "#00E676"
@@ -1161,17 +1115,17 @@ const MOCK_DATA = {
           },
           {
             "name": "播放器",
-            "actual": 3244024,
+            "actual": 3394024,
             "target": 4000000,
             "mom": 0,
-            "clients": 19
+            "clients": 20
           },
           {
             "name": "直播",
-            "actual": 1931967,
-            "target": 2125164,
+            "actual": 2001968,
+            "target": 2202165,
             "mom": 0,
-            "clients": 2
+            "clients": 3
           },
           {
             "name": "春药",
@@ -2256,1093 +2210,12 @@ const MOCK_DATA = {
             }
           ]
         },
-        "郭永正": {
-          "industryDetails": [
-            {
-              "industry": "棋牌",
-              "amount": 1999988,
-              "orders": 57
-            },
-            {
-              "industry": "直播",
-              "amount": 1381968,
-              "orders": 54
-            },
-            {
-              "industry": "播放器",
-              "amount": 507298,
-              "orders": 35
-            },
-            {
-              "industry": "成人游戏",
-              "amount": 49996,
-              "orders": 3
-            }
-          ],
-          "modeDetails": [
-            {
-              "mode": "CPT",
-              "amount": 3731951,
-              "orders": 130
-            },
-            {
-              "mode": "CPA",
-              "amount": 207300,
-              "orders": 19
-            }
-          ],
-          "clients": [
-            {
-              "name": "游戏",
-              "type": "老客户续费",
-              "contract": 15000,
-              "expireDate": "2026-04-30",
-              "status": "即将到期"
-            },
-            {
-              "name": "游戏",
-              "type": "老客户续费",
-              "contract": 29996,
-              "expireDate": "2026-04-30",
-              "status": "即将到期"
-            },
-            {
-              "name": "游戏",
-              "type": "老客户续费",
-              "contract": 5000,
-              "expireDate": "2026-04-30",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 109998,
-              "expireDate": "2026-05-03",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 50000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 20000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 30000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 15000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 15000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 20000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 10000,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 19982,
-              "expireDate": "2026-05-05",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 45000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 14994,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 15000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 25000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 25000,
-              "expireDate": "2026-05-01",
-              "status": "即将到期"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 20000,
-              "expireDate": "2026-04-09",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 76972,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 27148,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 20405,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 17736,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 12669,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 10326,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 10065,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 7372,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 6230,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 4426,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 4430,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 3085,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 2026,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 885,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 1906,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 644,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 440,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 298,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户新增",
-              "contract": 237,
-              "expireDate": "消耗完",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户续费",
-              "contract": 29996,
-              "expireDate": "2026-05-07",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 204960,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 72290,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 54335,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 47227,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 33734,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 27497,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 26801,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 19629,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 16590,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 11785,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 11796,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 8214,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5394,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 2358,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 5076,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 1714,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 1173,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 793,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 632,
-              "expireDate": "2026-05-12",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 185000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 125000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 125000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 15000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 15000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 15000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 25000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 25000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 75000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 75000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 95000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 135000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 35000,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 34994,
-              "expireDate": "2026-05-13",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 150000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 30000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 100000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 20000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 19995,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 30000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10000,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户续费",
-              "contract": 10001,
-              "expireDate": "2026-05-18",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 185652,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 65480,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 49217,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 42778,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 30557,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 24907,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 24276,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 12782,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 15028,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 10675,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 10685,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 7440,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 4886,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 2136,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 4598,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 1552,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 1062,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 718,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 572,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "棋牌",
-              "type": "老客户新增",
-              "contract": 4999,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户新增",
-              "contract": 110000,
-              "expireDate": "2026-05-22",
-              "status": "正常"
-            },
-            {
-              "name": "直播",
-              "type": "老客户续费",
-              "contract": 110000,
-              "expireDate": "2026-05-30",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 160665,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 61962,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 20026,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 17021,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 8393,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 7249,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 5797,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 5383,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 4295,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 3428,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 1950,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 1381,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 1080,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 590,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 436,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            },
-            {
-              "name": "播放器",
-              "type": "老客户续费",
-              "contract": 342,
-              "expireDate": "2026-05-27",
-              "status": "正常"
-            }
-          ]
-        },
         "吴挺": {
           "industryDetails": [
             {
               "industry": "播放器",
-              "amount": 2486727,
-              "orders": 180
+              "amount": 2636727,
+              "orders": 198
             },
             {
               "industry": "约炮",
@@ -3351,8 +2224,8 @@ const MOCK_DATA = {
             },
             {
               "industry": "直播",
-              "amount": 549999,
-              "orders": 19
+              "amount": 620000,
+              "orders": 21
             },
             {
               "industry": "春药",
@@ -3373,8 +2246,8 @@ const MOCK_DATA = {
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 3221713,
-              "orders": 203
+              "amount": 3441714,
+              "orders": 223
             },
             {
               "mode": "CPA",
@@ -5081,6 +3954,1227 @@ const MOCK_DATA = {
               "contract": 120000,
               "expireDate": "2026-05-24",
               "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 72144,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 28139,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 12526,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 8685,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 8323,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 3792,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 3617,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 3384,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 2603,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 2375,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 1234,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 878,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 672,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 649,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 295,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 284,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 226,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "中国好黄站 JVID 免费色站",
+              "type": "老客户续费",
+              "contract": 174,
+              "expireDate": "2026-05-11",
+              "status": "正常"
+            },
+            {
+              "name": "第一直播",
+              "type": "老客户续费",
+              "contract": 30000,
+              "expireDate": "2026-05-28",
+              "status": "正常"
+            },
+            {
+              "name": "第一直播",
+              "type": "老客户续费",
+              "contract": 40000,
+              "expireDate": "2026-05-28",
+              "status": "正常"
+            }
+          ]
+        },
+        "郭永正": {
+          "industryDetails": [
+            {
+              "industry": "棋牌",
+              "amount": 1999988,
+              "orders": 57
+            },
+            {
+              "industry": "直播",
+              "amount": 1381968,
+              "orders": 54
+            },
+            {
+              "industry": "播放器",
+              "amount": 507298,
+              "orders": 35
+            },
+            {
+              "industry": "成人游戏",
+              "amount": 49996,
+              "orders": 3
+            }
+          ],
+          "modeDetails": [
+            {
+              "mode": "CPT",
+              "amount": 3731951,
+              "orders": 130
+            },
+            {
+              "mode": "CPA",
+              "amount": 207300,
+              "orders": 19
+            }
+          ],
+          "clients": [
+            {
+              "name": "游戏",
+              "type": "老客户续费",
+              "contract": 15000,
+              "expireDate": "2026-04-30",
+              "status": "即将到期"
+            },
+            {
+              "name": "游戏",
+              "type": "老客户续费",
+              "contract": 29996,
+              "expireDate": "2026-04-30",
+              "status": "即将到期"
+            },
+            {
+              "name": "游戏",
+              "type": "老客户续费",
+              "contract": 5000,
+              "expireDate": "2026-04-30",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 109998,
+              "expireDate": "2026-05-03",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 50000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 20000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 30000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 15000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 15000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 20000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 10000,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 19982,
+              "expireDate": "2026-05-05",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 45000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 14994,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 15000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 25000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 25000,
+              "expireDate": "2026-05-01",
+              "status": "即将到期"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 20000,
+              "expireDate": "2026-04-09",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 76972,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 27148,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 20405,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 17736,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 12669,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 10326,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 10065,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 7372,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 6230,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 4426,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 4430,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 3085,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 2026,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 885,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 1906,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 644,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 440,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 298,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户新增",
+              "contract": 237,
+              "expireDate": "消耗完",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户续费",
+              "contract": 29996,
+              "expireDate": "2026-05-07",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 204960,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 72290,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 54335,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 47227,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 33734,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 27497,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 26801,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 19629,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 16590,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 11785,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 11796,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 8214,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5394,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 2358,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 5076,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 1714,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 1173,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 793,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 632,
+              "expireDate": "2026-05-12",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 185000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 125000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 125000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 15000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 15000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 15000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 25000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 25000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 75000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 75000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 95000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 135000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 35000,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 34994,
+              "expireDate": "2026-05-13",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 150000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 30000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 100000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 20000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 19995,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 30000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10000,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 10001,
+              "expireDate": "2026-05-18",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 185652,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 65480,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 49217,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 42778,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 30557,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 24907,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 24276,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 12782,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 15028,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 10675,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 10685,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 7440,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 4886,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 2136,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 4598,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 1552,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 1062,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 718,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 572,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 4999,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户新增",
+              "contract": 110000,
+              "expireDate": "2026-05-22",
+              "status": "正常"
+            },
+            {
+              "name": "直播",
+              "type": "老客户续费",
+              "contract": 110000,
+              "expireDate": "2026-05-30",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 160665,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 61962,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 20026,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 17021,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 8393,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 7249,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 5797,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 5383,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 4295,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 3428,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 1950,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 1381,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 1080,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 590,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 436,
+              "expireDate": "2026-05-27",
+              "status": "正常"
+            },
+            {
+              "name": "播放器",
+              "type": "老客户续费",
+              "contract": 342,
+              "expireDate": "2026-05-27",
+              "status": "正常"
             }
           ]
         },
@@ -6324,7 +6418,7 @@ const MOCK_DATA = {
           ]
         }
       },
-      "totalActual": 20944460,
+      "totalActual": 21164461,
       "totalTarget": 20000000,
       "expireToday": [],
       "expireSoon": [
@@ -8859,6 +8953,222 @@ const MOCK_DATA = {
           "expireDate": "2026-05-11",
           "daysLeft": 13,
           "contact": "pg官网"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 72143.9334,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 28138.9878,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 12525.975,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 8685.0225,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 8322.9993,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 3792.0267,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 3616.9749,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 3383.9883,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 2602.9773,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 2374.9803,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 1234.0251,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 878.031,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 672.0021,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 648.9945,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 295.0101,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 283.9914,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 225.9873,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
+        },
+        {
+          "client": "中国好黄站 JVID 免费色站",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 174.0123,
+          "tier": "培育客户",
+          "source": "四月",
+          "expireDate": "2026-05-11",
+          "daysLeft": 13,
+          "contact": "中国好黄站 JVID 免费色站"
         },
         {
           "client": "直播",
@@ -12027,6 +12337,30 @@ const MOCK_DATA = {
           "expireDate": "2026-05-28",
           "daysLeft": 30,
           "contact": "PG爆爆爆、PG电子"
+        },
+        {
+          "client": "第一直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 30000.2252,
+          "tier": "观察客户",
+          "source": "四月",
+          "expireDate": "2026-05-28",
+          "daysLeft": 30,
+          "contact": "第一直播"
+        },
+        {
+          "client": "第一直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 40000.2548,
+          "tier": "观察客户",
+          "source": "四月",
+          "expireDate": "2026-05-28",
+          "daysLeft": 30,
+          "contact": "第一直播"
         }
       ],
       "dailyByDate": {
@@ -12042,20 +12376,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 79995,
               "target": 3900000,
               "newOrders": 1,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12083,18 +12417,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 79995,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12118,8 +12452,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12128,7 +12462,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12137,7 +12471,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12160,17 +12494,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12201,20 +12535,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 529994,
               "target": 3900000,
               "newOrders": 34,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12242,18 +12576,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 529994,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12277,8 +12611,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12287,7 +12621,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12296,7 +12630,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12319,17 +12653,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12360,20 +12694,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 179994,
-              "target": 3700000,
-              "newOrders": 2,
-              "oldClients": 3,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 79997,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 179994,
+              "target": 3700000,
+              "newOrders": 2,
+              "oldClients": 3,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12401,18 +12735,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 129998,
-              "newTarget": 1800000,
-              "renewActual": 49996,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 79997,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 129998,
+              "newTarget": 1800000,
+              "renewActual": 49996,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12436,8 +12770,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12446,7 +12780,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12455,7 +12789,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12478,17 +12812,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12519,20 +12853,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 299982,
-              "target": 3700000,
-              "newOrders": 20,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 299982,
+              "target": 3700000,
+              "newOrders": 20,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12560,18 +12894,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 299982,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 299982,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12595,8 +12929,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12605,7 +12939,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12614,7 +12948,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12637,17 +12971,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12678,20 +13012,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12719,18 +13053,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12754,8 +13088,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12764,7 +13098,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12773,7 +13107,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12796,17 +13130,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12837,20 +13171,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 199996,
               "target": 3900000,
               "newOrders": 19,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -12878,18 +13212,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 199996,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -12913,8 +13247,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -12923,7 +13257,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -12932,7 +13266,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -12955,17 +13289,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -12996,20 +13330,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 237296,
-              "target": 3700000,
-              "newOrders": 19,
-              "oldClients": 1,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 949991,
               "target": 3900000,
               "newOrders": 1,
               "oldClients": 21,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 237296,
+              "target": 3700000,
+              "newOrders": 19,
+              "oldClients": 1,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13037,18 +13371,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 207300,
-              "newTarget": 1800000,
-              "renewActual": 29996,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 199996,
               "newTarget": 1900000,
               "renewActual": 749995,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 207300,
+              "newTarget": 1800000,
+              "renewActual": 29996,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13072,8 +13406,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13082,7 +13416,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13091,7 +13425,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13114,17 +13448,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13155,20 +13489,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 105871,
               "target": 3900000,
               "newOrders": 20,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13196,18 +13530,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 99998,
               "newTarget": 1900000,
               "renewActual": 5873,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13231,8 +13565,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13241,7 +13575,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13250,7 +13584,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13273,17 +13607,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13314,20 +13648,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 551999,
-              "target": 3700000,
-              "newOrders": 19,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 529997,
               "target": 3900000,
               "newOrders": 19,
               "oldClients": 5,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 551999,
+              "target": 3700000,
+              "newOrders": 19,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13355,18 +13689,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 551999,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 350000,
               "newTarget": 1900000,
               "renewActual": 179997,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 551999,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13390,8 +13724,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13400,7 +13734,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13409,7 +13743,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13432,17 +13766,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13473,20 +13807,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 199994,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 19,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13514,18 +13848,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 199994,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13549,8 +13883,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13559,7 +13893,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13568,7 +13902,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13591,17 +13925,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13632,20 +13966,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 49998,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13673,18 +14007,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 49998,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13708,8 +14042,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13718,7 +14052,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13727,7 +14061,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13750,17 +14084,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13791,20 +14125,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13832,18 +14166,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -13867,8 +14201,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -13877,7 +14211,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -13886,7 +14220,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -13909,17 +14243,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -13950,20 +14284,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 999994,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 16,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 150000,
               "target": 3900000,
               "newOrders": 19,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 999994,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 16,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -13991,18 +14325,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 999994,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 150000,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 999994,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14026,8 +14360,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14036,7 +14370,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14045,7 +14379,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14068,17 +14402,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14109,20 +14443,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 726755,
               "target": 3900000,
               "newOrders": 57,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14150,18 +14484,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 625001,
               "newTarget": 1900000,
               "renewActual": 101754,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14185,8 +14519,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14195,7 +14529,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14204,7 +14538,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14227,17 +14561,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14268,20 +14602,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14309,18 +14643,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14344,8 +14678,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14354,7 +14688,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14363,7 +14697,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14386,17 +14720,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14427,20 +14761,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 50000,
-              "target": 3700000,
-              "newOrders": 2,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 80000,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 50000,
+              "target": 3700000,
+              "newOrders": 2,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14468,18 +14802,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 50000,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 80000,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 50000,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14503,8 +14837,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14513,7 +14847,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14522,7 +14856,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14545,17 +14879,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14586,20 +14920,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 99994,
-              "target": 3700000,
-              "newOrders": 8,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 99994,
+              "target": 3700000,
+              "newOrders": 8,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14627,18 +14961,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 99994,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 99994,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14662,8 +14996,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14672,7 +15006,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14681,7 +15015,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14704,17 +15038,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14745,20 +15079,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 499995,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 21,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 79994,
               "target": 3900000,
               "newOrders": 19,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 499995,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 21,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14786,18 +15120,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 499995,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 79994,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 499995,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14821,8 +15155,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14831,7 +15165,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14840,7 +15174,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -14863,17 +15197,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -14904,20 +15238,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 20003,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -14945,18 +15279,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 20003,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -14980,8 +15314,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -14990,7 +15324,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -14999,7 +15333,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15022,17 +15356,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15063,20 +15397,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15104,18 +15438,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15139,8 +15473,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15149,7 +15483,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15158,7 +15492,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15181,17 +15515,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15222,20 +15556,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15263,18 +15597,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15298,8 +15632,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15308,7 +15642,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15317,7 +15651,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15340,17 +15674,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15381,20 +15715,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 610000,
-              "target": 3700000,
-              "newOrders": 21,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 610000,
+              "target": 3700000,
+              "newOrders": 21,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15422,18 +15756,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 610000,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 610000,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15457,8 +15791,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15467,7 +15801,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15476,7 +15810,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15499,17 +15833,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15540,20 +15874,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15581,18 +15915,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15616,8 +15950,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15626,7 +15960,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15635,7 +15969,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15658,17 +15992,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15699,20 +16033,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 120000,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15740,18 +16074,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 120000,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15775,8 +16109,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15785,7 +16119,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15794,7 +16128,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15817,17 +16151,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -15858,20 +16192,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 20000,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 1,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -15899,18 +16233,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 20000,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -15934,8 +16268,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -15944,7 +16278,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -15953,7 +16287,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -15976,17 +16310,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -16017,20 +16351,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -16058,18 +16392,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -16093,8 +16427,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -16103,7 +16437,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -16112,7 +16446,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -16135,17 +16469,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -16176,20 +16510,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
+              "name": "吴挺",
+              "actual": 150000,
+              "target": 3900000,
+              "newOrders": 0,
+              "oldClients": 18,
+              "color": "#00BCD4"
+            },
+            {
               "name": "郭永正",
               "actual": 409998,
               "target": 3700000,
               "newOrders": 0,
               "oldClients": 17,
               "color": "#7C4DFF"
-            },
-            {
-              "name": "吴挺",
-              "actual": 0,
-              "target": 3900000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00BCD4"
             },
             {
               "name": "黄凯悦",
@@ -16217,18 +16551,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
+              "name": "吴挺",
+              "newActual": 0,
+              "newTarget": 1900000,
+              "renewActual": 150000,
+              "renewTarget": 2000000
+            },
+            {
               "name": "郭永正",
               "newActual": 0,
               "newTarget": 1800000,
               "renewActual": 409998,
               "renewTarget": 1900000
-            },
-            {
-              "name": "吴挺",
-              "newActual": 0,
-              "newTarget": 1900000,
-              "renewActual": 0,
-              "renewTarget": 2000000
             },
             {
               "name": "黄凯悦",
@@ -16245,15 +16579,15 @@ const MOCK_DATA = {
               "renewTarget": 2000000
             }
           ],
-          "totalActual": 979991,
+          "totalActual": 1129991,
           "totalTarget": 666667,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -16262,7 +16596,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -16271,7 +16605,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -16294,17 +16628,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -16335,20 +16669,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
+              "name": "吴挺",
+              "actual": 70000,
+              "target": 3900000,
+              "newOrders": 0,
+              "oldClients": 2,
+              "color": "#00BCD4"
+            },
+            {
               "name": "郭永正",
               "actual": 0,
               "target": 3700000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#7C4DFF"
-            },
-            {
-              "name": "吴挺",
-              "actual": 0,
-              "target": 3900000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00BCD4"
             },
             {
               "name": "黄凯悦",
@@ -16376,18 +16710,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
+              "name": "吴挺",
+              "newActual": 0,
+              "newTarget": 1900000,
+              "renewActual": 70000,
+              "renewTarget": 2000000
+            },
+            {
               "name": "郭永正",
               "newActual": 0,
               "newTarget": 1800000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "吴挺",
-              "newActual": 0,
-              "newTarget": 1900000,
-              "renewActual": 0,
-              "renewTarget": 2000000
             },
             {
               "name": "黄凯悦",
@@ -16404,15 +16738,15 @@ const MOCK_DATA = {
               "renewTarget": 2000000
             }
           ],
-          "totalActual": 459995,
+          "totalActual": 529996,
           "totalTarget": 666667,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -16421,7 +16755,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -16430,7 +16764,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -16453,17 +16787,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -16494,20 +16828,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -16535,18 +16869,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -16570,8 +16904,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -16580,7 +16914,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -16589,7 +16923,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -16612,17 +16946,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -16653,20 +16987,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3700000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3900000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3700000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             },
             {
               "name": "黄凯悦",
@@ -16694,18 +17028,18 @@ const MOCK_DATA = {
               "renewTarget": 4000000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1800000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1900000,
               "renewActual": 0,
               "renewTarget": 2000000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1800000,
+              "renewActual": 0,
+              "renewTarget": 1900000
             },
             {
               "name": "黄凯悦",
@@ -16729,8 +17063,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 19864612,
-                "target": 18968846,
+                "actual": 20084613,
+                "target": 18979565,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -16739,7 +17073,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 902300,
-                "target": 861612,
+                "target": 852656,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -16748,7 +17082,7 @@ const MOCK_DATA = {
                 "mode": "CPS",
                 "label": "按销售提成",
                 "actual": 177548,
-                "target": 169542,
+                "target": 167779,
                 "mom": 0,
                 "icon": "💰",
                 "color": "#00E676"
@@ -16771,17 +17105,17 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3244024,
+                "actual": 3394024,
                 "target": 4000000,
                 "mom": 0,
-                "clients": 19
+                "clients": 20
               },
               {
                 "name": "直播",
-                "actual": 1931967,
-                "target": 2125164,
+                "actual": 2001968,
+                "target": 2202165,
                 "mom": 0,
-                "clients": 2
+                "clients": 3
               },
               {
                 "name": "春药",
@@ -29660,6 +29994,54 @@ const MOCK_DATA = {
       "regCount": 0,
       "convertCount": 0,
       "convertRate": 0
+    },
+    {
+      "date": "2026-04-28",
+      "client": "v",
+      "sales": "卢登",
+      "recoverCNY": 460000.0,
+      "status": "正常续费",
+      "result": "已收款",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-04-29",
+      "client": "胖大海",
+      "sales": "吴挺",
+      "recoverCNY": 0.0,
+      "status": "未续费",
+      "result": "无",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-04-29",
+      "client": "阿杰",
+      "sales": "吴挺",
+      "recoverCNY": 80000.0,
+      "status": "已续费",
+      "result": "已收款",
+      "roi": 0.3,
+      "regCount": 2476,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-04-29",
+      "client": "棒子",
+      "sales": "吴挺",
+      "recoverCNY": 80000.0,
+      "status": "未到期",
+      "result": "补时间到5月4号",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
     }
   ],
   "tierData": [
@@ -38750,16 +39132,216 @@ const MOCK_DATA = {
         "gap": -0.018,
         "payStatus": "未收款",
         "payDate": ""
+      },
+      {
+        "id": "HX-001",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 72144.0,
+        "recvCNY": 72143.9334,
+        "gap": -0.06660000001,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-003",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 28139.0,
+        "recvCNY": 28138.9878,
+        "gap": -0.0122,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-002",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 12526.0,
+        "recvCNY": 12525.975,
+        "gap": -0.025,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-021",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 8685.0,
+        "recvCNY": 8685.0225,
+        "gap": 0.0225,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-009",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 8323.0,
+        "recvCNY": 8322.9993,
+        "gap": -0.0007000000005,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-018",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 3792.0,
+        "recvCNY": 3792.0267,
+        "gap": 0.0267,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-035",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 3617.0,
+        "recvCNY": 3616.9749,
+        "gap": -0.0251,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-024",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 3384.0,
+        "recvCNY": 3383.9883,
+        "gap": -0.0117,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-016",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 2603.0,
+        "recvCNY": 2602.9773,
+        "gap": -0.0227,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-015",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 2375.0,
+        "recvCNY": 2374.9803,
+        "gap": -0.0197,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-006",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 1234.0,
+        "recvCNY": 1234.0251,
+        "gap": 0.0251,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-007",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 878.0,
+        "recvCNY": 878.031,
+        "gap": 0.031,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-013",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 672.0,
+        "recvCNY": 672.0021,
+        "gap": 0.0021,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-017",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 649.0,
+        "recvCNY": 648.9945,
+        "gap": -0.0055,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-004",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 295.0,
+        "recvCNY": 295.0101,
+        "gap": 0.0101,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-020",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 284.0,
+        "recvCNY": 283.9914,
+        "gap": -0.0086,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-046",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 226.0,
+        "recvCNY": 225.9873,
+        "gap": -0.0127,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-023",
+        "name": "中国好黄站 JVID 免费色站",
+        "sales": "吴挺",
+        "reportCNY": 174.0,
+        "recvCNY": 174.0123,
+        "gap": 0.0123,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-009",
+        "name": "第一直播",
+        "sales": "吴挺",
+        "reportCNY": 30000.0,
+        "recvCNY": 30000.2252,
+        "gap": 0.2252,
+        "payStatus": "未收款",
+        "payDate": ""
+      },
+      {
+        "id": "HX-017",
+        "name": "第一直播",
+        "sales": "吴挺",
+        "reportCNY": 40000.0,
+        "recvCNY": 40000.2548,
+        "gap": 0.2548,
+        "payStatus": "未收款",
+        "payDate": ""
       }
     ],
     "platformSpend": [
       {
         "platform": "Pornhub",
-        "amount": 6268019
+        "amount": 6754920
       },
       {
         "platform": "TikTok",
-        "amount": 2821400
+        "amount": 3009144
       },
       {
         "platform": "Pronhub",
@@ -38767,47 +39349,47 @@ const MOCK_DATA = {
       },
       {
         "platform": "Xvideos",
-        "amount": 1952085
+        "amount": 2014811
       },
       {
         "platform": "小红书",
-        "amount": 1330237
-      },
-      {
-        "platform": "调教师",
-        "amount": 737592
+        "amount": 1358948
       },
       {
         "platform": "色虎",
-        "amount": 729478
+        "amount": 807730
+      },
+      {
+        "platform": "调教师",
+        "amount": 748458
       },
       {
         "platform": "PH·Prem",
-        "amount": 539658
+        "amount": 551435
       },
       {
         "platform": "快播",
-        "amount": 520273
+        "amount": 536326
       },
       {
         "platform": "铁粉空间",
-        "amount": 485259
+        "amount": 494434
       },
       {
         "platform": "黄片网盘",
-        "amount": 361731
+        "amount": 374831
       },
       {
         "platform": "性欲社",
-        "amount": 291757
+        "amount": 303943
       },
       {
         "platform": "懂片帝",
-        "amount": 238106
+        "amount": 282545
       },
       {
         "platform": "18R",
-        "amount": 226422
+        "amount": 229690
       },
       {
         "platform": "魅魔vlog",
@@ -38815,31 +39397,31 @@ const MOCK_DATA = {
       },
       {
         "platform": "N号房",
-        "amount": 170936
+        "amount": 176783
       },
       {
         "platform": "稚嫩学园",
-        "amount": 118014
+        "amount": 119094
       },
       {
         "platform": "抖阴Pro",
-        "amount": 110683
+        "amount": 112359
       },
       {
         "platform": "拨阴",
-        "amount": 104077
+        "amount": 104303
       },
       {
         "platform": "抖阴Plus",
-        "amount": 84800
+        "amount": 86027
       },
       {
         "platform": "酥妻ultra",
-        "amount": 78753
+        "amount": 79037
       },
       {
         "platform": "99夜",
-        "amount": 43033
+        "amount": 43549
       },
       {
         "platform": "花花公子",
@@ -38851,11 +39433,11 @@ const MOCK_DATA = {
       },
       {
         "platform": "奥黛",
-        "amount": 7681
+        "amount": 11177
       },
       {
         "platform": "寻情记",
-        "amount": 5748
+        "amount": 6195
       },
       {
         "platform": "幼甜",
@@ -38970,6 +39552,10 @@ const MOCK_DATA = {
       {
         "date": "2026-04-27",
         "amount": 825000
+      },
+      {
+        "date": "2026-04-28",
+        "amount": 979998
       }
     ]
   },
@@ -53830,7 +54416,7 @@ MOCK_DATA.trendData = {
       "data": [
         0,
         0,
-        3922586
+        4142587
       ],
       "color": "#00BCD4"
     },
@@ -55487,24 +56073,11 @@ function renderDailyReport() {
     const daysCnt = allRows.length || 1;
     const avgDAU = Math.round(mDAU / daysCnt);
     const avgNew = Math.round(mNew / daysCnt);
-    const marStat = (dr.monthlyStats || {})['2026-03'] || {};
-    const marAvgDAU = marStat.avgDAU || 0;
-    const marAvgNew = marStat.avgNew || 0;
-    // 日活环比
-    const hbPct = marAvgDAU ? ((avgDAU - marAvgDAU) / marAvgDAU * 100) : null;
-    const hbDisplay = hbPct === null ? '—' : (hbPct >= 0 ? '▲ +' : '▼ ') + hbPct.toFixed(1) + '%';
-    const hbColor = hbPct === null ? '#94a3b8' : (hbPct >= 0 ? '#10b981' : '#ef4444');
-    // 新增环比
-    const newHbPct = marAvgNew ? ((avgNew - marAvgNew) / marAvgNew * 100) : null;
-    const newHbDisplay = newHbPct === null ? '—' : (newHbPct >= 0 ? '▲ +' : '▼ ') + newHbPct.toFixed(1) + '%';
-    const newHbColor = newHbPct === null ? '#94a3b8' : (newHbPct >= 0 ? '#10b981' : '#ef4444');
     kpiCards = [
       { label: '本月累计日活',   value: fmtY(mDAU),      sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
       { label: '本月累计新增',   value: fmtY(mNew),      sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
       { label: '平均日活',       value: fmtY(avgDAU),    sub: `${daysCnt}天均值`,   color: '#06b6d4', accent: '#06b6d4' },
-      { label: '日活环比',       value: hbDisplay,       sub: `vs 3月 (${fmtY(marAvgDAU)})`, color: hbColor, accent: hbColor },
       { label: '平均新增',       value: fmtY(avgNew),    sub: `${daysCnt}天均值`,   color: '#10b981', accent: '#10b981' },
-      { label: '新增环比',       value: newHbDisplay,    sub: `vs 3月 (${fmtY(marAvgNew)})`, color: newHbColor, accent: newHbColor },
       { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
       { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: '全平台', color: '#8b5cf6', accent: '#8b5cf6' },
       { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
@@ -55595,165 +56168,6 @@ function drRenderCharts() {
       {type:'line',name:'7日留存', data:ret7Vals,smooth:true,lineStyle:{width:2},connectNulls:false},
     ],
   }));
-
-  // 日活环比详细分析 (3月 vs 4月，按日对齐)
-  drRenderHbDetail(byPlatform);
-}
-
-function drRenderHbDetail(byPlatform) {
-  const platRows = byPlatform[drPlatform] || [];
-  const marByDay = {}, aprByDay = {};
-  platRows.forEach(r => {
-    if (!r.date) return;
-    const d = parseInt(r.date.slice(8, 10), 10);
-    if (r.date.startsWith('2026-03')) marByDay[d] = r.dau || 0;
-    else if (r.date.startsWith('2026-04')) aprByDay[d] = r.dau || 0;
-  });
-
-  const days = [];
-  for (let d = 1; d <= 31; d++) {
-    if (marByDay[d] != null || aprByDay[d] != null) days.push(d);
-  }
-  const xLabels = days.map(d => d + '日');
-  const marVals = days.map(d => marByDay[d] != null ? marByDay[d] : null);
-  const aprVals = days.map(d => aprByDay[d] != null ? aprByDay[d] : null);
-
-  ec('c-dr-hb')?.setOption(ext({
-    color:['#94a3b8', '#06b6d4'],
-    tooltip:{...BASE.tooltip, trigger:'axis', formatter:params=>{
-      const valid = params.filter(p=>p.value!=null);
-      let html = params[0].name;
-      valid.forEach(p => html += `<br>${p.marker}${p.seriesName}: <b>${fmtY(p.value)}</b>`);
-      if (valid.length === 2) {
-        const pct = ((valid[1].value - valid[0].value) / valid[0].value * 100).toFixed(1);
-        html += `<br>环比: <b style="color:${pct>=0?'#10b981':'#ef4444'}">${pct>=0?'+':''}${pct}%</b>`;
-      }
-      return html;
-    }},
-    legend:{show:true, textStyle:{color:'#94a3b8'}, bottom:0},
-    grid:{left:12,right:12,top:12,bottom:30,containLabel:true},
-    xAxis:{...BASE.xAxis, type:'category', data:xLabels, axisLabel:{color:'#94a3b8',fontSize:11}},
-    yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
-    series:[
-      {type:'line',name:'3月',data:marVals,smooth:true,lineStyle:{width:2},connectNulls:false,symbol:'circle',symbolSize:5},
-      {type:'line',name:'4月',data:aprVals,smooth:true,lineStyle:{width:2.5},connectNulls:false,symbol:'circle',symbolSize:5,areaStyle:{opacity:0.12}},
-    ],
-  }));
-
-  // 明细表
-  let bothCnt = 0, sumPct = 0;
-  const rowsHtml = days.map(d => {
-    const m = marByDay[d], a = aprByDay[d];
-    let pctCell = '<span style="color:#64748b">—</span>';
-    let trendCell = '<span style="color:#64748b">—</span>';
-    if (m != null && a != null && m > 0) {
-      const pct = (a - m) / m * 100;
-      bothCnt++; sumPct += pct;
-      const up = pct >= 0;
-      const color = up ? '#10b981' : '#ef4444';
-      pctCell = `<span style="color:${color};font-weight:600">${up?'▲ +':'▼ '}${pct.toFixed(1)}%</span>`;
-      trendCell = `<span style="color:${color};font-size:14px">${up?'↗':'↘'}</span>`;
-    }
-    return `<tr style="border-top:1px solid rgba(255,255,255,0.04)">
-      <td style="padding:8px 12px;color:#cbd5e1">${d}日</td>
-      <td style="padding:8px 12px;text-align:right;color:#94a3b8">${m != null ? fmtY(m) : '<span style="color:#64748b">—</span>'}</td>
-      <td style="padding:8px 12px;text-align:right;color:#cbd5e1">${a != null ? fmtY(a) : '<span style="color:#64748b">—</span>'}</td>
-      <td style="padding:8px 12px;text-align:right">${pctCell}</td>
-      <td style="padding:8px 12px;text-align:center">${trendCell}</td>
-    </tr>`;
-  }).join('');
-  document.querySelector('#dr-hb-table tbody').innerHTML = rowsHtml ||
-    `<tr><td colspan="5" style="padding:20px;text-align:center;color:#64748b">${drPlatform} 无对比数据</td></tr>`;
-
-  const sumEl = document.getElementById('dr-hb-summary');
-  if (sumEl) {
-    if (bothCnt > 0) {
-      const avgPct = sumPct / bothCnt;
-      const up = avgPct >= 0;
-      sumEl.innerHTML = `重叠 ${bothCnt} 天 · 平均环比 <span style="color:${up?'#10b981':'#ef4444'};font-weight:600">${up?'+':''}${avgPct.toFixed(1)}%</span>`;
-    } else {
-      sumEl.textContent = '无重叠日期';
-    }
-  }
-
-  // 新增用户环比
-  drRenderNewHbDetail(byPlatform);
-}
-
-function drRenderNewHbDetail(byPlatform) {
-  const platRows = byPlatform[drPlatform] || [];
-  const marByDay = {}, aprByDay = {};
-  platRows.forEach(r => {
-    if (!r.date) return;
-    const d = parseInt(r.date.slice(8, 10), 10);
-    if (r.date.startsWith('2026-03')) marByDay[d] = r.newUsers || 0;
-    else if (r.date.startsWith('2026-04')) aprByDay[d] = r.newUsers || 0;
-  });
-
-  const days = [];
-  for (let d = 1; d <= 31; d++) {
-    if (marByDay[d] != null || aprByDay[d] != null) days.push(d);
-  }
-  const xLabels = days.map(d => d + '日');
-  const marVals = days.map(d => marByDay[d] != null ? marByDay[d] : null);
-  const aprVals = days.map(d => aprByDay[d] != null ? aprByDay[d] : null);
-
-  ec('c-dr-new-hb')?.setOption(ext({
-    color:['#6ee7b7', '#10b981'],
-    tooltip:{...BASE.tooltip, trigger:'axis', formatter:params=>{
-      const valid = params.filter(p=>p.value!=null);
-      let html = params[0].name;
-      valid.forEach(p => html += `<br>${p.marker}${p.seriesName}: <b>${fmtY(p.value)}</b>`);
-      if (valid.length === 2) {
-        const pct = ((valid[1].value - valid[0].value) / valid[0].value * 100).toFixed(1);
-        html += `<br>环比: <b style="color:${pct>=0?'#10b981':'#ef4444'}">${pct>=0?'+':''}${pct}%</b>`;
-      }
-      return html;
-    }},
-    legend:{show:true, textStyle:{color:'#94a3b8'}, bottom:0},
-    grid:{left:12,right:12,top:12,bottom:30,containLabel:true},
-    xAxis:{...BASE.xAxis, type:'category', data:xLabels, axisLabel:{color:'#94a3b8',fontSize:11}},
-    yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
-    series:[
-      {type:'line',name:'3月',data:marVals,smooth:true,lineStyle:{width:2},connectNulls:false,symbol:'circle',symbolSize:5},
-      {type:'line',name:'4月',data:aprVals,smooth:true,lineStyle:{width:2.5},connectNulls:false,symbol:'circle',symbolSize:5,areaStyle:{opacity:0.12}},
-    ],
-  }));
-
-  let bothCnt = 0, sumPct = 0;
-  const rowsHtml = days.map(d => {
-    const m = marByDay[d], a = aprByDay[d];
-    let pctCell = '<span style="color:#64748b">—</span>';
-    let trendCell = '<span style="color:#64748b">—</span>';
-    if (m != null && a != null && m > 0) {
-      const pct = (a - m) / m * 100;
-      bothCnt++; sumPct += pct;
-      const up = pct >= 0;
-      const color = up ? '#10b981' : '#ef4444';
-      pctCell = `<span style="color:${color};font-weight:600">${up?'▲ +':'▼ '}${pct.toFixed(1)}%</span>`;
-      trendCell = `<span style="color:${color};font-size:14px">${up?'↗':'↘'}</span>`;
-    }
-    return `<tr style="border-top:1px solid rgba(255,255,255,0.04)">
-      <td style="padding:8px 12px;color:#cbd5e1">${d}日</td>
-      <td style="padding:8px 12px;text-align:right;color:#94a3b8">${m != null ? fmtY(m) : '<span style="color:#64748b">—</span>'}</td>
-      <td style="padding:8px 12px;text-align:right;color:#cbd5e1">${a != null ? fmtY(a) : '<span style="color:#64748b">—</span>'}</td>
-      <td style="padding:8px 12px;text-align:right">${pctCell}</td>
-      <td style="padding:8px 12px;text-align:center">${trendCell}</td>
-    </tr>`;
-  }).join('');
-  document.querySelector('#dr-new-hb-table tbody').innerHTML = rowsHtml ||
-    `<tr><td colspan="5" style="padding:20px;text-align:center;color:#64748b">${drPlatform} 无对比数据</td></tr>`;
-
-  const sumEl = document.getElementById('dr-new-hb-summary');
-  if (sumEl) {
-    if (bothCnt > 0) {
-      const avgPct = sumPct / bothCnt;
-      const up = avgPct >= 0;
-      sumEl.innerHTML = `重叠 ${bothCnt} 天 · 平均环比 <span style="color:${up?'#10b981':'#ef4444'};font-weight:600">${up?'+':''}${avgPct.toFixed(1)}%</span>`;
-    } else {
-      sumEl.textContent = '无重叠日期';
-    }
-  }
 }
 
 const renders = [renderOverview, renderRanking, renderAdMode, renderExpire, renderReports, renderWorkflow, renderROI, renderTier, renderFeedback, renderPayment, renderSupply, renderDailyReport];
