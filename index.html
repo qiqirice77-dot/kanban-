@@ -997,6 +997,29 @@ tr:hover td{background:rgba(255,255,255,.03)}
         </div>
       </div>
     </div>
+    <div class="card mt16">
+      <div class="card-hd">
+        <div class="card-title">新增用户环比详细分析 (3月 vs 4月)</div>
+        <div id="dr-new-hb-summary" style="font-size:12px;color:var(--text3);margin-left:auto;padding-right:16px"></div>
+      </div>
+      <div class="ch ch280" id="c-dr-new-hb"></div>
+      <div style="padding:0 16px 16px">
+        <div style="max-height:280px;overflow-y:auto;border:1px solid rgba(255,255,255,0.06);border-radius:8px">
+          <table id="dr-new-hb-table" style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead style="position:sticky;top:0;background:#1c1c1c;z-index:1">
+              <tr style="text-align:left;color:#94a3b8">
+                <th style="padding:10px 12px;font-weight:500">日期</th>
+                <th style="padding:10px 12px;font-weight:500;text-align:right">3月新增</th>
+                <th style="padding:10px 12px;font-weight:500;text-align:right">4月新增</th>
+                <th style="padding:10px 12px;font-weight:500;text-align:right">环比</th>
+                <th style="padding:10px 12px;font-weight:500;text-align:center">趋势</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -55464,18 +55487,24 @@ function renderDailyReport() {
     const daysCnt = allRows.length || 1;
     const avgDAU = Math.round(mDAU / daysCnt);
     const avgNew = Math.round(mNew / daysCnt);
-    // 日活环比：本月平均日活 vs 3月平均日活
     const marStat = (dr.monthlyStats || {})['2026-03'] || {};
     const marAvgDAU = marStat.avgDAU || 0;
+    const marAvgNew = marStat.avgNew || 0;
+    // 日活环比
     const hbPct = marAvgDAU ? ((avgDAU - marAvgDAU) / marAvgDAU * 100) : null;
     const hbDisplay = hbPct === null ? '—' : (hbPct >= 0 ? '▲ +' : '▼ ') + hbPct.toFixed(1) + '%';
     const hbColor = hbPct === null ? '#94a3b8' : (hbPct >= 0 ? '#10b981' : '#ef4444');
+    // 新增环比
+    const newHbPct = marAvgNew ? ((avgNew - marAvgNew) / marAvgNew * 100) : null;
+    const newHbDisplay = newHbPct === null ? '—' : (newHbPct >= 0 ? '▲ +' : '▼ ') + newHbPct.toFixed(1) + '%';
+    const newHbColor = newHbPct === null ? '#94a3b8' : (newHbPct >= 0 ? '#10b981' : '#ef4444');
     kpiCards = [
       { label: '本月累计日活',   value: fmtY(mDAU),      sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
       { label: '本月累计新增',   value: fmtY(mNew),      sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
       { label: '平均日活',       value: fmtY(avgDAU),    sub: `${daysCnt}天均值`,   color: '#06b6d4', accent: '#06b6d4' },
       { label: '日活环比',       value: hbDisplay,       sub: `vs 3月 (${fmtY(marAvgDAU)})`, color: hbColor, accent: hbColor },
       { label: '平均新增',       value: fmtY(avgNew),    sub: `${daysCnt}天均值`,   color: '#10b981', accent: '#10b981' },
+      { label: '新增环比',       value: newHbDisplay,    sub: `vs 3月 (${fmtY(marAvgNew)})`, color: newHbColor, accent: newHbColor },
       { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
       { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: '全平台', color: '#8b5cf6', accent: '#8b5cf6' },
       { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
@@ -55637,6 +55666,85 @@ function drRenderHbDetail(byPlatform) {
     `<tr><td colspan="5" style="padding:20px;text-align:center;color:#64748b">${drPlatform} 无对比数据</td></tr>`;
 
   const sumEl = document.getElementById('dr-hb-summary');
+  if (sumEl) {
+    if (bothCnt > 0) {
+      const avgPct = sumPct / bothCnt;
+      const up = avgPct >= 0;
+      sumEl.innerHTML = `重叠 ${bothCnt} 天 · 平均环比 <span style="color:${up?'#10b981':'#ef4444'};font-weight:600">${up?'+':''}${avgPct.toFixed(1)}%</span>`;
+    } else {
+      sumEl.textContent = '无重叠日期';
+    }
+  }
+
+  // 新增用户环比
+  drRenderNewHbDetail(byPlatform);
+}
+
+function drRenderNewHbDetail(byPlatform) {
+  const platRows = byPlatform[drPlatform] || [];
+  const marByDay = {}, aprByDay = {};
+  platRows.forEach(r => {
+    if (!r.date) return;
+    const d = parseInt(r.date.slice(8, 10), 10);
+    if (r.date.startsWith('2026-03')) marByDay[d] = r.newUsers || 0;
+    else if (r.date.startsWith('2026-04')) aprByDay[d] = r.newUsers || 0;
+  });
+
+  const days = [];
+  for (let d = 1; d <= 31; d++) {
+    if (marByDay[d] != null || aprByDay[d] != null) days.push(d);
+  }
+  const xLabels = days.map(d => d + '日');
+  const marVals = days.map(d => marByDay[d] != null ? marByDay[d] : null);
+  const aprVals = days.map(d => aprByDay[d] != null ? aprByDay[d] : null);
+
+  ec('c-dr-new-hb')?.setOption(ext({
+    color:['#6ee7b7', '#10b981'],
+    tooltip:{...BASE.tooltip, trigger:'axis', formatter:params=>{
+      const valid = params.filter(p=>p.value!=null);
+      let html = params[0].name;
+      valid.forEach(p => html += `<br>${p.marker}${p.seriesName}: <b>${fmtY(p.value)}</b>`);
+      if (valid.length === 2) {
+        const pct = ((valid[1].value - valid[0].value) / valid[0].value * 100).toFixed(1);
+        html += `<br>环比: <b style="color:${pct>=0?'#10b981':'#ef4444'}">${pct>=0?'+':''}${pct}%</b>`;
+      }
+      return html;
+    }},
+    legend:{show:true, textStyle:{color:'#94a3b8'}, bottom:0},
+    grid:{left:12,right:12,top:12,bottom:30,containLabel:true},
+    xAxis:{...BASE.xAxis, type:'category', data:xLabels, axisLabel:{color:'#94a3b8',fontSize:11}},
+    yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
+    series:[
+      {type:'line',name:'3月',data:marVals,smooth:true,lineStyle:{width:2},connectNulls:false,symbol:'circle',symbolSize:5},
+      {type:'line',name:'4月',data:aprVals,smooth:true,lineStyle:{width:2.5},connectNulls:false,symbol:'circle',symbolSize:5,areaStyle:{opacity:0.12}},
+    ],
+  }));
+
+  let bothCnt = 0, sumPct = 0;
+  const rowsHtml = days.map(d => {
+    const m = marByDay[d], a = aprByDay[d];
+    let pctCell = '<span style="color:#64748b">—</span>';
+    let trendCell = '<span style="color:#64748b">—</span>';
+    if (m != null && a != null && m > 0) {
+      const pct = (a - m) / m * 100;
+      bothCnt++; sumPct += pct;
+      const up = pct >= 0;
+      const color = up ? '#10b981' : '#ef4444';
+      pctCell = `<span style="color:${color};font-weight:600">${up?'▲ +':'▼ '}${pct.toFixed(1)}%</span>`;
+      trendCell = `<span style="color:${color};font-size:14px">${up?'↗':'↘'}</span>`;
+    }
+    return `<tr style="border-top:1px solid rgba(255,255,255,0.04)">
+      <td style="padding:8px 12px;color:#cbd5e1">${d}日</td>
+      <td style="padding:8px 12px;text-align:right;color:#94a3b8">${m != null ? fmtY(m) : '<span style="color:#64748b">—</span>'}</td>
+      <td style="padding:8px 12px;text-align:right;color:#cbd5e1">${a != null ? fmtY(a) : '<span style="color:#64748b">—</span>'}</td>
+      <td style="padding:8px 12px;text-align:right">${pctCell}</td>
+      <td style="padding:8px 12px;text-align:center">${trendCell}</td>
+    </tr>`;
+  }).join('');
+  document.querySelector('#dr-new-hb-table tbody').innerHTML = rowsHtml ||
+    `<tr><td colspan="5" style="padding:20px;text-align:center;color:#64748b">${drPlatform} 无对比数据</td></tr>`;
+
+  const sumEl = document.getElementById('dr-new-hb-summary');
   if (sumEl) {
     if (bothCnt > 0) {
       const avgPct = sumPct / bothCnt;
