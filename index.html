@@ -29988,7 +29988,7 @@ const MOCK_DATA = {
               "type": "老客户新增",
               "contract": 409,
               "expireDate": "2026-05-01",
-              "status": "今日到期"
+              "status": "正常"
             }
           ]
         },
@@ -30005,21 +30005,33 @@ const MOCK_DATA = {
       },
       "totalActual": 350400,
       "totalTarget": 18000000,
-      "expireToday": [
+      "expireToday": [],
+      "expireSoon": [
         {
-          "client": "直播",
+          "client": "开元官方（165）、PG官方（9926）、澳门太阳城（683）",
           "group": "",
           "displayName": "",
-          "sales": "郭永正",
-          "amount": 409.2,
-          "tier": "观察客户",
+          "sales": "卢登",
+          "amount": 289995.7,
+          "tier": "实力客户",
           "source": "五月",
-          "expireDate": "2026-05-01",
-          "daysLeft": 0,
-          "contact": "直播"
+          "expireDate": "2026-06-01",
+          "daysLeft": 30,
+          "contact": "开元官方（165）、PG官方（9926）、澳门太阳城（683）"
+        },
+        {
+          "client": "PG娱乐城",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 59995.5,
+          "tier": "核心客户",
+          "source": "五月",
+          "expireDate": "2026-06-01",
+          "daysLeft": 30,
+          "contact": "PG娱乐城"
         }
       ],
-      "expireSoon": [],
       "dailyByDate": {
         "2026-05-01": {
           "label": "5月1日",
@@ -37900,7 +37912,7 @@ let currentMonth = 'may';        // 'apr' | 'mar' | 'feb'
 let selectedDate = '2026-05-01'; // 单日视角选中日期
 
 const MONTH_META = {
-  may: { year:2026, month:5, days:31, label:"2026年5月", defaultDate:"2026-05-01" },
+  may: { year:2026, month:5, days:31, label:"2026年5月", defaultDate:"2026-05-02" },
   apr: { year:2026, month:4, days:30, label:"2026年4月", defaultDate:"2026-04-30" },
   mar: { year:2026, month:3, days:31, label:"2026年3月", defaultDate:"2026-03-27" },
   feb: { year:2026, month:2, days:29, label:"2026年2月", defaultDate:"2026-02-28" },
