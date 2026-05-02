@@ -29834,28 +29834,28 @@ const MOCK_DATA = {
       "label": "2026年5月",
       "salesList": [
         {
+          "name": "陈亦凡",
+          "actual": 999999,
+          "target": 3200000,
+          "newOrders": 18,
+          "oldClients": 0,
+          "color": "#00E676"
+        },
+        {
           "name": "卢登",
-          "actual": 349991,
+          "actual": 579987,
           "target": 8500000,
           "newOrders": 0,
-          "oldClients": 2,
+          "oldClients": 5,
           "color": "#1E88E5"
         },
         {
           "name": "郭永正",
           "actual": 409,
           "target": 3200000,
-          "newOrders": 1,
-          "oldClients": 0,
-          "color": "#7C4DFF"
-        },
-        {
-          "name": "陈亦凡",
-          "actual": 0,
-          "target": 3200000,
           "newOrders": 0,
-          "oldClients": 0,
-          "color": "#00E676"
+          "oldClients": 1,
+          "color": "#7C4DFF"
         },
         {
           "name": "吴挺",
@@ -29868,25 +29868,25 @@ const MOCK_DATA = {
       ],
       "renewData": [
         {
+          "name": "陈亦凡",
+          "newActual": 999999,
+          "newTarget": 700000,
+          "renewActual": 0,
+          "renewTarget": 2500000
+        },
+        {
           "name": "卢登",
           "newActual": 0,
           "newTarget": 1000000,
-          "renewActual": 349991,
+          "renewActual": 579987,
           "renewTarget": 7500000
         },
         {
           "name": "郭永正",
-          "newActual": 409,
-          "newTarget": 1300000,
-          "renewActual": 0,
-          "renewTarget": 1900000
-        },
-        {
-          "name": "陈亦凡",
           "newActual": 0,
-          "newTarget": 700000,
-          "renewActual": 0,
-          "renewTarget": 2500000
+          "newTarget": 1300000,
+          "renewActual": 409,
+          "renewTarget": 1900000
         },
         {
           "name": "吴挺",
@@ -29901,8 +29901,8 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 349991,
-            "target": 17978979,
+            "actual": 1579986,
+            "target": 17995339,
             "mom": 0,
             "icon": "⏱️",
             "color": "#1E88E5"
@@ -29911,7 +29911,7 @@ const MOCK_DATA = {
             "mode": "CPA",
             "label": "按行为计费",
             "actual": 409,
-            "target": 21021,
+            "target": 4661,
             "mom": 0,
             "icon": "🖱️",
             "color": "#7C4DFF"
@@ -29920,10 +29920,17 @@ const MOCK_DATA = {
         "industries": [
           {
             "name": "棋牌",
-            "actual": 349991,
+            "actual": 579987,
             "target": 10500000,
             "mom": 0,
-            "clients": 2
+            "clients": 4
+          },
+          {
+            "name": "约炮",
+            "actual": 999999,
+            "target": 3000000,
+            "mom": 0,
+            "clients": 1
           },
           {
             "name": "直播",
@@ -29935,19 +29942,163 @@ const MOCK_DATA = {
         ]
       },
       "personData": {
-        "卢登": {
+        "陈亦凡": {
           "industryDetails": [
             {
-              "industry": "棋牌",
-              "amount": 349991,
-              "orders": 2
+              "industry": "约炮",
+              "amount": 999999,
+              "orders": 18
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 349991,
-              "orders": 2
+              "amount": 999999,
+              "orders": 18
+            }
+          ],
+          "clients": [
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 264538,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 151595,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 105342,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "老客户新增",
+              "contract": 164579,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 49515,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 54980,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 46200,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 54055,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 21690,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 17307,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 7101,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 5278,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 6288,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 3210,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 15253,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 5439,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 25120,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "约炮",
+              "type": "全新客户",
+              "contract": 2509,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            }
+          ]
+        },
+        "卢登": {
+          "industryDetails": [
+            {
+              "industry": "棋牌",
+              "amount": 579987,
+              "orders": 5
+            }
+          ],
+          "modeDetails": [
+            {
+              "mode": "CPT",
+              "amount": 579987,
+              "orders": 5
             }
           ],
           "clients": [
@@ -29963,6 +30114,27 @@ const MOCK_DATA = {
               "type": "老客户续费",
               "contract": 59996,
               "expireDate": "2026-06-01",
+              "status": "正常"
+            },
+            {
+              "name": "金沙国际",
+              "type": "老客户续费",
+              "contract": 129996,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "永利皇宫",
+              "type": "老客户续费",
+              "contract": 99680,
+              "expireDate": "2026-06-02",
+              "status": "正常"
+            },
+            {
+              "name": "永利皇宫",
+              "type": "老客户续费",
+              "contract": 320,
+              "expireDate": "2026-06-02",
               "status": "正常"
             }
           ]
@@ -29985,17 +30157,12 @@ const MOCK_DATA = {
           "clients": [
             {
               "name": "直播",
-              "type": "老客户新增",
+              "type": "老客户续费",
               "contract": 409,
               "expireDate": "2026-05-01",
               "status": "正常"
             }
           ]
-        },
-        "陈亦凡": {
-          "industryDetails": [],
-          "modeDetails": [],
-          "clients": []
         },
         "吴挺": {
           "industryDetails": [],
@@ -30003,7 +30170,7 @@ const MOCK_DATA = {
           "clients": []
         }
       },
-      "totalActual": 350400,
+      "totalActual": 1580395,
       "totalTarget": 18000000,
       "expireToday": [],
       "expireSoon": [
@@ -30037,6 +30204,14 @@ const MOCK_DATA = {
           "label": "5月1日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 349991,
               "target": 8500000,
@@ -30048,17 +30223,9 @@ const MOCK_DATA = {
               "name": "郭永正",
               "actual": 409,
               "target": 3200000,
-              "newOrders": 1,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
               "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
+              "oldClients": 1,
+              "color": "#7C4DFF"
             },
             {
               "name": "吴挺",
@@ -30071,6 +30238,13 @@ const MOCK_DATA = {
           ],
           "renewData": [
             {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
+            {
               "name": "卢登",
               "newActual": 0,
               "newTarget": 1000000,
@@ -30079,17 +30253,10 @@ const MOCK_DATA = {
             },
             {
               "name": "郭永正",
-              "newActual": 409,
-              "newTarget": 1300000,
-              "renewActual": 0,
-              "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
               "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
+              "newTarget": 1300000,
+              "renewActual": 409,
+              "renewTarget": 1900000
             },
             {
               "name": "吴挺",
@@ -30106,8 +30273,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30116,7 +30283,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30125,10 +30292,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30144,11 +30318,19 @@ const MOCK_DATA = {
           "label": "5月2日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 999999,
+              "target": 3200000,
+              "newOrders": 18,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
-              "actual": 0,
+              "actual": 229996,
               "target": 8500000,
               "newOrders": 0,
-              "oldClients": 0,
+              "oldClients": 3,
               "color": "#1E88E5"
             },
             {
@@ -30158,14 +30340,6 @@ const MOCK_DATA = {
               "newOrders": 0,
               "oldClients": 0,
               "color": "#7C4DFF"
-            },
-            {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
             },
             {
               "name": "吴挺",
@@ -30178,10 +30352,17 @@ const MOCK_DATA = {
           ],
           "renewData": [
             {
+              "name": "陈亦凡",
+              "newActual": 999999,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
+            {
               "name": "卢登",
               "newActual": 0,
               "newTarget": 1000000,
-              "renewActual": 0,
+              "renewActual": 229996,
               "renewTarget": 7500000
             },
             {
@@ -30192,13 +30373,6 @@ const MOCK_DATA = {
               "renewTarget": 1900000
             },
             {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1200000,
@@ -30206,15 +30380,15 @@ const MOCK_DATA = {
               "renewTarget": 1900000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 1229995,
           "totalTarget": 580645,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30223,7 +30397,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30232,10 +30406,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30251,6 +30432,14 @@ const MOCK_DATA = {
           "label": "5月3日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30267,14 +30456,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30284,6 +30465,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30297,13 +30485,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30320,8 +30501,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30330,7 +30511,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30339,10 +30520,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30358,6 +30546,14 @@ const MOCK_DATA = {
           "label": "5月4日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30374,14 +30570,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30391,6 +30579,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30404,13 +30599,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30427,8 +30615,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30437,7 +30625,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30446,10 +30634,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30465,6 +30660,14 @@ const MOCK_DATA = {
           "label": "5月5日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30481,14 +30684,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30498,6 +30693,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30511,13 +30713,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30534,8 +30729,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30544,7 +30739,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30553,10 +30748,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30572,6 +30774,14 @@ const MOCK_DATA = {
           "label": "5月6日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30588,14 +30798,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30605,6 +30807,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30618,13 +30827,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30641,8 +30843,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30651,7 +30853,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30660,10 +30862,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30679,6 +30888,14 @@ const MOCK_DATA = {
           "label": "5月7日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30695,14 +30912,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30712,6 +30921,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30725,13 +30941,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30748,8 +30957,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30758,7 +30967,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30767,10 +30976,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30786,6 +31002,14 @@ const MOCK_DATA = {
           "label": "5月8日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30802,14 +31026,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30819,6 +31035,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30832,13 +31055,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30855,8 +31071,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30865,7 +31081,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30874,10 +31090,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -30893,6 +31116,14 @@ const MOCK_DATA = {
           "label": "5月9日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -30909,14 +31140,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -30926,6 +31149,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -30939,13 +31169,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -30962,8 +31185,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -30972,7 +31195,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -30981,10 +31204,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31000,6 +31230,14 @@ const MOCK_DATA = {
           "label": "5月10日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31016,14 +31254,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31033,6 +31263,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31046,13 +31283,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31069,8 +31299,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31079,7 +31309,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31088,10 +31318,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31107,6 +31344,14 @@ const MOCK_DATA = {
           "label": "5月11日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31123,14 +31368,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31140,6 +31377,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31153,13 +31397,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31176,8 +31413,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31186,7 +31423,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31195,10 +31432,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31214,6 +31458,14 @@ const MOCK_DATA = {
           "label": "5月12日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31230,14 +31482,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31247,6 +31491,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31260,13 +31511,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31283,8 +31527,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31293,7 +31537,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31302,10 +31546,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31321,6 +31572,14 @@ const MOCK_DATA = {
           "label": "5月13日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31337,14 +31596,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31354,6 +31605,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31367,13 +31625,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31390,8 +31641,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31400,7 +31651,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31409,10 +31660,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31428,6 +31686,14 @@ const MOCK_DATA = {
           "label": "5月14日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31444,14 +31710,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31461,6 +31719,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31474,13 +31739,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31497,8 +31755,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31507,7 +31765,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31516,10 +31774,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31535,6 +31800,14 @@ const MOCK_DATA = {
           "label": "5月15日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31551,14 +31824,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31568,6 +31833,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31581,13 +31853,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31604,8 +31869,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31614,7 +31879,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31623,10 +31888,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31642,6 +31914,14 @@ const MOCK_DATA = {
           "label": "5月16日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31658,14 +31938,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31675,6 +31947,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31688,13 +31967,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31711,8 +31983,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31721,7 +31993,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31730,10 +32002,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31749,6 +32028,14 @@ const MOCK_DATA = {
           "label": "5月17日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31765,14 +32052,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31782,6 +32061,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31795,13 +32081,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31818,8 +32097,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31828,7 +32107,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31837,10 +32116,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31856,6 +32142,14 @@ const MOCK_DATA = {
           "label": "5月18日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31872,14 +32166,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31889,6 +32175,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -31902,13 +32195,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -31925,8 +32211,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31935,7 +32221,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31944,10 +32230,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -31963,6 +32256,14 @@ const MOCK_DATA = {
           "label": "5月19日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -31979,14 +32280,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -31996,6 +32289,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32009,13 +32309,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32032,8 +32325,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32042,7 +32335,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32051,10 +32344,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32070,6 +32370,14 @@ const MOCK_DATA = {
           "label": "5月20日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32086,14 +32394,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32103,6 +32403,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32116,13 +32423,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32139,8 +32439,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32149,7 +32449,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32158,10 +32458,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32177,6 +32484,14 @@ const MOCK_DATA = {
           "label": "5月21日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32193,14 +32508,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32210,6 +32517,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32223,13 +32537,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32246,8 +32553,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32256,7 +32563,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32265,10 +32572,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32284,6 +32598,14 @@ const MOCK_DATA = {
           "label": "5月22日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32300,14 +32622,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32317,6 +32631,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32330,13 +32651,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32353,8 +32667,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32363,7 +32677,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32372,10 +32686,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32391,6 +32712,14 @@ const MOCK_DATA = {
           "label": "5月23日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32407,14 +32736,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32424,6 +32745,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32437,13 +32765,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32460,8 +32781,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32470,7 +32791,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32479,10 +32800,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32498,6 +32826,14 @@ const MOCK_DATA = {
           "label": "5月24日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32514,14 +32850,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32531,6 +32859,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32544,13 +32879,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32567,8 +32895,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32577,7 +32905,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32586,10 +32914,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32605,6 +32940,14 @@ const MOCK_DATA = {
           "label": "5月25日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32621,14 +32964,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32638,6 +32973,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32651,13 +32993,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32674,8 +33009,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32684,7 +33019,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32693,10 +33028,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32712,6 +33054,14 @@ const MOCK_DATA = {
           "label": "5月26日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32728,14 +33078,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32745,6 +33087,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32758,13 +33107,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32781,8 +33123,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32791,7 +33133,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32800,10 +33142,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32819,6 +33168,14 @@ const MOCK_DATA = {
           "label": "5月27日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32835,14 +33192,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32852,6 +33201,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32865,13 +33221,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32888,8 +33237,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32898,7 +33247,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32907,10 +33256,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -32926,6 +33282,14 @@ const MOCK_DATA = {
           "label": "5月28日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -32942,14 +33306,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -32959,6 +33315,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -32972,13 +33335,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -32995,8 +33351,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33005,7 +33361,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33014,10 +33370,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -33033,6 +33396,14 @@ const MOCK_DATA = {
           "label": "5月29日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -33049,14 +33420,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -33066,6 +33429,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -33079,13 +33449,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -33102,8 +33465,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33112,7 +33475,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33121,10 +33484,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -33140,6 +33510,14 @@ const MOCK_DATA = {
           "label": "5月30日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -33156,14 +33534,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -33173,6 +33543,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -33186,13 +33563,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -33209,8 +33579,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33219,7 +33589,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33228,10 +33598,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -33247,6 +33624,14 @@ const MOCK_DATA = {
           "label": "5月31日",
           "salesList": [
             {
+              "name": "陈亦凡",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#00E676"
+            },
+            {
               "name": "卢登",
               "actual": 0,
               "target": 8500000,
@@ -33263,14 +33648,6 @@ const MOCK_DATA = {
               "color": "#7C4DFF"
             },
             {
-              "name": "陈亦凡",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00E676"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
@@ -33280,6 +33657,13 @@ const MOCK_DATA = {
             }
           ],
           "renewData": [
+            {
+              "name": "陈亦凡",
+              "newActual": 0,
+              "newTarget": 700000,
+              "renewActual": 0,
+              "renewTarget": 2500000
+            },
             {
               "name": "卢登",
               "newActual": 0,
@@ -33293,13 +33677,6 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "陈亦凡",
-              "newActual": 0,
-              "newTarget": 700000,
-              "renewActual": 0,
-              "renewTarget": 2500000
             },
             {
               "name": "吴挺",
@@ -33316,8 +33693,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 349991,
-                "target": 17978979,
+                "actual": 1579986,
+                "target": 17995339,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33326,7 +33703,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 21021,
+                "target": 4661,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33335,10 +33712,17 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 349991,
+                "actual": 579987,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 2
+                "clients": 4
+              },
+              {
+                "name": "约炮",
+                "actual": 999999,
+                "target": 3000000,
+                "mom": 0,
+                "clients": 1
               },
               {
                 "name": "直播",
@@ -33524,6 +33908,42 @@ const MOCK_DATA = {
       "client": "V",
       "sales": "卢登",
       "recoverCNY": 660000.0,
+      "status": "正常续费",
+      "result": "已收款",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-05-02",
+      "client": "翠花",
+      "sales": "吴挺",
+      "recoverCNY": 80000.0,
+      "status": "待确认",
+      "result": "客户今天有航程，最晚明天看数据之后才能确认续费意向",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-05-02",
+      "client": "可乐",
+      "sales": "卢登",
+      "recoverCNY": 130000.0,
+      "status": "正常续费",
+      "result": "已收款",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026-05-02",
+      "client": "花开无期",
+      "sales": "卢登",
+      "recoverCNY": 100000.0,
       "status": "正常续费",
       "result": "已收款",
       "roi": 0,
@@ -35066,22 +35486,308 @@ const MOCK_DATA = {
         "gap": -4.5,
         "payStatus": "已收款",
         "payDate": "2026-05-01"
+      },
+      {
+        "id": "HX-021",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 264538.0,
+        "recvCNY": 264537.98,
+        "gap": -0.02000000002,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-024",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 151595.0,
+        "recvCNY": 151595.01,
+        "gap": 0.01000000001,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-035",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 105342.0,
+        "recvCNY": 105342.02,
+        "gap": 0.02,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-009",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 164579.0,
+        "recvCNY": 164579.03,
+        "gap": 0.03,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-018",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 49515.0,
+        "recvCNY": 49514.99,
+        "gap": -0.01,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-016",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 54980.0,
+        "recvCNY": 54980.03,
+        "gap": 0.03,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-015",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 46200.0,
+        "recvCNY": 46200.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-006",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 54055.0,
+        "recvCNY": 54054.98,
+        "gap": -0.02,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-007",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 21690.0,
+        "recvCNY": 21689.99,
+        "gap": -0.009999999998,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-017",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 17307.0,
+        "recvCNY": 17307.01,
+        "gap": 0.009999999998,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-046",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 7101.0,
+        "recvCNY": 7101.01,
+        "gap": 0.009999999999,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-023",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 5278.0,
+        "recvCNY": 5278.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-026",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 6288.0,
+        "recvCNY": 6288.03,
+        "gap": 0.03,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-029",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 3210.0,
+        "recvCNY": 3209.99,
+        "gap": -0.01,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-022",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 15253.0,
+        "recvCNY": 15253.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-051",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 5439.0,
+        "recvCNY": 5439.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-008",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 25120.0,
+        "recvCNY": 25119.99,
+        "gap": -0.009999999998,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-047",
+        "name": "约炮",
+        "sales": "陈亦凡",
+        "reportCNY": 2509.0,
+        "recvCNY": 2508.94,
+        "gap": -0.06,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-001",
+        "name": "金沙国际",
+        "sales": "卢登",
+        "reportCNY": 130000.0,
+        "recvCNY": 129996.0,
+        "gap": -4.0,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-001",
+        "name": "永利皇宫",
+        "sales": "卢登",
+        "reportCNY": 99680.0,
+        "recvCNY": 99679.693,
+        "gap": -0.307,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
+      },
+      {
+        "id": "HX-005",
+        "name": "永利皇宫",
+        "sales": "卢登",
+        "reportCNY": 320.0,
+        "recvCNY": 320.032,
+        "gap": 0.032,
+        "payStatus": "已收款",
+        "payDate": "2026-05-02"
       }
     ],
     "platformSpend": [
       {
         "platform": "Pornhub",
-        "amount": 290409
+        "amount": 520089
+      },
+      {
+        "platform": "小红书",
+        "amount": 264538
       },
       {
         "platform": "色虎",
-        "amount": 60000
+        "amount": 224579
+      },
+      {
+        "platform": "PH·Prem",
+        "amount": 151595
+      },
+      {
+        "platform": "调教师",
+        "amount": 105342
+      },
+      {
+        "platform": "快播",
+        "amount": 54980
+      },
+      {
+        "platform": "性欲社",
+        "amount": 54055
+      },
+      {
+        "platform": "铁粉空间",
+        "amount": 49515
+      },
+      {
+        "platform": "黄片网盘",
+        "amount": 46200
+      },
+      {
+        "platform": "奥黛",
+        "amount": 25120
+      },
+      {
+        "platform": "N号房",
+        "amount": 21690
+      },
+      {
+        "platform": "懂片帝",
+        "amount": 17307
+      },
+      {
+        "platform": "稚嫩学园",
+        "amount": 15253
+      },
+      {
+        "platform": "拨阴",
+        "amount": 7101
+      },
+      {
+        "platform": "淫客",
+        "amount": 6288
+      },
+      {
+        "platform": "白嫖射",
+        "amount": 5439
+      },
+      {
+        "platform": "99夜",
+        "amount": 5278
+      },
+      {
+        "platform": "寻情记",
+        "amount": 3210
+      },
+      {
+        "platform": "台姬店",
+        "amount": 2509
+      },
+      {
+        "platform": "抖阴Plus",
+        "amount": 320
       }
     ],
     "dailySpend": [
       {
         "date": "2026-05-01",
         "amount": 350409
+      },
+      {
+        "date": "2026-05-02",
+        "amount": 1229999
       }
     ]
   },
@@ -37855,7 +38561,7 @@ MOCK_DATA.trendData = {
       "data": [
         0,
         0,
-        349991
+        579987
       ],
       "color": "#1E88E5"
     },
@@ -37867,6 +38573,15 @@ MOCK_DATA.trendData = {
         409
       ],
       "color": "#7C4DFF"
+    },
+    {
+      "name": "陈亦凡",
+      "data": [
+        0,
+        0,
+        999999
+      ],
+      "color": "#00E676"
     }
   ]
 };
