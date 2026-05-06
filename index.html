@@ -29835,19 +29835,27 @@ const MOCK_DATA = {
       "salesList": [
         {
           "name": "陈亦凡",
-          "actual": 3480000,
+          "actual": 3499995,
           "target": 3200000,
-          "newOrders": 18,
+          "newOrders": 22,
           "oldClients": 10,
           "color": "#00E676"
         },
         {
           "name": "卢登",
-          "actual": 1259980,
+          "actual": 2339974,
           "target": 8500000,
-          "newOrders": 0,
-          "oldClients": 22,
+          "newOrders": 19,
+          "oldClients": 36,
           "color": "#1E88E5"
+        },
+        {
+          "name": "吴挺",
+          "actual": 579997,
+          "target": 3100000,
+          "newOrders": 19,
+          "oldClients": 22,
+          "color": "#00BCD4"
         },
         {
           "name": "郭永正",
@@ -29856,43 +29864,35 @@ const MOCK_DATA = {
           "newOrders": 0,
           "oldClients": 2,
           "color": "#7C4DFF"
-        },
-        {
-          "name": "吴挺",
-          "actual": 0,
-          "target": 3100000,
-          "newOrders": 0,
-          "oldClients": 0,
-          "color": "#00BCD4"
         }
       ],
       "renewData": [
         {
           "name": "陈亦凡",
-          "newActual": 999999,
+          "newActual": 1019994,
           "newTarget": 700000,
           "renewActual": 2480001,
           "renewTarget": 2500000
         },
         {
           "name": "卢登",
-          "newActual": 0,
+          "newActual": 159996,
           "newTarget": 1000000,
-          "renewActual": 1259980,
+          "renewActual": 2179978,
           "renewTarget": 7500000
+        },
+        {
+          "name": "吴挺",
+          "newActual": 140001,
+          "newTarget": 1200000,
+          "renewActual": 439996,
+          "renewTarget": 1900000
         },
         {
           "name": "郭永正",
           "newActual": 0,
           "newTarget": 1300000,
           "renewActual": 110409,
-          "renewTarget": 1900000
-        },
-        {
-          "name": "吴挺",
-          "newActual": 0,
-          "newTarget": 1200000,
-          "renewActual": 0,
           "renewTarget": 1900000
         }
       ],
@@ -29901,8 +29901,8 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 4849980,
-            "target": 17998481,
+            "actual": 6529966,
+            "target": 17998872,
             "mom": 0,
             "icon": "⏱️",
             "color": "#1E88E5"
@@ -29911,7 +29911,7 @@ const MOCK_DATA = {
             "mode": "CPA",
             "label": "按行为计费",
             "actual": 409,
-            "target": 1519,
+            "target": 1128,
             "mom": 0,
             "icon": "🖱️",
             "color": "#7C4DFF"
@@ -29920,10 +29920,10 @@ const MOCK_DATA = {
         "industries": [
           {
             "name": "棋牌",
-            "actual": 1259980,
+            "actual": 2359969,
             "target": 10500000,
             "mom": 0,
-            "clients": 5
+            "clients": 8
           },
           {
             "name": "约炮",
@@ -29933,11 +29933,18 @@ const MOCK_DATA = {
             "clients": 1
           },
           {
-            "name": "直播",
-            "actual": 110409,
-            "target": 121450,
+            "name": "播放器",
+            "actual": 439996,
+            "target": 2500000,
             "mom": 0,
-            "clients": 1
+            "clients": 3
+          },
+          {
+            "name": "直播",
+            "actual": 250410,
+            "target": 275451,
+            "mom": 0,
+            "clients": 2
           }
         ]
       },
@@ -29948,26 +29955,59 @@ const MOCK_DATA = {
               "industry": "约炮",
               "amount": 3480000,
               "orders": 28
+            },
+            {
+              "industry": "棋牌",
+              "amount": 19995,
+              "orders": 4
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 3480000,
-              "orders": 28
+              "amount": 3499995,
+              "orders": 32
             }
           ],
           "clients": [
             {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 10350,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 6426,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 1223,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户新增",
+              "contract": 1996,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 264538,
               "expireDate": "2026-06-02",
               "status": "正常"
             },
             {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 151595,
               "expireDate": "2026-06-02",
               "status": "正常"
@@ -29988,7 +30028,7 @@ const MOCK_DATA = {
             },
             {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 49515,
               "expireDate": "2026-06-02",
               "status": "正常"
@@ -30030,14 +30070,14 @@ const MOCK_DATA = {
             },
             {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 7101,
               "expireDate": "2026-06-02",
               "status": "正常"
             },
             {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 5278,
               "expireDate": "2026-06-02",
               "status": "正常"
@@ -30058,7 +30098,7 @@ const MOCK_DATA = {
             },
             {
               "name": "约炮",
-              "type": "全新客户",
+              "type": "老客户新增",
               "contract": 15253,
               "expireDate": "2026-06-02",
               "status": "正常"
@@ -30160,15 +30200,15 @@ const MOCK_DATA = {
           "industryDetails": [
             {
               "industry": "棋牌",
-              "amount": 1259980,
-              "orders": 22
+              "amount": 2339974,
+              "orders": 55
             }
           ],
           "modeDetails": [
             {
               "mode": "CPT",
-              "amount": 1259980,
-              "orders": 22
+              "amount": 2339974,
+              "orders": 55
             }
           ],
           "clients": [
@@ -30325,6 +30365,547 @@ const MOCK_DATA = {
               "contract": 49999,
               "expireDate": "2026-06-03",
               "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 82897,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 31856,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 258,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 258,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 2455,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 985,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 1141,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 7474,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 2098,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 2497,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 786,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 2248,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 12013,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 692,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 240,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 6884,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "全新客户",
+              "contract": 285,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 146,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "送1888",
+              "type": "老客户新增",
+              "contract": 4784,
+              "expireDate": "2026-05-20",
+              "status": "正常"
+            },
+            {
+              "name": "PG电子",
+              "type": "老客户续费",
+              "contract": 39999,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 530027,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 203683,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 1650,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 1650,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 15695,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 932,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 6297,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 7293,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 47785,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 13414,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 5025,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 15963,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            },
+            {
+              "name": "棋牌",
+              "type": "老客户续费",
+              "contract": 30585,
+              "expireDate": "2026-06-06",
+              "status": "正常"
+            }
+          ]
+        },
+        "吴挺": {
+          "industryDetails": [
+            {
+              "industry": "播放器",
+              "amount": 439996,
+              "orders": 22
+            },
+            {
+              "industry": "直播",
+              "amount": 140001,
+              "orders": 19
+            }
+          ],
+          "modeDetails": [
+            {
+              "mode": "CPT",
+              "amount": 579997,
+              "orders": 41
+            }
+          ],
+          "clients": [
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 68077,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 26622,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 6997,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 6472,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 3178,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 4115,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 8572,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 4495,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 2622,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 3143,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 1418,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 415,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 1136,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 137,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 944,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 108,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 457,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 576,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "约爱直播",
+              "type": "老客户新增",
+              "contract": 516,
+              "expireDate": "2026-05-12",
+              "status": "即将到期"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 96798,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 37578,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 15408,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 11792,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 9542,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 5969,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 5426,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 4087,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 4037,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 3293,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 1574,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 1171,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 987,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 896,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 370,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 327,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 285,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 257,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "多乐视频",
+              "type": "老客户续费",
+              "contract": 200,
+              "expireDate": "2026-06-08",
+              "status": "正常"
+            },
+            {
+              "name": "91看片 51看片 夸克视频",
+              "type": "老客户续费",
+              "contract": 120000,
+              "expireDate": "2026-06-01",
+              "status": "正常"
+            },
+            {
+              "name": "油管18+  91看片 51看片",
+              "type": "老客户续费",
+              "contract": 60000,
+              "expireDate": "2026-05-30",
+              "status": "正常"
+            },
+            {
+              "name": "油管18+  91看片 51看片",
+              "type": "老客户续费",
+              "contract": 60000,
+              "expireDate": "2026-05-30",
+              "status": "正常"
             }
           ]
         },
@@ -30364,17 +30945,540 @@ const MOCK_DATA = {
               "status": "正常"
             }
           ]
-        },
-        "吴挺": {
-          "industryDetails": [],
-          "modeDetails": [],
-          "clients": []
         }
       },
-      "totalActual": 4850389,
+      "totalActual": 6530375,
       "totalTarget": 18000000,
       "expireToday": [],
       "expireSoon": [
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 68077.4446,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 26622.211,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 6997.0472,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 6472.0436,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 3178.0518,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 4115.0516,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 8572.058,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 4495.062,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 2622.0172,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 3142.997,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 1418.0144,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 414.997,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 1136.0074,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 137.0138,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 944.0244,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 108.0288,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 457.0082,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 576.0172,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "约爱直播",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 515.8648,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "约爱直播"
+        },
+        {
+          "client": "棋牌",
+          "group": "",
+          "displayName": "",
+          "sales": "陈亦凡",
+          "amount": 10350.079,
+          "tier": "实力客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "棋牌"
+        },
+        {
+          "client": "棋牌",
+          "group": "",
+          "displayName": "",
+          "sales": "陈亦凡",
+          "amount": 6426.0395,
+          "tier": "实力客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "棋牌"
+        },
+        {
+          "client": "棋牌",
+          "group": "",
+          "displayName": "",
+          "sales": "陈亦凡",
+          "amount": 1222.9915,
+          "tier": "实力客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "棋牌"
+        },
+        {
+          "client": "棋牌",
+          "group": "",
+          "displayName": "",
+          "sales": "陈亦凡",
+          "amount": 1996.04,
+          "tier": "实力客户",
+          "source": "五月",
+          "expireDate": "2026-05-12",
+          "daysLeft": 6,
+          "contact": "棋牌"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 82896.8895,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 31856.159,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 257.984,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 257.984,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 2454.9485,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 984.954,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 1140.9815,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 7473.8215,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 2097.927,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 2496.9265,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 785.9755,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 2247.9775,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 12012.7275,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 692.0115,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 239.9835,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 6883.836,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 285.0195,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 146.0195,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "送1888",
+          "group": "",
+          "displayName": "",
+          "sales": "卢登",
+          "amount": 4783.824,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-05-20",
+          "daysLeft": 14,
+          "contact": "送1888"
+        },
+        {
+          "client": "油管18+  91看片 51看片",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 59999.9292,
+          "tier": "常规客户",
+          "source": "五月",
+          "expireDate": "2026-05-30",
+          "daysLeft": 24,
+          "contact": "油管18+  91看片 51看片"
+        },
+        {
+          "client": "油管18+  91看片 51看片",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 59999.9292,
+          "tier": "常规客户",
+          "source": "五月",
+          "expireDate": "2026-05-30",
+          "daysLeft": 24,
+          "contact": "油管18+  91看片 51看片"
+        },
         {
           "client": "开元官方（165）、PG官方（9926）、澳门太阳城（683）",
           "group": "",
@@ -30398,6 +31502,18 @@ const MOCK_DATA = {
           "expireDate": "2026-06-01",
           "daysLeft": 26,
           "contact": "PG娱乐城"
+        },
+        {
+          "client": "91看片 51看片 夸克视频",
+          "group": "",
+          "displayName": "",
+          "sales": "吴挺",
+          "amount": 119999.8584,
+          "tier": "观察客户",
+          "source": "五月",
+          "expireDate": "2026-06-01",
+          "daysLeft": 26,
+          "contact": "91看片 51看片 夸克视频"
         },
         {
           "client": "约炮",
@@ -31009,20 +32125,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 409,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 1,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 409,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 1,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31041,17 +32157,17 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1300000,
-              "renewActual": 409,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1200000,
               "renewActual": 0,
+              "renewTarget": 1900000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1300000,
+              "renewActual": 409,
               "renewTarget": 1900000
             }
           ],
@@ -31062,8 +32178,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31072,7 +32188,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31081,10 +32197,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31094,11 +32210,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31123,20 +32246,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31155,16 +32278,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -31176,8 +32299,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31186,7 +32309,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31195,10 +32318,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31208,11 +32331,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31237,20 +32367,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31269,16 +32399,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -31290,8 +32420,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31300,7 +32430,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31309,10 +32439,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31322,11 +32452,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31351,20 +32488,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 110000,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 1,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 110000,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 1,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31383,17 +32520,17 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
-              "newActual": 0,
-              "newTarget": 1300000,
-              "renewActual": 110000,
-              "renewTarget": 1900000
-            },
-            {
               "name": "吴挺",
               "newActual": 0,
               "newTarget": 1200000,
               "renewActual": 0,
+              "renewTarget": 1900000
+            },
+            {
+              "name": "郭永正",
+              "newActual": 0,
+              "newTarget": 1300000,
+              "renewActual": 110000,
               "renewTarget": 1900000
             }
           ],
@@ -31404,8 +32541,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31414,7 +32551,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31423,10 +32560,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31436,11 +32573,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31465,20 +32609,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
+              "name": "吴挺",
+              "actual": 199996,
+              "target": 3100000,
+              "newOrders": 0,
+              "oldClients": 19,
+              "color": "#00BCD4"
+            },
+            {
               "name": "郭永正",
               "actual": 0,
               "target": 3200000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#7C4DFF"
-            },
-            {
-              "name": "吴挺",
-              "actual": 0,
-              "target": 3100000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00BCD4"
             }
           ],
           "renewData": [
@@ -31497,29 +32641,29 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
+              "name": "吴挺",
+              "newActual": 0,
+              "newTarget": 1200000,
+              "renewActual": 199996,
+              "renewTarget": 1900000
+            },
+            {
               "name": "郭永正",
               "newActual": 0,
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "吴挺",
-              "newActual": 0,
-              "newTarget": 1200000,
-              "renewActual": 0,
-              "renewTarget": 1900000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 199996,
           "totalTarget": 580645,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31528,7 +32672,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31537,10 +32681,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31550,11 +32694,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31564,19 +32715,27 @@ const MOCK_DATA = {
           "salesList": [
             {
               "name": "陈亦凡",
-              "actual": 0,
+              "actual": 19995,
               "target": 3200000,
-              "newOrders": 0,
+              "newOrders": 4,
               "oldClients": 0,
               "color": "#00E676"
             },
             {
               "name": "卢登",
-              "actual": 0,
+              "actual": 1079994,
               "target": 8500000,
-              "newOrders": 0,
-              "oldClients": 0,
+              "newOrders": 19,
+              "oldClients": 14,
               "color": "#1E88E5"
+            },
+            {
+              "name": "吴挺",
+              "actual": 380001,
+              "target": 3100000,
+              "newOrders": 19,
+              "oldClients": 3,
+              "color": "#00BCD4"
             },
             {
               "name": "郭永正",
@@ -31585,30 +32744,29 @@ const MOCK_DATA = {
               "newOrders": 0,
               "oldClients": 0,
               "color": "#7C4DFF"
-            },
-            {
-              "name": "吴挺",
-              "actual": 0,
-              "target": 3100000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#00BCD4"
             }
           ],
           "renewData": [
             {
               "name": "陈亦凡",
-              "newActual": 0,
+              "newActual": 19995,
               "newTarget": 700000,
               "renewActual": 0,
               "renewTarget": 2500000
             },
             {
               "name": "卢登",
-              "newActual": 0,
+              "newActual": 159996,
               "newTarget": 1000000,
-              "renewActual": 0,
+              "renewActual": 919998,
               "renewTarget": 7500000
+            },
+            {
+              "name": "吴挺",
+              "newActual": 140001,
+              "newTarget": 1200000,
+              "renewActual": 240000,
+              "renewTarget": 1900000
             },
             {
               "name": "郭永正",
@@ -31616,24 +32774,17 @@ const MOCK_DATA = {
               "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
-            },
-            {
-              "name": "吴挺",
-              "newActual": 0,
-              "newTarget": 1200000,
-              "renewActual": 0,
-              "renewTarget": 1900000
             }
           ],
-          "totalActual": 0,
+          "totalActual": 1479989,
           "totalTarget": 580645,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31642,7 +32793,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31651,10 +32802,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31664,11 +32815,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31693,20 +32851,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31725,16 +32883,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -31746,8 +32904,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31756,7 +32914,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31765,10 +32923,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31778,11 +32936,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31807,20 +32972,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31839,16 +33004,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -31860,8 +33025,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31870,7 +33035,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31879,10 +33044,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -31892,11 +33057,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -31921,20 +33093,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -31953,16 +33125,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -31974,8 +33146,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -31984,7 +33156,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -31993,10 +33165,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32006,11 +33178,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32035,20 +33214,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32067,16 +33246,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32088,8 +33267,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32098,7 +33277,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32107,10 +33286,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32120,11 +33299,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32149,20 +33335,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32181,16 +33367,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32202,8 +33388,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32212,7 +33398,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32221,10 +33407,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32234,11 +33420,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32263,20 +33456,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32295,16 +33488,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32316,8 +33509,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32326,7 +33519,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32335,10 +33528,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32348,11 +33541,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32377,20 +33577,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32409,16 +33609,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32430,8 +33630,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32440,7 +33640,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32449,10 +33649,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32462,11 +33662,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32491,20 +33698,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32523,16 +33730,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32544,8 +33751,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32554,7 +33761,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32563,10 +33770,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32576,11 +33783,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32605,20 +33819,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32637,16 +33851,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32658,8 +33872,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32668,7 +33882,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32677,10 +33891,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32690,11 +33904,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32719,20 +33940,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32751,16 +33972,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32772,8 +33993,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32782,7 +34003,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32791,10 +34012,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32804,11 +34025,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32833,20 +34061,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32865,16 +34093,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -32886,8 +34114,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -32896,7 +34124,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -32905,10 +34133,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -32918,11 +34146,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -32947,20 +34182,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -32979,16 +34214,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33000,8 +34235,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33010,7 +34245,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33019,10 +34254,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33032,11 +34267,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33061,20 +34303,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33093,16 +34335,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33114,8 +34356,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33124,7 +34366,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33133,10 +34375,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33146,11 +34388,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33175,20 +34424,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33207,16 +34456,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33228,8 +34477,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33238,7 +34487,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33247,10 +34496,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33260,11 +34509,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33289,20 +34545,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33321,16 +34577,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33342,8 +34598,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33352,7 +34608,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33361,10 +34617,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33374,11 +34630,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33403,20 +34666,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33435,16 +34698,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33456,8 +34719,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33466,7 +34729,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33475,10 +34738,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33488,11 +34751,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33517,20 +34787,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33549,16 +34819,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33570,8 +34840,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33580,7 +34850,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33589,10 +34859,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33602,11 +34872,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33631,20 +34908,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33663,16 +34940,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33684,8 +34961,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33694,7 +34971,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33703,10 +34980,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33716,11 +34993,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33745,20 +35029,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33777,16 +35061,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33798,8 +35082,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33808,7 +35092,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33817,10 +35101,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33830,11 +35114,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33859,20 +35150,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -33891,16 +35182,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -33912,8 +35203,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -33922,7 +35213,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -33931,10 +35222,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -33944,11 +35235,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -33973,20 +35271,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -34005,16 +35303,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -34026,8 +35324,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -34036,7 +35334,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -34045,10 +35343,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -34058,11 +35356,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -34087,20 +35392,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -34119,16 +35424,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -34140,8 +35445,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -34150,7 +35455,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -34159,10 +35464,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -34172,11 +35477,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -34201,20 +35513,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -34233,16 +35545,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -34254,8 +35566,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -34264,7 +35576,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -34273,10 +35585,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -34286,11 +35598,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -34315,20 +35634,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -34347,16 +35666,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -34368,8 +35687,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -34378,7 +35697,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -34387,10 +35706,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -34400,11 +35719,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -34429,20 +35755,20 @@ const MOCK_DATA = {
               "color": "#1E88E5"
             },
             {
-              "name": "郭永正",
-              "actual": 0,
-              "target": 3200000,
-              "newOrders": 0,
-              "oldClients": 0,
-              "color": "#7C4DFF"
-            },
-            {
               "name": "吴挺",
               "actual": 0,
               "target": 3100000,
               "newOrders": 0,
               "oldClients": 0,
               "color": "#00BCD4"
+            },
+            {
+              "name": "郭永正",
+              "actual": 0,
+              "target": 3200000,
+              "newOrders": 0,
+              "oldClients": 0,
+              "color": "#7C4DFF"
             }
           ],
           "renewData": [
@@ -34461,16 +35787,16 @@ const MOCK_DATA = {
               "renewTarget": 7500000
             },
             {
-              "name": "郭永正",
+              "name": "吴挺",
               "newActual": 0,
-              "newTarget": 1300000,
+              "newTarget": 1200000,
               "renewActual": 0,
               "renewTarget": 1900000
             },
             {
-              "name": "吴挺",
+              "name": "郭永正",
               "newActual": 0,
-              "newTarget": 1200000,
+              "newTarget": 1300000,
               "renewActual": 0,
               "renewTarget": 1900000
             }
@@ -34482,8 +35808,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 4849980,
-                "target": 17998481,
+                "actual": 6529966,
+                "target": 17998872,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -34492,7 +35818,7 @@ const MOCK_DATA = {
                 "mode": "CPA",
                 "label": "按行为计费",
                 "actual": 409,
-                "target": 1519,
+                "target": 1128,
                 "mom": 0,
                 "icon": "🖱️",
                 "color": "#7C4DFF"
@@ -34501,10 +35827,10 @@ const MOCK_DATA = {
             "industries": [
               {
                 "name": "棋牌",
-                "actual": 1259980,
+                "actual": 2359969,
                 "target": 10500000,
                 "mom": 0,
-                "clients": 5
+                "clients": 8
               },
               {
                 "name": "约炮",
@@ -34514,11 +35840,18 @@ const MOCK_DATA = {
                 "clients": 1
               },
               {
-                "name": "直播",
-                "actual": 110409,
-                "target": 121450,
+                "name": "播放器",
+                "actual": 439996,
+                "target": 2500000,
                 "mom": 0,
-                "clients": 1
+                "clients": 3
+              },
+              {
+                "name": "直播",
+                "actual": 250410,
+                "target": 275451,
+                "mom": 0,
+                "clients": 2
               }
             ]
           }
@@ -34891,6 +36224,42 @@ const MOCK_DATA = {
       "recoverCNY": 550000.0,
       "status": "不续费",
       "result": "要求降价十万，先下架",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026/5/6",
+      "client": "娜娜",
+      "sales": "吴挺",
+      "recoverCNY": 160000.0,
+      "status": "待确认",
+      "result": "补五天时间看最终数据",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026/5/6",
+      "client": "v",
+      "sales": "卢登",
+      "recoverCNY": 1550000.0,
+      "status": "降价续费，本期收款880000",
+      "result": "已收款",
+      "roi": 0,
+      "regCount": 0,
+      "convertCount": 0,
+      "convertRate": 0
+    },
+    {
+      "date": "2026/5/6",
+      "client": "糜竺 爺爺",
+      "sales": "卢登",
+      "recoverCNY": 40000.0,
+      "status": "正常续费",
+      "result": "已收款",
       "roi": 0,
       "regCount": 0,
       "convertCount": 0,
@@ -36921,36 +38290,816 @@ const MOCK_DATA = {
         "gap": -0.22,
         "payStatus": "已收款",
         "payDate": "2026-05-04"
+      },
+      {
+        "id": "HX-001",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 96800.0,
+        "recvCNY": 96798.306,
+        "gap": -1.694,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-003",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 37579.0,
+        "recvCNY": 37578.3364,
+        "gap": -0.6636,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-002",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 15408.0,
+        "recvCNY": 15407.744,
+        "gap": -0.256,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-009",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 11792.0,
+        "recvCNY": 11791.78,
+        "gap": -0.22,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-021",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 9542.0,
+        "recvCNY": 9541.862,
+        "gap": -0.138,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-018",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 5969.0,
+        "recvCNY": 5968.864,
+        "gap": -0.136,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-035",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 5426.0,
+        "recvCNY": 5425.9238,
+        "gap": -0.0762,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-024",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 4087.0,
+        "recvCNY": 4086.9532,
+        "gap": -0.0468,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-015",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 4037.0,
+        "recvCNY": 4036.9626,
+        "gap": -0.0374,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-016",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 3293.0,
+        "recvCNY": 3292.9688,
+        "gap": -0.0312,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-006",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 1574.0,
+        "recvCNY": 1573.9878,
+        "gap": -0.0122,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-007",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 1171.0,
+        "recvCNY": 1170.994,
+        "gap": -0.006,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-013",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 987.0,
+        "recvCNY": 986.9904,
+        "gap": -0.0096,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-017",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 896.0,
+        "recvCNY": 896.0116,
+        "gap": 0.0116,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-004",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 370.0,
+        "recvCNY": 369.985,
+        "gap": -0.015,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-020",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 327.0,
+        "recvCNY": 327.019,
+        "gap": 0.019,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-005",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 285.0,
+        "recvCNY": 285.0078,
+        "gap": 0.0078,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-046",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 257.0,
+        "recvCNY": 256.9776,
+        "gap": -0.0224,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-023",
+        "name": "多乐视频",
+        "sales": "吴挺",
+        "reportCNY": 200.0,
+        "recvCNY": 199.826,
+        "gap": -0.174,
+        "payStatus": "已收款",
+        "payDate": "2026-05-05"
+      },
+      {
+        "id": "HX-001",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 82899.0,
+        "recvCNY": 82896.8895,
+        "gap": -2.1105,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-003",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 31857.0,
+        "recvCNY": 31856.159,
+        "gap": -0.841,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-004",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 258.0,
+        "recvCNY": 257.984,
+        "gap": -0.016,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-005",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 258.0,
+        "recvCNY": 257.984,
+        "gap": -0.016,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-006",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 2455.0,
+        "recvCNY": 2454.9485,
+        "gap": -0.0515,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-007",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 985.0,
+        "recvCNY": 984.954,
+        "gap": -0.046,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-008",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 1141.0,
+        "recvCNY": 1140.9815,
+        "gap": -0.0185,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-009",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 7474.0,
+        "recvCNY": 7473.8215,
+        "gap": -0.1785,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-015",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 2098.0,
+        "recvCNY": 2097.927,
+        "gap": -0.073,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-016",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 2497.0,
+        "recvCNY": 2496.9265,
+        "gap": -0.0735,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-017",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 786.0,
+        "recvCNY": 785.9755,
+        "gap": -0.0245,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-018",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 2248.0,
+        "recvCNY": 2247.9775,
+        "gap": -0.0225,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-021",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 12013.0,
+        "recvCNY": 12012.7275,
+        "gap": -0.2725,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-022",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 692.0,
+        "recvCNY": 692.0115,
+        "gap": 0.0115,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-023",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 240.0,
+        "recvCNY": 239.9835,
+        "gap": -0.0165,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-024",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 6884.0,
+        "recvCNY": 6883.836,
+        "gap": -0.164,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-026",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 285.0,
+        "recvCNY": 285.0195,
+        "gap": 0.0195,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-029",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 146.0,
+        "recvCNY": 146.0195,
+        "gap": 0.0195,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-035",
+        "name": "送1888",
+        "sales": "卢登",
+        "reportCNY": 4784.0,
+        "recvCNY": 4783.824,
+        "gap": -0.176,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-003",
+        "name": "91看片 51看片 夸克视频",
+        "sales": "吴挺",
+        "reportCNY": 120000.0,
+        "recvCNY": 119999.8584,
+        "gap": -0.1416,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-022",
+        "name": "PG电子",
+        "sales": "卢登",
+        "reportCNY": 40000.0,
+        "recvCNY": 39999.3,
+        "gap": -0.7,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-001",
+        "name": "油管18+  91看片 51看片",
+        "sales": "吴挺",
+        "reportCNY": 60000.0,
+        "recvCNY": 59999.9292,
+        "gap": -0.0708,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-002",
+        "name": "油管18+  91看片 51看片",
+        "sales": "吴挺",
+        "reportCNY": 60000.0,
+        "recvCNY": 59999.9292,
+        "gap": -0.0708,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-001",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 530028.0,
+        "recvCNY": 530027.019,
+        "gap": -0.981,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-003",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 203683.0,
+        "recvCNY": 203682.618,
+        "gap": -0.382,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-004",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 1650.0,
+        "recvCNY": 1649.997,
+        "gap": -0.003,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-005",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 1650.0,
+        "recvCNY": 1649.997,
+        "gap": -0.003,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-006",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 15695.0,
+        "recvCNY": 15694.947,
+        "gap": -0.053,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-029",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 932.0,
+        "recvCNY": 931.983,
+        "gap": -0.017,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-007",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 6297.0,
+        "recvCNY": 6297.009,
+        "gap": 0.009,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-008",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 7293.0,
+        "recvCNY": 7292.955,
+        "gap": -0.045,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-009",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 47785.0,
+        "recvCNY": 47784.915,
+        "gap": -0.08499999999,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-015",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 13414.0,
+        "recvCNY": 13413.945,
+        "gap": -0.055,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-017",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 5025.0,
+        "recvCNY": 5024.994,
+        "gap": -0.005999999999,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-016",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 15963.0,
+        "recvCNY": 15962.943,
+        "gap": -0.057,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-035",
+        "name": "棋牌",
+        "sales": "卢登",
+        "reportCNY": 30585.0,
+        "recvCNY": 30585.078,
+        "gap": 0.078,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-001",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 68077.0,
+        "recvCNY": 68077.4446,
+        "gap": 0.4446,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-003",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 26622.0,
+        "recvCNY": 26622.211,
+        "gap": 0.211,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-021",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 6997.0,
+        "recvCNY": 6997.0472,
+        "gap": 0.0472,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-002",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 6472.0,
+        "recvCNY": 6472.0436,
+        "gap": 0.0436,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-024",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 3178.0,
+        "recvCNY": 3178.0518,
+        "gap": 0.0518,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-035",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 4115.0,
+        "recvCNY": 4115.0516,
+        "gap": 0.0516,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-009",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 8572.0,
+        "recvCNY": 8572.058,
+        "gap": 0.058,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-018",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 4495.0,
+        "recvCNY": 4495.062,
+        "gap": 0.062,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-016",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 2622.0,
+        "recvCNY": 2622.0172,
+        "gap": 0.0172,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-015",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 3143.0,
+        "recvCNY": 3142.997,
+        "gap": -0.003,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-006",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 1418.0,
+        "recvCNY": 1418.0144,
+        "gap": 0.0144,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-013",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 415.0,
+        "recvCNY": 414.997,
+        "gap": -0.003,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-007",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 1136.0,
+        "recvCNY": 1136.0074,
+        "gap": 0.0074,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-020",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 137.0,
+        "recvCNY": 137.0138,
+        "gap": 0.0138,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-017",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 944.0,
+        "recvCNY": 944.0244,
+        "gap": 0.0244,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-046",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 108.0,
+        "recvCNY": 108.0288,
+        "gap": 0.0288,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-023",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 457.0,
+        "recvCNY": 457.0082,
+        "gap": 0.0082,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-004",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 576.0,
+        "recvCNY": 576.0172,
+        "gap": 0.0172,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-005",
+        "name": "约爱直播",
+        "sales": "吴挺",
+        "reportCNY": 516.0,
+        "recvCNY": 515.8648,
+        "gap": -0.1352,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-021",
+        "name": "棋牌",
+        "sales": "陈亦凡",
+        "reportCNY": 10350.0,
+        "recvCNY": 10350.079,
+        "gap": 0.079,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-024",
+        "name": "棋牌",
+        "sales": "陈亦凡",
+        "reportCNY": 6426.0,
+        "recvCNY": 6426.0395,
+        "gap": 0.0395,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-023",
+        "name": "棋牌",
+        "sales": "陈亦凡",
+        "reportCNY": 1223.0,
+        "recvCNY": 1222.9915,
+        "gap": -0.0085,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
+      },
+      {
+        "id": "HX-022",
+        "name": "棋牌",
+        "sales": "陈亦凡",
+        "reportCNY": 1996.0,
+        "recvCNY": 1996.04,
+        "gap": 0.04,
+        "payStatus": "已收款",
+        "payDate": "2026-05-06"
       }
     ],
     "platformSpend": [
       {
         "platform": "Pornhub",
-        "amount": 2500652
+        "amount": 3338456
       },
       {
         "platform": "TikTok",
-        "amount": 692675
+        "amount": 1112416
       },
       {
         "platform": "Xvideos",
-        "amount": 406974
-      },
-      {
-        "platform": "小红书",
-        "amount": 264538
+        "amount": 488854
       },
       {
         "platform": "色虎",
-        "amount": 246296
+        "amount": 321919
+      },
+      {
+        "platform": "小红书",
+        "amount": 303440
       },
       {
         "platform": "PH·Prem",
-        "amount": 151595
+        "amount": 172170
       },
       {
         "platform": "调教师",
-        "amount": 119242
+        "amount": 164152
       },
       {
         "platform": "Pronhub",
@@ -36958,71 +39107,79 @@ const MOCK_DATA = {
       },
       {
         "platform": "快播",
-        "amount": 62235
+        "amount": 86610
       },
       {
         "platform": "性欲社",
-        "amount": 61188
+        "amount": 82330
       },
       {
         "platform": "黄片网盘",
-        "amount": 52296
+        "amount": 74988
       },
       {
         "platform": "铁粉空间",
-        "amount": 49515
-      },
-      {
-        "platform": "奥黛",
-        "amount": 28435
-      },
-      {
-        "platform": "N号房",
-        "amount": 24552
-      },
-      {
-        "platform": "懂片帝",
-        "amount": 19591
+        "amount": 62227
       },
       {
         "platform": "稚嫩学园",
-        "amount": 15253
+        "amount": 57941
       },
       {
-        "platform": "拨阴",
-        "amount": 7101
+        "platform": "奥黛",
+        "amount": 36869
+      },
+      {
+        "platform": "N号房",
+        "amount": 34141
+      },
+      {
+        "platform": "懂片帝",
+        "amount": 27242
       },
       {
         "platform": "抖阴Pro",
-        "amount": 6785
+        "amount": 9639
+      },
+      {
+        "platform": "抖阴Plus",
+        "amount": 8586
+      },
+      {
+        "platform": "拨阴",
+        "amount": 7466
+      },
+      {
+        "platform": "99夜",
+        "amount": 7398
       },
       {
         "platform": "淫客",
         "amount": 6288
       },
       {
-        "platform": "抖阴Plus",
-        "amount": 5877
-      },
-      {
         "platform": "白嫖射",
         "amount": 5439
       },
       {
-        "platform": "99夜",
-        "amount": 5278
+        "platform": "寻情记",
+        "amount": 4712
       },
       {
-        "platform": "寻情记",
-        "amount": 3634
+        "platform": "18R",
+        "amount": 3863
       },
       {
         "platform": "台姬店",
         "amount": 2509
       },
       {
-        "platform": "18R",
-        "amount": 2461
+        "platform": "酥妻ultra",
+        "amount": 464
+      },
+      {
+        "platform": "X-chat",
+        "amount": 285
       }
     ],
     "dailySpend": [
@@ -37041,13 +39198,256 @@ const MOCK_DATA = {
       {
         "date": "2026-05-04",
         "amount": 110000
+      },
+      {
+        "date": "2026-05-06",
+        "amount": 1679995
       }
     ]
   },
   "supplyData": {
-    "records": [],
-    "total": 0,
-    "platformCount": 0
+    "records": [
+      {
+        "date": "2026-05-06",
+        "adType": "春药",
+        "platform": "Pornhub",
+        "mode": "补量",
+        "amount": 760
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "春药",
+        "platform": "TikTok",
+        "mode": "补量",
+        "amount": 311
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "春药",
+        "platform": "Xvideos",
+        "mode": "补量",
+        "amount": 203
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "春药",
+        "platform": "抖阴Pro",
+        "mode": "补量",
+        "amount": 3
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "春药",
+        "platform": "抖阴Plus",
+        "mode": "补量",
+        "amount": 3
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "TikTok",
+        "mode": "补量",
+        "amount": 43
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "性欲社",
+        "mode": "补量",
+        "amount": 57
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "N号房",
+        "mode": "补量",
+        "amount": 28
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "抖阴Plus",
+        "mode": "补量",
+        "amount": 66
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "色虎",
+        "mode": "补量",
+        "amount": 35
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "18R",
+        "mode": "补量",
+        "amount": 71
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "懂片帝",
+        "mode": "补量",
+        "amount": 49
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "淫客",
+        "mode": "补量",
+        "amount": 52
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "稚嫩学园",
+        "mode": "补量",
+        "amount": 88
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "酥妻ultra",
+        "mode": "补量",
+        "amount": 24
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "黄片网盘",
+        "mode": "补量",
+        "amount": 63
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "铁粉空间",
+        "mode": "补量",
+        "amount": 41
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "好妻网web",
+        "mode": "补量",
+        "amount": 76
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "寻情记",
+        "mode": "补量",
+        "amount": 55
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "花花公子",
+        "mode": "补量",
+        "amount": 32
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "魅魔vlog",
+        "mode": "补量",
+        "amount": 97
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "奥黛",
+        "mode": "补量",
+        "amount": 58
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "约炮",
+        "platform": "小红书",
+        "mode": "补量",
+        "amount": 55
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "Pornhub",
+        "mode": "补量",
+        "amount": 13469
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "抖阴Pro",
+        "mode": "补量",
+        "amount": 28545
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "抖阴Pro",
+        "mode": "补量",
+        "amount": 10068
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "抖阴Plus",
+        "mode": "补量",
+        "amount": 6577
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "淫客",
+        "mode": "补量",
+        "amount": 110
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "稚嫩学园",
+        "mode": "补量",
+        "amount": 88
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "快播",
+        "mode": "补量",
+        "amount": 708
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "懂片帝",
+        "mode": "补量",
+        "amount": 1989
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "酥妻ultra",
+        "mode": "补量",
+        "amount": 161
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "18R",
+        "mode": "补量",
+        "amount": 294
+      },
+      {
+        "date": "2026-05-06",
+        "adType": "直播",
+        "platform": "奥黛",
+        "mode": "补量",
+        "amount": 293
+      }
+    ],
+    "total": 64572,
+    "platformCount": 22
   },
   "dailyReport": {
     "platforms": [
@@ -40874,9 +43274,18 @@ MOCK_DATA.trendData = {
       "data": [
         0,
         0,
-        1259980
+        2339974
       ],
       "color": "#1E88E5"
+    },
+    {
+      "name": "吴挺",
+      "data": [
+        0,
+        0,
+        579997
+      ],
+      "color": "#00BCD4"
     },
     {
       "name": "郭永正",
@@ -40892,7 +43301,7 @@ MOCK_DATA.trendData = {
       "data": [
         0,
         0,
-        3480000
+        3499995
       ],
       "color": "#00E676"
     }
