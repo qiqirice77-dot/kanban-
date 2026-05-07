@@ -45340,14 +45340,31 @@ function renderDailyReport() {
   const allRows = (byPlatform['全平台'] || []).filter(r => r.date.startsWith(curMonth));
   const isDay = viewMode === 'day';
 
+  // 环比辅助函数：相对前一天涨跌
+  const allRowsAll = byPlatform['全平台'] || [];
+  const findPrevRow = (curDate) => {
+    const idx = allRowsAll.findIndex(r => r.date === curDate);
+    return idx > 0 ? allRowsAll[idx - 1] : null;
+  };
+  const fmtMoM = (cur, prev) => {
+    if (prev === undefined || prev === null || prev === 0) return '';
+    const diff = cur - prev;
+    const pct = (diff / prev * 100);
+    const sign = diff > 0 ? '+' : '';
+    const color = diff > 0 ? '#10b981' : (diff < 0 ? '#ef4444' : '#999');
+    const arrow = diff > 0 ? '↑' : (diff < 0 ? '↓' : '');
+    return ` <span style="color:${color};font-weight:600">${arrow}${sign}${pct.toFixed(1)}%</span>`;
+  };
+
   let kpiCards;
   if (isDay) {
     // 单日：显示 selectedDate 当天全平台数据
     const dayRow = (byPlatform['全平台'] || []).find(r => r.date === selectedDate) || {};
+    const prevRow = findPrevRow(selectedDate) || {};
     kpiCards = [
-      { label: `日活 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.dau||0),      sub: '全平台',  color: '#06b6d4', accent: '#06b6d4' },
-      { label: `新增 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.newUsers||0), sub: '全平台',  color: '#10b981', accent: '#10b981' },
-      { label: `充值 (${selectedDate.slice(5)})`,   value: fmt(dayRow.recharge||0),  sub: 'CNY',     color: '#f59e0b', accent: '#f59e0b' },
+      { label: `日活 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.dau||0),      sub: `全平台 · vs 昨日${fmtMoM(dayRow.dau||0, prevRow.dau)}`,  color: '#06b6d4', accent: '#06b6d4' },
+      { label: `新增 (${selectedDate.slice(5)})`,   value: fmtY(dayRow.newUsers||0), sub: `全平台 · vs 昨日${fmtMoM(dayRow.newUsers||0, prevRow.newUsers)}`,  color: '#10b981', accent: '#10b981' },
+      { label: `充值 (${selectedDate.slice(5)})`,   value: fmt(dayRow.recharge||0),  sub: `CNY · vs 昨日${fmtMoM(dayRow.recharge||0, prevRow.recharge)}`,     color: '#f59e0b', accent: '#f59e0b' },
       { label: `次日留存 (${selectedDate.slice(5)})`, value: dayRow.ret1 ? (dayRow.ret1*100).toFixed(1)+'%' : '—', sub: '', color: '#ef4444', accent: '#ef4444' },
       { label: '平台数量',                           value: platforms.filter(p=>p!=='全平台').length, sub: '个平台', color: '#8b5cf6', accent: '#8b5cf6' },
     ];
@@ -45365,13 +45382,14 @@ function renderDailyReport() {
     const daysCnt = allRows.length || 1;
     const avgDAU = Math.round(mDAU / daysCnt);
     const avgNew = Math.round(mNew / daysCnt);
+    const prevTodayRow = todayRow ? findPrevRow(latestDate) : null;
     kpiCards = [
       { label: '本月累计日活',   value: fmtY(mDAU),      sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
       { label: '本月累计新增',   value: fmtY(mNew),      sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
       { label: '平均日活',       value: fmtY(avgDAU),    sub: `${daysCnt}天均值`,   color: '#06b6d4', accent: '#06b6d4' },
       { label: '平均新增',       value: fmtY(avgNew),    sub: `${daysCnt}天均值`,   color: '#10b981', accent: '#10b981' },
       { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
-      { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: '全平台', color: '#8b5cf6', accent: '#8b5cf6' },
+      { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: `全平台 · vs 昨日${fmtMoM(todayRow?.dau||0, prevTodayRow?.dau)}`, color: '#8b5cf6', accent: '#8b5cf6' },
       { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
     ];
   }
