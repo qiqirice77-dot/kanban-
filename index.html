@@ -636,6 +636,8 @@ tr:hover td{background:rgba(255,255,255,.03)}
   <button class="nav-btn" onclick="go(9)">💰 收款&amp;消耗</button>
   <button class="nav-btn" onclick="go(10)">📦 补量汇总</button>
   <button class="nav-btn" onclick="go(11)">📱 产品日报</button>
+  <button class="nav-btn" onclick="go(12)">⏱ 账期&amp;异常</button>
+  <button class="nav-btn" onclick="go(13)">🎯 集中度风险</button>
 </nav>
 
 <!-- Panels -->
@@ -974,6 +976,51 @@ tr:hover td{background:rgba(255,255,255,.03)}
     <div class="card">
       <div class="card-hd"><div class="card-title">留存率</div></div>
       <div class="ch ch240" id="c-dr-ret"></div>
+    </div>
+  </div>
+
+  <!-- 12 账期 & 异常预警 -->
+  <div class="panel" id="p12">
+    <div class="g4 mb16" id="pt-kpi"></div>
+    <div class="g2 mb16">
+      <div class="card">
+        <div class="card-hd"><div class="card-title">账期分布</div></div>
+        <div class="ch ch280" id="c-pt-dist"></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><div class="card-title">销售平均账期</div></div>
+        <div class="ch ch280" id="c-pt-sales"></div>
+      </div>
+    </div>
+    <div class="card mb16">
+      <div class="card-hd">
+        <div class="card-title">异常账期合同</div>
+        <span class="badge b-warn" id="pt-abn-count">—</span>
+      </div>
+      <div class="tbl-wrap" style="max-height:420px;overflow-y:auto"><table id="t-pt-abn"></table></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">客户付款周期画像（按累计实收 Top 20）</div></div>
+      <div class="tbl-wrap" style="max-height:420px;overflow-y:auto"><table id="t-pt-client"></table></div>
+    </div>
+  </div>
+
+  <!-- 13 集中度风险 -->
+  <div class="panel" id="p13">
+    <div class="g3 mb16" id="cr-kpi"></div>
+    <div class="g2 mb16">
+      <div class="card">
+        <div class="card-hd"><div class="card-title">Top 5 客户占比</div></div>
+        <div class="ch ch280" id="c-cr-client"></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><div class="card-title">Top 5 平台占比</div></div>
+        <div class="ch ch280" id="c-cr-plat"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">行业占比与阈值</div></div>
+      <div class="ch ch280" id="c-cr-ind"></div>
     </div>
   </div>
 
@@ -58342,6 +58389,305 @@ const MOCK_DATA = {
         "avgRet1": 13.7
       }
     }
+  },
+  "paymentTermsData": {
+    "avgDays": 0.8,
+    "maxDays": 86,
+    "unpaidN": 0,
+    "abnN": 1,
+    "buckets": [
+      {
+        "name": "当日付款",
+        "value": 169
+      },
+      {
+        "name": "1-3天",
+        "value": 99
+      },
+      {
+        "name": "4-7天",
+        "value": 3
+      },
+      {
+        "name": "8-15天",
+        "value": 0
+      },
+      {
+        "name": "16-30天",
+        "value": 0
+      },
+      {
+        "name": ">30天",
+        "value": 1
+      },
+      {
+        "name": "未付款",
+        "value": 0
+      }
+    ],
+    "salesTerm": [
+      {
+        "sales": "郭永正",
+        "avgDays": 2.5,
+        "count": 54
+      },
+      {
+        "sales": "陈亦凡",
+        "avgDays": 0.5,
+        "count": 79
+      },
+      {
+        "sales": "吴挺",
+        "avgDays": 0.5,
+        "count": 83
+      },
+      {
+        "sales": "卢登",
+        "avgDays": 0.0,
+        "count": 55
+      }
+    ],
+    "abnormal": [
+      {
+        "id": "HX-001",
+        "product": "直播",
+        "sales": "郭永正",
+        "client": "Pornhub",
+        "industry": "直播",
+        "amount": 409.2,
+        "launch": "2026-02-04",
+        "pay": "2026-05-01",
+        "days": 86,
+        "status": "已付",
+        "reason": "账期 86 天超 15 天阈值"
+      }
+    ],
+    "clientTerm": [
+      {
+        "client": "Pornhub",
+        "total": 4652816,
+        "deals": 25,
+        "avgDays": 4.2,
+        "maxDays": 86
+      },
+      {
+        "client": "TikTok",
+        "total": 1686769,
+        "deals": 22,
+        "avgDays": 0.7,
+        "maxDays": 5
+      },
+      {
+        "client": "Xvideos",
+        "total": 583607,
+        "deals": 9,
+        "avgDays": 1.0,
+        "maxDays": 6
+      },
+      {
+        "client": "小红书",
+        "total": 547004,
+        "deals": 14,
+        "avgDays": 0.4,
+        "maxDays": 1
+      },
+      {
+        "client": "色虎",
+        "total": 435750,
+        "deals": 15,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "PH·Prem",
+        "total": 251724,
+        "deals": 11,
+        "avgDays": 0.4,
+        "maxDays": 1
+      },
+      {
+        "client": "调教师",
+        "total": 238449,
+        "deals": 13,
+        "avgDays": 0.4,
+        "maxDays": 1
+      },
+      {
+        "client": "铁粉空间",
+        "total": 191503,
+        "deals": 12,
+        "avgDays": 0.3,
+        "maxDays": 1
+      },
+      {
+        "client": "快播",
+        "total": 150018,
+        "deals": 15,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "性欲社",
+        "total": 116818,
+        "deals": 14,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "黄片网盘",
+        "total": 115749,
+        "deals": 13,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "稚嫩学园",
+        "total": 64199,
+        "deals": 8,
+        "avgDays": 0.2,
+        "maxDays": 1
+      },
+      {
+        "client": "N号房",
+        "total": 51796,
+        "deals": 14,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "懂片帝",
+        "total": 42841,
+        "deals": 14,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "奥黛",
+        "total": 39347,
+        "deals": 5,
+        "avgDays": 0.2,
+        "maxDays": 1
+      },
+      {
+        "client": "18R",
+        "total": 20552,
+        "deals": 6,
+        "avgDays": 0.3,
+        "maxDays": 1
+      },
+      {
+        "client": "抖阴Pro",
+        "total": 13042,
+        "deals": 15,
+        "avgDays": 0.5,
+        "maxDays": 2
+      },
+      {
+        "client": "拨阴",
+        "total": 12081,
+        "deals": 5,
+        "avgDays": 0.2,
+        "maxDays": 1
+      },
+      {
+        "client": "抖阴Plus",
+        "total": 11244,
+        "deals": 16,
+        "avgDays": 0.4,
+        "maxDays": 2
+      },
+      {
+        "client": "99夜",
+        "total": 10307,
+        "deals": 11,
+        "avgDays": 0.4,
+        "maxDays": 1
+      }
+    ]
+  },
+  "concentrationData": {
+    "top5ClientPct": 80.5,
+    "top5ClientThreshold": 40,
+    "top5Clients": [
+      {
+        "name": "约炮",
+        "amount": 3480000,
+        "pct": 37.6
+      },
+      {
+        "name": "棋牌",
+        "amount": 2537090,
+        "pct": 27.4
+      },
+      {
+        "name": "直播",
+        "amount": 700400,
+        "pct": 7.6
+      },
+      {
+        "name": "拉斯维加斯",
+        "amount": 449995,
+        "pct": 4.9
+      },
+      {
+        "name": "开元官方（165）、PG官方（9926）、澳门太阳城（683）",
+        "amount": 289996,
+        "pct": 3.1
+      }
+    ],
+    "top1PlatPct": 50.2,
+    "top1PlatThreshold": 30,
+    "top5Plats": [
+      {
+        "name": "Pornhub",
+        "amount": 4652833,
+        "pct": 50.2
+      },
+      {
+        "name": "TikTok",
+        "amount": 1686774,
+        "pct": 18.2
+      },
+      {
+        "name": "Xvideos",
+        "amount": 583608,
+        "pct": 6.3
+      },
+      {
+        "name": "小红书",
+        "amount": 547011,
+        "pct": 5.9
+      },
+      {
+        "name": "色虎",
+        "amount": 435755,
+        "pct": 4.7
+      }
+    ],
+    "top1IndPct": 43.2,
+    "top1IndThreshold": 50,
+    "industries": [
+      {
+        "name": "棋牌",
+        "amount": 3997065,
+        "pct": 43.2
+      },
+      {
+        "name": "约炮",
+        "amount": 3539996,
+        "pct": 38.2
+      },
+      {
+        "name": "播放器",
+        "amount": 884996,
+        "pct": 9.6
+      },
+      {
+        "name": "直播",
+        "amount": 840401,
+        "pct": 9.1
+      }
+    ]
   }
 };
 
@@ -58454,7 +58800,7 @@ function getCurData(){
 
 function _rerender(){
   renderGlobalKPIs();
-  [0,1,2,3].forEach(i=>{ done[i]=false; });
+  [0,1,2,3,12,13].forEach(i=>{ done[i]=false; });
   const curIdx = [...document.querySelectorAll(".panel")].findIndex(p=>p.classList.contains("on"));
   if(curIdx>=0 && curIdx!==11){ renders[curIdx](); done[curIdx]=true; }
   if(curIdx===11){ renderDailyReport(); }
@@ -60137,8 +60483,141 @@ function drRenderCharts() {
   }));
 }
 
-const renders = [renderOverview, renderRanking, renderAdMode, renderExpire, renderReports, renderWorkflow, renderROI, renderTier, renderFeedback, renderPayment, renderSupply, renderDailyReport];
-const done = Array(12).fill(false);
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  TAB 12 — 账期 & 异常预警                                    ║
+// ╚══════════════════════════════════════════════════════════════╝
+function renderPaymentTerms(){
+  const pt = MOCK_DATA.paymentTermsData || {};
+  const buckets = pt.buckets || [];
+  const salesTerm = pt.salesTerm || [];
+  const abnormal = pt.abnormal || [];
+  const clientTerm = pt.clientTerm || [];
+
+  document.getElementById("pt-kpi").innerHTML = `
+    <div class="kpi" style="--accent:#06b6d4"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">平均账期</div><div class="kpi-val" style="color:#06b6d4">${pt.avgDays||0}</div>
+      <div class="kpi-sub">天 · 投放到付款</div></div>
+    <div class="kpi" style="--accent:#f59e0b"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">最长账期</div><div class="kpi-val" style="color:#f59e0b">${pt.maxDays||0}</div>
+      <div class="kpi-sub">天 · 历史峰值</div></div>
+    <div class="kpi" style="--accent:#ef4444"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">异常合同</div><div class="kpi-val" style="color:#ef4444">${pt.abnN||0}</div>
+      <div class="kpi-sub">需重点跟进</div></div>
+    <div class="kpi" style="--accent:#8b5cf6"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">未付款合同</div><div class="kpi-val" style="color:#8b5cf6">${pt.unpaidN||0}</div>
+      <div class="kpi-sub">含投放未到 7 天</div></div>`;
+
+  ec("c-pt-dist")?.setOption(ext({
+    tooltip:{...BASE.tooltip, trigger:"item"},
+    legend:{bottom:0, textStyle:{color:"#94a3b8"}, type:"scroll"},
+    series:[{type:"pie", radius:["40%","68%"], center:["50%","45%"],
+      label:{show:true, formatter:"{b}\n{c}笔", color:"#e8eaf0", fontSize:11},
+      data: buckets.map((b,i)=>({value:b.value, name:b.name, itemStyle:{color:["#10b981","#42A5F5","#06b6d4","#f59e0b","#FF7043","#ef4444","#94a3b8"][i]}}))
+    }]
+  }));
+
+  ec("c-pt-sales")?.setOption(ext({
+    tooltip:{...BASE.tooltip, trigger:"axis", axisPointer:{type:"shadow"}},
+    grid:{left:12,right:20,top:12,bottom:8,containLabel:true},
+    xAxis:{...BASE.xAxis, type:"value", axisLabel:{formatter:v=>v+"天",color:"#94a3b8"}},
+    yAxis:{...BASE.yAxis, type:"category", data:salesTerm.map(s=>s.sales).reverse(), axisLabel:{color:"#94a3b8"}},
+    series:[{type:"bar", barWidth:"55%",
+      data: salesTerm.map(s=>s.avgDays).reverse().map(v=>({value:v, itemStyle:{color: v>15?"#ef4444":v>7?"#f59e0b":"#10b981", borderRadius:[0,4,4,0]}})),
+      label:{show:true, position:"right", formatter:p=>p.value+"天", color:"#94a3b8", fontSize:11}
+    }]
+  }));
+
+  document.getElementById("pt-abn-count").textContent = `${abnormal.length} 单异常`;
+  document.getElementById("t-pt-abn").innerHTML = `<thead><tr><th>合同</th><th>广告主</th><th>销售</th><th>行业</th><th class="tr">金额</th><th>投放</th><th>付款</th><th>异常原因</th></tr></thead><tbody>${
+    abnormal.map(t=>`<tr>
+      <td class="mono" style="font-size:12px">${t.id}</td>
+      <td style="font-size:12px">${t.product||t.client||""}</td>
+      <td style="font-size:12px">${t.sales||""}</td>
+      <td style="font-size:12px">${t.industry||""}</td>
+      <td class="tr mono">${fmt(t.amount)}</td>
+      <td class="mono" style="font-size:12px">${t.launch||""}</td>
+      <td class="mono" style="font-size:12px">${t.pay||"—"}</td>
+      <td style="color:#ef4444;font-size:12px">${t.reason||""}</td>
+    </tr>`).join('') || '<tr><td colspan="8" style="text-align:center;padding:20px;color:#94a3b8">暂无异常</td></tr>'
+  }</tbody>`;
+
+  document.getElementById("t-pt-client").innerHTML = `<thead><tr><th>广告主</th><th class="tr">累计实收</th><th class="tr">合同数</th><th class="tr">平均账期</th><th class="tr">最长账期</th></tr></thead><tbody>${
+    clientTerm.map(c=>{
+      const ad = c.avgDays;
+      const adColor = ad===null?"#94a3b8":(ad>15?"#ef4444":ad>7?"#f59e0b":"#10b981");
+      return `<tr>
+        <td style="font-size:12px">${c.client}</td>
+        <td class="tr mono">${fmt(c.total)}</td>
+        <td class="tr mono">${c.deals}</td>
+        <td class="tr mono" style="color:${adColor};font-weight:600">${ad===null?"未付":ad+"天"}</td>
+        <td class="tr mono">${c.maxDays===null?"—":c.maxDays+"天"}</td>
+      </tr>`;
+    }).join('')
+  }</tbody>`;
+}
+
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  TAB 13 — 集中度风险                                         ║
+// ╚══════════════════════════════════════════════════════════════╝
+function renderConcentration(){
+  const cd = MOCK_DATA.concentrationData || {};
+  const tier = (cur, th, isReverse=false) => {
+    if (cur === undefined || cur === null) return {color:"#94a3b8", label:"无数据"};
+    if (cur > th) return {color:"#ef4444", label:"超阈值"};
+    if (cur > th * 0.8) return {color:"#f59e0b", label:"接近"};
+    return {color:"#10b981", label:"健康"};
+  };
+  const c1 = tier(cd.top5ClientPct, cd.top5ClientThreshold);
+  const c2 = tier(cd.top1PlatPct, cd.top1PlatThreshold);
+  const c3 = tier(cd.top1IndPct, cd.top1IndThreshold);
+
+  document.getElementById("cr-kpi").innerHTML = `
+    <div class="kpi" style="--accent:${c1.color}"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">Top 5 客户集中度</div><div class="kpi-val" style="color:${c1.color}">${cd.top5ClientPct||0}%</div>
+      <div class="kpi-sub">阈值 ${cd.top5ClientThreshold||40}% · ${c1.label}</div></div>
+    <div class="kpi" style="--accent:${c2.color}"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">Top 1 平台集中度</div><div class="kpi-val" style="color:${c2.color}">${cd.top1PlatPct||0}%</div>
+      <div class="kpi-sub">阈值 ${cd.top1PlatThreshold||30}% · ${c2.label}</div></div>
+    <div class="kpi" style="--accent:${c3.color}"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">Top 1 赛道集中度</div><div class="kpi-val" style="color:${c3.color}">${cd.top1IndPct||0}%</div>
+      <div class="kpi-sub">阈值 ${cd.top1IndThreshold||50}% · ${c3.label}</div></div>`;
+
+  const colors5 = ["#1E88E5","#42A5F5","#64B5F6","#90CAF9","#BBDEFB"];
+  ec("c-cr-client")?.setOption(ext({
+    tooltip:{...BASE.tooltip, trigger:"item", formatter: p=>`${p.name}<br/>${fmt(p.value)} 元 · ${p.percent}%`},
+    legend:{bottom:0, textStyle:{color:"#94a3b8"}, type:"scroll"},
+    series:[{type:"pie", radius:["42%","70%"], center:["50%","45%"],
+      label:{show:true, formatter:"{b}\n{d}%", color:"#e8eaf0", fontSize:11},
+      data:(cd.top5Clients||[]).map((c,i)=>({value:c.amount, name:c.name, itemStyle:{color:colors5[i]}}))
+    }]
+  }));
+
+  const colors5p = ["#7C4DFF","#9575CD","#B39DDB","#D1C4E9","#EDE7F6"];
+  ec("c-cr-plat")?.setOption(ext({
+    tooltip:{...BASE.tooltip, trigger:"item", formatter: p=>`${p.name}<br/>${fmt(p.value)} 元 · ${p.percent}%`},
+    legend:{bottom:0, textStyle:{color:"#94a3b8"}, type:"scroll"},
+    series:[{type:"pie", radius:["42%","70%"], center:["50%","45%"],
+      label:{show:true, formatter:"{b}\n{d}%", color:"#e8eaf0", fontSize:11},
+      data:(cd.top5Plats||[]).map((c,i)=>({value:c.amount, name:c.name, itemStyle:{color:colors5p[i]}}))
+    }]
+  }));
+
+  const inds = cd.industries || [];
+  ec("c-cr-ind")?.setOption(ext({
+    tooltip:{...BASE.tooltip, trigger:"axis", axisPointer:{type:"shadow"}},
+    grid:{left:12,right:20,top:24,bottom:8,containLabel:true},
+    xAxis:{...BASE.xAxis, type:"category", data:inds.map(i=>i.name), axisLabel:{color:"#94a3b8"}},
+    yAxis:{...BASE.yAxis, type:"value", axisLabel:{formatter:v=>v+"%",color:"#94a3b8"}, max:100},
+    series:[{type:"bar", barWidth:"55%",
+      data: inds.map(i=>({value: i.pct, itemStyle:{color: i.pct>cd.top1IndThreshold?"#ef4444":i.pct>cd.top1IndThreshold*0.8?"#f59e0b":"#10b981", borderRadius:[4,4,0,0]}})),
+      label:{show:true, position:"top", formatter:p=>p.value+"%", color:"#94a3b8", fontSize:11},
+      markLine:{symbol:"none", data:[{yAxis:cd.top1IndThreshold, lineStyle:{color:"#ef4444", type:"dashed"}, label:{formatter:`阈值 ${cd.top1IndThreshold}%`, color:"#ef4444", position:"insideEndTop"}}]}
+    }]
+  }));
+}
+
+const renders = [renderOverview, renderRanking, renderAdMode, renderExpire, renderReports, renderWorkflow, renderROI, renderTier, renderFeedback, renderPayment, renderSupply, renderDailyReport, renderPaymentTerms, renderConcentration];
+const done = Array(14).fill(false);
 
 function go(idx){
   document.querySelectorAll(".nav-btn").forEach((b,i)=>b.classList.toggle("active",i===idx));
