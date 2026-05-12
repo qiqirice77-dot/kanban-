@@ -705,6 +705,15 @@ tr:hover td{background:rgba(255,255,255,.03)}
 
   <!-- 1 销售监控 -->
   <div class="panel" id="p1">
+    <!-- 月末业绩预测 -->
+    <div class="card mb16" id="card-forecast">
+      <div class="card-hd">
+        <div class="card-title">月末业绩预测</div>
+        <span class="badge b-gray" id="forecast-tip">按当前日均外推</span>
+      </div>
+      <div class="g5 mb16" id="forecast-kpi" style="padding:16px"></div>
+      <div class="tbl-wrap"><table id="t-forecast"></table></div>
+    </div>
     <!-- 排行榜 -->
     <div class="card mb16" id="card-rank">
       <div class="card-hd">
@@ -58606,33 +58615,33 @@ const MOCK_DATA = {
     ]
   },
   "concentrationData": {
-    "top5ClientPct": 80.5,
+    "top5ClientPct": 66.9,
     "top5ClientThreshold": 40,
     "top5Clients": [
       {
-        "name": "约炮",
-        "amount": 3480000,
-        "pct": 37.6
+        "name": "飞驰",
+        "amount": 2480001,
+        "pct": 26.8
       },
       {
-        "name": "棋牌",
-        "amount": 2537090,
-        "pct": 27.4
+        "name": "V",
+        "amount": 1170000,
+        "pct": 12.6
       },
       {
-        "name": "直播",
-        "amount": 700400,
-        "pct": 7.6
+        "name": "fafa",
+        "amount": 999999,
+        "pct": 10.8
       },
       {
-        "name": "拉斯维加斯",
-        "amount": 449995,
-        "pct": 4.9
+        "name": "呆呆",
+        "amount": 899997,
+        "pct": 9.7
       },
       {
-        "name": "开元官方（165）、PG官方（9926）、澳门太阳城（683）",
-        "amount": 289996,
-        "pct": 3.1
+        "name": "v",
+        "amount": 649994,
+        "pct": 7.0
       }
     ],
     "top1PlatPct": 50.2,
@@ -58686,6 +58695,72 @@ const MOCK_DATA = {
         "name": "直播",
         "amount": 840401,
         "pct": 9.1
+      }
+    ]
+  },
+  "forecastData": {
+    "daysInMonth": 31,
+    "dayOfMonth": 12,
+    "daysRemaining": 19,
+    "team": {
+      "actual": 9262458,
+      "target": 18000000,
+      "completion": 51.5,
+      "dailyAvg": 771872,
+      "forecast": 23928018,
+      "forecastPct": 132.9,
+      "gap": 8737542,
+      "dailyNeed": 459871,
+      "paceRatio": 132.9
+    },
+    "people": [
+      {
+        "name": "陈亦凡",
+        "actual": 4837093,
+        "target": 3200000,
+        "completion": 151.2,
+        "dailyAvg": 403091,
+        "forecast": 12495824,
+        "forecastPct": 390.5,
+        "gap": -1637093,
+        "dailyNeed": -86163,
+        "paceRatio": 390.5
+      },
+      {
+        "name": "卢登",
+        "actual": 2339974,
+        "target": 8500000,
+        "completion": 27.5,
+        "dailyAvg": 194998,
+        "forecast": 6044932,
+        "forecastPct": 71.1,
+        "gap": 6160026,
+        "dailyNeed": 324212,
+        "paceRatio": 71.1
+      },
+      {
+        "name": "吴挺",
+        "actual": 1084993,
+        "target": 3100000,
+        "completion": 35.0,
+        "dailyAvg": 90416,
+        "forecast": 2802899,
+        "forecastPct": 90.4,
+        "gap": 2015007,
+        "dailyNeed": 106053,
+        "paceRatio": 90.4
+      },
+      {
+        "name": "郭永正",
+        "actual": 1000399,
+        "target": 3200000,
+        "completion": 31.3,
+        "dailyAvg": 83367,
+        "forecast": 2584363,
+        "forecastPct": 80.8,
+        "gap": 2199601,
+        "dailyNeed": 115768,
+        "paceRatio": 80.8
       }
     ]
   }
@@ -59122,7 +59197,54 @@ function renderOverview(){
 // ╔══════════════════════════════════════════════════════════════╗
 // ║  TAB 1 — 销售监控                                            ║
 // ╚══════════════════════════════════════════════════════════════╝
+function renderForecast(){
+  const fc = MOCK_DATA.forecastData;
+  const card = document.getElementById("card-forecast");
+  if (!fc || !card) return;
+  // 单日视角隐藏预测（预测只对整月有意义）
+  if (viewMode === 'day') { card.style.display = 'none'; return; }
+  card.style.display = '';
+  const t = fc.team;
+  const tip = document.getElementById("forecast-tip");
+  if (tip) tip.textContent = `已过 ${fc.dayOfMonth}/${fc.daysInMonth} 天 · 剩 ${fc.daysRemaining} 天`;
+  const fcColor = (p) => p >= 100 ? "#10b981" : p >= 80 ? "#f59e0b" : "#ef4444";
+  document.getElementById("forecast-kpi").innerHTML = `
+    <div class="kpi" style="--accent:#42A5F5"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">当前实收</div><div class="kpi-val" style="color:#42A5F5">${fmtY(t.actual)}</div>
+      <div class="kpi-sub">完成 ${t.completion}%</div></div>
+    <div class="kpi" style="--accent:#06b6d4"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">当前日均</div><div class="kpi-val" style="color:#06b6d4">${fmtY(t.dailyAvg)}</div>
+      <div class="kpi-sub">CNY/天</div></div>
+    <div class="kpi" style="--accent:${fcColor(t.forecastPct)}"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">预计月底</div><div class="kpi-val" style="color:${fcColor(t.forecastPct)}">${fmtY(t.forecast)}</div>
+      <div class="kpi-sub">预计完成 ${t.forecastPct}%</div></div>
+    <div class="kpi" style="--accent:${t.gap>0?'#ef4444':'#10b981'}"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">距 KPI</div><div class="kpi-val" style="color:${t.gap>0?'#ef4444':'#10b981'}">${t.gap>0?fmtY(t.gap):'已达成'}</div>
+      <div class="kpi-sub">${t.gap>0?'还差金额':'超额完成'}</div></div>
+    <div class="kpi" style="--accent:#f59e0b"><div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">日均需达成</div><div class="kpi-val" style="color:#f59e0b">${t.dailyNeed>0?fmtY(t.dailyNeed):'0'}</div>
+      <div class="kpi-sub">剩 ${fc.daysRemaining} 天 · ${t.paceRatio<100?'需提速':'已超速'}</div></div>`;
+  document.getElementById("t-forecast").innerHTML = `
+    <thead><tr><th>销售</th><th class="tr">当前实收</th><th class="tr">目标</th><th class="tr">完成率</th><th class="tr">当前日均</th><th class="tr">预计月底</th><th class="tr">预计完成率</th><th class="tr">距 KPI</th><th class="tr">日均需达成</th><th>节奏</th></tr></thead>
+    <tbody>${fc.people.map(p=>{
+      const pc = fcColor(p.forecastPct);
+      const pace = p.paceRatio >= 100 ? '<span class="badge b-ok">超速</span>' : p.paceRatio >= 80 ? '<span class="badge b-warn">勉强</span>' : '<span class="badge b-err">需提速</span>';
+      return `<tr>
+        <td style="font-weight:600">${p.name}</td>
+        <td class="tr mono">${fmt(p.actual)}</td>
+        <td class="tr mono">${fmt(p.target)}</td>
+        <td class="tr mono" style="color:${fcColor(p.completion)}">${p.completion}%</td>
+        <td class="tr mono">${fmt(p.dailyAvg)}</td>
+        <td class="tr mono" style="color:${pc};font-weight:600">${fmt(p.forecast)}</td>
+        <td class="tr mono" style="color:${pc}">${p.forecastPct}%</td>
+        <td class="tr mono" style="color:${p.gap>0?'#ef4444':'#10b981'}">${p.gap>0?fmt(p.gap):'达成'}</td>
+        <td class="tr mono">${p.dailyNeed>0?fmt(p.dailyNeed):'—'}</td>
+        <td>${pace}</td>
+      </tr>`;
+    }).join('')}</tbody>`;
+}
 function renderRanking(){
+  renderForecast();
   const D = getCurData();
   const { salesList, adData } = D;
   const isDay = viewMode === 'day';
