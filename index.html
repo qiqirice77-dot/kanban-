@@ -61081,6 +61081,21 @@ document.getElementById("hd-date").textContent =
 // 全局 KPI（始终显示）
 renderGlobalKPIs();
 
+// 初始化 day-picker 范围与月份下拉到 currentMonth
+(function initMonthPicker(){
+  const meta = MONTH_META[currentMonth];
+  if (!meta) return;
+  const pad = n => String(n).padStart(2,'0');
+  const picker = document.getElementById("day-picker");
+  if (picker){
+    picker.min   = `${meta.year}-${pad(meta.month)}-01`;
+    picker.max   = `${meta.year}-${pad(meta.month)}-${pad(meta.days)}`;
+    picker.value = selectedDate;
+  }
+  const sel = document.getElementById("month-select");
+  if (sel) sel.value = currentMonth;
+})();
+
 // 初始刷新时间
 document.getElementById("last-refresh").textContent =
   "刷新时间："+new Date().toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
