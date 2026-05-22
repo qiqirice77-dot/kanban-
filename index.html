@@ -75947,7 +75947,7 @@ function renderSupply(){
   // 平台编号汇总（按编号分组）
   const idMap = {};
   recs.forEach(r=>{
-    const key = r.platformId || r.platform;
+    const key = r.adType || r.platform;
     if(!idMap[key]) idMap[key] = {id: key, platform: r.platform, amount: 0, count: 0};
     idMap[key].amount += r.amount;
     idMap[key].count  += 1;
@@ -75975,13 +75975,12 @@ function renderSupply(){
     <td class="tc mono" style="color:var(--text3);font-size:12px">${i+1}</td>
     <td style="font-size:12px;color:var(--text2)">${r.date}</td>
     <td style="font-weight:600">${r.platform}</td>
-    <td class="mono" style="font-size:12px;color:var(--text3)">${r.platformId}</td>
+    <td style="font-size:12px;color:var(--text3)">${r.adType||"—"}</td>
     <td><span class="badge b-warn">${r.mode}</span></td>
     <td class="tr mono" style="color:#f59e0b;font-weight:700">${fmt(r.amount)}</td>
-    <td style="font-size:12px;color:var(--text3)">${r.note||"—"}</td>
   </tr>`).join('');
   document.getElementById("t-supply").innerHTML =
-    `<thead><tr><th class="tc">#</th><th>日期</th><th>平台</th><th>编号</th><th>模式</th><th class="tr">金额(CNY)</th><th>备注</th></tr></thead><tbody>${tRows}</tbody>`;
+    `<thead><tr><th class="tc">#</th><th>日期</th><th>平台</th><th>广告类型</th><th>模式</th><th class="tr">金额(CNY)</th></tr></thead><tbody>${tRows}</tbody>`;
 }
 
 // ╔══════════════════════════════════════════════════════════════╗
