@@ -78897,6 +78897,8 @@ function renderDailyReport() {
       { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
       { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: `vs ${lastMRow.date.slice(5) || '上月'}${fmtMoM(todayRow?.dau||0, lastMRow.row?.dau)}`, color: '#8b5cf6', accent: '#8b5cf6' },
       { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
+      { label: '日活整体环比',   value: prevAvgDAU ? (((avgDAU-prevAvgDAU)/prevAvgDAU*100)>0?'+':'')+(((avgDAU-prevAvgDAU)/prevAvgDAU*100).toFixed(1))+'%' : '—', sub: `本月均${fmtY(avgDAU)} vs 上月均${fmtY(prevAvgDAU)}`, color: avgDAU>=prevAvgDAU?'#10b981':'#ef4444', accent: avgDAU>=prevAvgDAU?'#10b981':'#ef4444' },
+      { label: '新增整体环比',   value: prevAvgNew ? (((avgNew-prevAvgNew)/prevAvgNew*100)>0?'+':'')+(((avgNew-prevAvgNew)/prevAvgNew*100).toFixed(1))+'%' : '—', sub: `本月均${fmtY(avgNew)} vs 上月均${fmtY(prevAvgNew)}`, color: avgNew>=prevAvgNew?'#10b981':'#ef4444', accent: avgNew>=prevAvgNew?'#10b981':'#ef4444' },
     ];
   }
   document.getElementById('dr-kpi').innerHTML = kpiCards.map(k => `<div class="kpi" style="--accent:${k.accent}">
