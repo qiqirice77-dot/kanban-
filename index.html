@@ -78881,11 +78881,19 @@ function renderDailyReport() {
     const avgDAU = Math.round(mDAU / daysCnt);
     const avgNew = Math.round(mNew / daysCnt);
     const lastMRow = todayRow ? findSameDayLastMonth(latestDate) : {row: null, date: ''};
+    // 上月同期均值（取与本月相同天数）
+    const [cy2, cm2] = curMonth.split('-').map(Number);
+    const pm = cm2 === 1 ? 12 : cm2 - 1;
+    const py = cm2 === 1 ? cy2 - 1 : cy2;
+    const prevMonthStr = `${py}-${String(pm).padStart(2,'0')}`;
+    const prevMonthRows = allRowsAll.filter(r => r.date.startsWith(prevMonthStr)).slice(0, daysCnt);
+    const prevAvgDAU = prevMonthRows.length ? Math.round(prevMonthRows.reduce((s,r)=>s+(r.dau||0),0)/prevMonthRows.length) : 0;
+    const prevAvgNew = prevMonthRows.length ? Math.round(prevMonthRows.reduce((s,r)=>s+(r.newUsers||0),0)/prevMonthRows.length) : 0;
     kpiCards = [
       { label: '本月累计日活',   value: fmtY(mDAU),      sub: `${curMonth} 全平台`, color: '#06b6d4', accent: '#06b6d4' },
       { label: '本月累计新增',   value: fmtY(mNew),      sub: `${curMonth} 全平台`, color: '#10b981', accent: '#10b981' },
-      { label: '平均日活',       value: fmtY(avgDAU),    sub: `${daysCnt}天均值`,   color: '#06b6d4', accent: '#06b6d4' },
-      { label: '平均新增',       value: fmtY(avgNew),    sub: `${daysCnt}天均值`,   color: '#10b981', accent: '#10b981' },
+      { label: '平均日活',       value: fmtY(avgDAU),    sub: `${daysCnt}天均值${fmtMoM(avgDAU, prevAvgDAU)}`,   color: '#06b6d4', accent: '#06b6d4' },
+      { label: '平均新增',       value: fmtY(avgNew),    sub: `${daysCnt}天均值${fmtMoM(avgNew, prevAvgNew)}`,   color: '#10b981', accent: '#10b981' },
       { label: '本月累计充值',   value: fmt(mRecharge),  sub: 'CNY',                color: '#f59e0b', accent: '#f59e0b' },
       { label: `最新日活 (${latestDate.slice(5)})`, value: fmtY(todayRow?.dau||0), sub: `vs ${lastMRow.date.slice(5) || '上月'}${fmtMoM(todayRow?.dau||0, lastMRow.row?.dau)}`, color: '#8b5cf6', accent: '#8b5cf6' },
       { label: '平均次日留存',   value: avgRet1+(avgRet1==='—'?'':'%'), sub: '本月均值', color: '#ef4444', accent: '#ef4444' },
@@ -78942,24 +78950,81 @@ function drRenderCharts() {
   const ret3Vals = rows.map(r => r.ret3 != null ? r.ret3 : null);
   const ret7Vals = rows.map(r => r.ret7 != null ? r.ret7 : null);
 
-  // 日活趋势
+  // 上月同期数据
+  const [cy, cm] = curMonth.split('-').map(Number);
+  const prevM = cm === 1 ? 12 : cm - 1;
+  const prevY = cm === 1 ? cy - 1 : cy;
+  const prevMonth = `${prevY}-${String(prevM).padStart(2,'0')}`;
+  const prevRows = (drPlatform === '全平台' ? byPlatform['全平台'] : byPlatform[drPlatform] || [])
+    .filter(r => r.date.startsWith(prevMonth))
+    .sort((a, b) => a.date.localeCompare(b.date));
+  // 按日号对齐（取相同日号的上月数据）
+  const prevDauVals = rows.map(r => {
+    const day = r.date.slice(8);
+    const pr = prevRows.find(p => p.date.slice(8) === day);
+    return pr ? pr.dau : null;
+  });
+  const prevNewVals = rows.map(r => {
+    const day = r.date.slice(8);
+    const pr = prevRows.find(p => p.date.slice(8) === day);
+    return pr ? pr.newUsers : null;
+  });
+
+  const momTooltip = (cur, prev) => {
+    if (!prev) return '';
+    const pct = ((cur - prev) / prev * 100).toFixed(1);
+    const sign = pct > 0 ? '+' : '';
+    return ` (${sign}${pct}%)`;
+  };
+
+  // 日活趋势（含上月同期）
   ec('c-dr-dau')?.setOption(ext({
-    color:['#06b6d4'],
-    tooltip:{...BASE.tooltip, trigger:'axis'},
-    grid:{left:12,right:12,top:12,bottom:8,containLabel:true},
+    color:['#06b6d4','#94a3b8'],
+    legend:{show:true, textStyle:{color:'#94a3b8'}, top:0},
+    tooltip:{...BASE.tooltip, trigger:'axis', formatter: params => {
+      const d = params[0].name;
+      const cur = params.find(p=>p.seriesName==='本月');
+      const prev = params.find(p=>p.seriesName==='上月同期');
+      let s = d;
+      if(cur) s += `<br/>${cur.marker}本月: <b>${cur.value>=10000?(cur.value/10000).toFixed(1)+'w':cur.value}</b>`;
+      if(prev && prev.value!=null) {
+        s += `<br/>${prev.marker}上月: <b>${prev.value>=10000?(prev.value/10000).toFixed(1)+'w':prev.value}</b>`;
+        if(cur && cur.value && prev.value) s += momTooltip(cur.value, prev.value);
+      }
+      return s;
+    }},
+    grid:{left:12,right:12,top:28,bottom:8,containLabel:true},
     xAxis:{...BASE.xAxis, type:'category', data:xDates, axisLabel:{color:'#94a3b8',fontSize:11}},
     yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
-    series:[{type:'line',name:'日活',data:dauVals,smooth:true,areaStyle:{opacity:0.15},lineStyle:{width:2}}],
+    series:[
+      {type:'line',name:'本月',data:dauVals,smooth:true,areaStyle:{opacity:0.15},lineStyle:{width:2}},
+      {type:'line',name:'上月同期',data:prevDauVals,smooth:true,lineStyle:{width:1.5,type:'dashed'},symbol:'none'},
+    ],
   }));
 
-  // 新增用户趋势
+  // 新增用户趋势（含上月同期）
   ec('c-dr-new')?.setOption(ext({
-    color:['#10b981'],
-    tooltip:{...BASE.tooltip, trigger:'axis'},
-    grid:{left:12,right:12,top:12,bottom:8,containLabel:true},
+    color:['#10b981','#94a3b8'],
+    legend:{show:true, textStyle:{color:'#94a3b8'}, top:0},
+    tooltip:{...BASE.tooltip, trigger:'axis', formatter: params => {
+      const d = params[0].name;
+      const cur = params.find(p=>p.seriesName==='本月');
+      const prev = params.find(p=>p.seriesName==='上月同期');
+      let s = d;
+      if(cur) s += `<br/>${cur.marker}本月: <b>${cur.value>=10000?(cur.value/10000).toFixed(1)+'w':cur.value}</b>`;
+      if(prev && prev.value!=null) {
+        s += `<br/>${prev.marker}上月: <b>${prev.value>=10000?(prev.value/10000).toFixed(1)+'w':prev.value}</b>`;
+        if(cur && cur.value && prev.value) s += momTooltip(cur.value, prev.value);
+      }
+      return s;
+    }},
+    grid:{left:12,right:12,top:28,bottom:8,containLabel:true},
     xAxis:{...BASE.xAxis, type:'category', data:xDates, axisLabel:{color:'#94a3b8',fontSize:11}},
     yAxis:{...BASE.yAxis, axisLabel:{color:'#94a3b8', formatter:v=>v>=10000?(v/10000).toFixed(1)+'w':v}},
-    series:[{type:'bar',name:'新增用户',data:newVals,barMaxWidth:20}],
+    series:[
+      {type:'bar',name:'本月',data:newVals,barMaxWidth:20},
+      {type:'line',name:'上月同期',data:prevNewVals,smooth:true,lineStyle:{width:1.5,type:'dashed'},symbol:'none'},
+    ],
   }));
 
   // 留存率
