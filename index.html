@@ -82220,18 +82220,18 @@ const MOCK_DATA = {
   },
   "forecastData": {
     "daysInMonth": 30,
-    "dayOfMonth": 2,
-    "daysRemaining": 28,
+    "dayOfMonth": 3,
+    "daysRemaining": 27,
     "team": {
       "actual": 350000,
       "target": 1681000,
       "completion": 20.8,
-      "dailyAvg": 175000,
-      "forecast": 5250000,
-      "forecastPct": 312.3,
+      "dailyAvg": 116667,
+      "forecast": 3500000,
+      "forecastPct": 208.2,
       "gap": 1331000,
-      "dailyNeed": 47536,
-      "paceRatio": 312.3
+      "dailyNeed": 49296,
+      "paceRatio": 208.2
     },
     "people": [
       {
@@ -82239,12 +82239,12 @@ const MOCK_DATA = {
         "actual": 350000,
         "target": 357000,
         "completion": 98.0,
-        "dailyAvg": 175000,
-        "forecast": 5250000,
-        "forecastPct": 1470.6,
+        "dailyAvg": 116667,
+        "forecast": 3500000,
+        "forecastPct": 980.4,
         "gap": 7000,
-        "dailyNeed": 250,
-        "paceRatio": 1470.6
+        "dailyNeed": 259,
+        "paceRatio": 980.4
       },
       {
         "name": "陈亦凡",
@@ -82255,7 +82255,7 @@ const MOCK_DATA = {
         "forecast": 0,
         "forecastPct": 0.0,
         "gap": 318000,
-        "dailyNeed": 11357,
+        "dailyNeed": 11778,
         "paceRatio": 0.0
       },
       {
@@ -82267,7 +82267,7 @@ const MOCK_DATA = {
         "forecast": 0,
         "forecastPct": 0.0,
         "gap": 420000,
-        "dailyNeed": 15000,
+        "dailyNeed": 15556,
         "paceRatio": 0.0
       },
       {
@@ -82279,7 +82279,7 @@ const MOCK_DATA = {
         "forecast": 0,
         "forecastPct": 0.0,
         "gap": 310000,
-        "dailyNeed": 11071,
+        "dailyNeed": 11481,
         "paceRatio": 0.0
       },
       {
@@ -82291,7 +82291,7 @@ const MOCK_DATA = {
         "forecast": 0,
         "forecastPct": 0.0,
         "gap": 118000,
-        "dailyNeed": 4214,
+        "dailyNeed": 4370,
         "paceRatio": 0.0
       },
       {
@@ -82303,7 +82303,7 @@ const MOCK_DATA = {
         "forecast": 0,
         "forecastPct": 0.0,
         "gap": 158000,
-        "dailyNeed": 5643,
+        "dailyNeed": 5852,
         "paceRatio": 0.0
       }
     ]
@@ -82311,27 +82311,27 @@ const MOCK_DATA = {
   "compareData": {
     "curMonth": "2026-06",
     "prevMonth": "2026-05",
-    "endDay": 2,
+    "endDay": 3,
     "team": {
       "cur": 350000,
-      "prev": 1580395,
-      "diff": -1230395,
-      "pct": -77.9
+      "prev": 4740389,
+      "diff": -4390389,
+      "pct": -92.6
     },
     "sales": [
       {
         "name": "陈亦凡",
         "cur": 0,
-        "prev": 999999,
-        "diff": -999999,
+        "prev": 3480000,
+        "diff": -3480000,
         "pct": -100.0
       },
       {
         "name": "卢登",
         "cur": 350000,
-        "prev": 579987,
-        "diff": -229987,
-        "pct": -39.7
+        "prev": 1259980,
+        "diff": -909980,
+        "pct": -72.2
       },
       {
         "name": "郭永正",
@@ -82345,16 +82345,16 @@ const MOCK_DATA = {
       {
         "name": "约炮",
         "cur": 0,
-        "prev": 999999,
-        "diff": -999999,
+        "prev": 3480000,
+        "diff": -3480000,
         "pct": -100.0
       },
       {
         "name": "棋牌",
         "cur": 350000,
-        "prev": 579987,
-        "diff": -229987,
-        "pct": -39.7
+        "prev": 1259980,
+        "diff": -909980,
+        "pct": -72.2
       },
       {
         "name": "直播",
@@ -82368,9 +82368,9 @@ const MOCK_DATA = {
       {
         "name": "CPT",
         "cur": 350000,
-        "prev": 1579986,
-        "diff": -1229986,
-        "pct": -77.8
+        "prev": 4739980,
+        "diff": -4389980,
+        "pct": -92.6
       },
       {
         "name": "CPA",
@@ -82382,18 +82382,18 @@ const MOCK_DATA = {
     ],
     "ctype": [
       {
+        "name": "老客户续费",
+        "cur": 350000,
+        "prev": 3740390,
+        "diff": -3390390,
+        "pct": -90.6
+      },
+      {
         "name": "老客户新增",
         "cur": 0,
         "prev": 993711,
         "diff": -993711,
         "pct": -100.0
-      },
-      {
-        "name": "老客户续费",
-        "cur": 350000,
-        "prev": 580396,
-        "diff": -230396,
-        "pct": -39.7
       },
       {
         "name": "全新客户",
@@ -82468,7 +82468,7 @@ let currentMonth = 'jun';        // 'apr' | 'mar' | 'feb'
 let selectedDate = '2026-06-01'; // 单日视角选中日期
 
 const MONTH_META = {
-  jun: { year:2026, month:6, days:30, label:"2026年6月", defaultDate:"2026-06-02" },
+  jun: { year:2026, month:6, days:30, label:"2026年6月", defaultDate:"2026-06-03" },
   may: { year:2026, month:5, days:31, label:"2026年5月", defaultDate:"2026-05-31" },
   apr: { year:2026, month:4, days:30, label:"2026年4月", defaultDate:"2026-04-30" },
   mar: { year:2026, month:3, days:31, label:"2026年3月", defaultDate:"2026-03-27" },
