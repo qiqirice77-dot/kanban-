@@ -1068,6 +1068,20 @@ tr:hover td{background:rgba(255,255,255,.03)}
         <div class="ch ch280" id="c-cmp-ctype"></div>
       </div>
     </div>
+    <div class="g2 mb16">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-title">周环比 · 当月vs上月</div>
+        </div>
+        <div class="tbl-wrap"><table id="t-cmp-weekly" style="font-size:13px"></table></div>
+      </div>
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-title">日环比 · 当月每日vs上月同日</div>
+        </div>
+        <div class="tbl-wrap" style="max-height:440px;overflow-y:auto"><table id="t-cmp-daily" style="font-size:13px"></table></div>
+      </div>
+    </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">明细对比表</div></div>
       <div class="tbl-wrap"><table id="t-cmp-all"></table></div>
@@ -91218,6 +91232,119 @@ const MOCK_DATA = {
         "diff": -6288,
         "pct": -100.0
       }
+    ],
+    "daily": [
+      {
+        "day": 1,
+        "curDate": "2026-06-01",
+        "prevDate": "2026-05-01",
+        "cur": 430000,
+        "prev": 350400,
+        "diff": 79600,
+        "pct": 22.7
+      },
+      {
+        "day": 2,
+        "curDate": "2026-06-02",
+        "prevDate": "2026-05-02",
+        "cur": 0,
+        "prev": 1229995,
+        "diff": -1229995,
+        "pct": -100.0
+      },
+      {
+        "day": 3,
+        "curDate": "2026-06-03",
+        "prevDate": "2026-05-03",
+        "cur": 3360004,
+        "prev": 3159994,
+        "diff": 200010,
+        "pct": 6.3
+      },
+      {
+        "day": 4,
+        "curDate": "2026-06-04",
+        "prevDate": "2026-05-04",
+        "cur": 650000,
+        "prev": 110000,
+        "diff": 540000,
+        "pct": 490.9
+      },
+      {
+        "day": 5,
+        "curDate": "2026-06-05",
+        "prevDate": "2026-05-05",
+        "cur": 0,
+        "prev": 199996,
+        "diff": -199996,
+        "pct": -100.0
+      },
+      {
+        "day": 6,
+        "curDate": "2026-06-06",
+        "prevDate": "2026-05-06",
+        "cur": 990000,
+        "prev": 1479989,
+        "diff": -489989,
+        "pct": -33.1
+      },
+      {
+        "day": 7,
+        "curDate": "2026-06-07",
+        "prevDate": "2026-05-07",
+        "cur": 1019989,
+        "prev": 1079988,
+        "diff": -59999,
+        "pct": -5.6
+      },
+      {
+        "day": 8,
+        "curDate": "2026-06-08",
+        "prevDate": "2026-05-08",
+        "cur": 211047,
+        "prev": 101054,
+        "diff": 109993,
+        "pct": 108.8
+      },
+      {
+        "day": 9,
+        "curDate": "2026-06-09",
+        "prevDate": "2026-05-09",
+        "cur": 0,
+        "prev": 674994,
+        "diff": -674994,
+        "pct": -100.0
+      }
+    ],
+    "weekly": [
+      {
+        "week": "W1 (1-7号)",
+        "cur": 6449993,
+        "prev": 7610363,
+        "diff": -1160370,
+        "pct": -15.2
+      },
+      {
+        "week": "W2 (8-14号)",
+        "cur": 211047,
+        "prev": 776048,
+        "diff": -565001,
+        "pct": -72.8
+      },
+      {
+        "week": "W3 (15-21号)",
+        "cur": 0,
+        "prev": 0,
+        "diff": 0,
+        "pct": 0
+      },
+      {
+        "week": "W4 (22-月末)",
+        "cur": 0,
+        "prev": 0,
+        "diff": 0,
+        "pct": 0
+      }
     ]
   }
 };
@@ -93319,6 +93446,43 @@ function renderCompare(){
       ${sec("行业类型", cd.industry || [])}
       ${sec("合作模式", cd.mode || [])}
       ${sec("合同类型", cd.ctype || [])}
+    </tbody>`;
+
+  // 周环比表
+  const weekly = cd.weekly || [];
+  const weeklyTotal = weekly.reduce((acc,r)=>{acc.cur+=r.cur;acc.prev+=r.prev;return acc;},{cur:0,prev:0});
+  const weeklyTotalPct = weeklyTotal.prev>0 ? ((weeklyTotal.cur-weeklyTotal.prev)/weeklyTotal.prev*100) : 0;
+  document.getElementById("t-cmp-weekly").innerHTML = `
+    <thead><tr><th>周次</th><th class="tr">${pm}月</th><th class="tr">${cm}月</th><th class="tr">差额</th><th class="tr">环比</th></tr></thead>
+    <tbody>
+      ${weekly.map(r=>`<tr>
+        <td>${r.week}</td>
+        <td class="tr mono" style="color:var(--text3)">${fmt(r.prev)}</td>
+        <td class="tr mono" style="font-weight:600">${fmt(r.cur)}</td>
+        <td class="tr mono" style="color:${r.diff>=0?'#10b981':'#ef4444'}">${r.diff>0?'+':''}${fmt(r.diff)}</td>
+        <td class="tr mono" style="color:${r.pct>=0?'#10b981':'#ef4444'};font-weight:600">${r.pct>0?'+':''}${r.pct.toFixed(1)}%</td>
+      </tr>`).join('')}
+      <tr style="border-top:2px solid var(--border);background:rgba(255,255,255,0.02)">
+        <td style="font-weight:700">合计</td>
+        <td class="tr mono" style="color:var(--text3)">${fmt(weeklyTotal.prev)}</td>
+        <td class="tr mono" style="font-weight:700">${fmt(weeklyTotal.cur)}</td>
+        <td class="tr mono" style="color:${weeklyTotal.cur>=weeklyTotal.prev?'#10b981':'#ef4444'};font-weight:700">${weeklyTotal.cur-weeklyTotal.prev>0?'+':''}${fmt(weeklyTotal.cur-weeklyTotal.prev)}</td>
+        <td class="tr mono" style="color:${weeklyTotalPct>=0?'#10b981':'#ef4444'};font-weight:700">${weeklyTotalPct>0?'+':''}${weeklyTotalPct.toFixed(1)}%</td>
+      </tr>
+    </tbody>`;
+
+  // 日环比表（最新日期在前）
+  const daily = (cd.daily || []).slice().reverse();
+  document.getElementById("t-cmp-daily").innerHTML = `
+    <thead><tr><th>日期</th><th class="tr">${pm}月同日</th><th class="tr">${cm}月当日</th><th class="tr">差额</th><th class="tr">环比</th></tr></thead>
+    <tbody>
+      ${daily.map(r=>`<tr>
+        <td class="mono" style="font-size:12px">${r.curDate.slice(5)}</td>
+        <td class="tr mono" style="color:var(--text3);font-size:12px">${fmt(r.prev)}</td>
+        <td class="tr mono" style="font-weight:600">${fmt(r.cur)}</td>
+        <td class="tr mono" style="color:${r.diff>=0?'#10b981':'#ef4444'};font-size:12px">${r.diff>0?'+':''}${fmt(r.diff)}</td>
+        <td class="tr mono" style="color:${r.pct>=0?'#10b981':'#ef4444'};font-weight:600">${r.pct>0?'+':''}${r.pct.toFixed(1)}%</td>
+      </tr>`).join('')}
     </tbody>`;
 }
 
