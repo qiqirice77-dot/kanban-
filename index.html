@@ -477,6 +477,13 @@ tr:hover td{background:rgba(255,255,255,.03)}
 }
 @media(max-width:1280px){.g5{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:860px){.g5{grid-template-columns:repeat(2,1fr)}}
+.g6{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;margin-bottom:18px;
+}
+@media(max-width:1440px){.g6{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.g6{grid-template-columns:repeat(2,1fr)}}
 
 /* ── Divider ────────────────────────────────── */
 .div{height:1px;background:var(--border);margin:16px 0}
@@ -671,7 +678,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
   </div>
 
   <!-- ░░ 5 Global KPI Cards ░░ -->
-  <div class="g5" id="g-kpi"></div>
+  <div class="g6" id="g-kpi"></div>
 
   <!-- 0 总览 -->
   <div class="panel on" id="p0">
@@ -95071,6 +95078,12 @@ function renderGlobalKPIs(){
       <div class="kpi-label">今日到期</div>
       <div class="kpi-val" style="color:${expCnt>0?'#FF1744':'#00E676'}">${expCnt}<span style="font-size:16px;font-weight:400"> 单</span></div>
       <div class="kpi-sub">${expCnt>0?`共 ${expCntMoney()} 待续签`:"暂无到期合同"}</div>
+    </div>
+    <div class="kpi" style="--accent:#FF6F00">
+      <div class="kpi-accent"></div><div class="kpi-glow"></div>
+      <div class="kpi-label">本月不续费</div>
+      <div class="kpi-val" style="color:#FF6F00">${fmtY(getMonthData().nonRenewAmount||0)}</div>
+      <div class="kpi-sub">${(getMonthData().nonRenewCount||0)} 个客户流失</div>
     </div>`;
 }
 
