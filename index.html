@@ -710,6 +710,7 @@ tr:hover td{background:rgba(255,255,255,.03)}
         <div class="ch ch280" id="ov-trend"></div>
       </div>
     </div>
+    <div class="mb16" style="margin-top:16px" id="g-seo"></div>
   </div>
 
   <!-- 1 销售监控 -->
@@ -103733,6 +103734,36 @@ function renderGlobalKPIs(){
       <div class="kpi-val" style="color:#FF6F00">${fmtY(getMonthData().nonRenewAmount||0)}</div>
       <div class="kpi-sub">${(getMonthData().nonRenewCount||0)} 个客户流失</div>
     </div>`;
+
+  // SEO 业绩进度卡片（在总览底部追加）
+  const seoData = getMonthData().seoData;
+  const seoBox = document.getElementById('g-seo');
+  if (seoData && seoBox) {
+    const seoPct = seoData.totalTarget > 0 ? Math.round(seoData.totalActual / seoData.totalTarget * 100) : 0;
+    const personRows = (seoData.salesList || []).map(s => {
+      const pct = s.target > 0 ? Math.round(s.actual / s.target * 100) : 0;
+      const barColor = pct >= 100 ? '#10b981' : (pct >= 60 ? '#3b82f6' : (pct >= 30 ? '#f59e0b' : '#ef4444'));
+      const w = Math.min(100, pct);
+      return `<tr>
+        <td style="font-weight:600">${s.name}</td>
+        <td class="tr mono">${fmtY(s.actual)}</td>
+        <td class="tr mono" style="color:var(--text3)">${fmtY(s.target)}</td>
+        <td><div style="background:rgba(255,255,255,0.05);border-radius:4px;overflow:hidden;height:8px"><div style="background:${barColor};width:${w}%;height:100%"></div></div></td>
+        <td class="tr mono" style="color:${barColor};font-weight:600">${pct}%</td>
+      </tr>`;
+    }).join('');
+    seoBox.innerHTML = `
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-title">📈 技术SEO 业绩进度</div>
+          <span class="badge ${seoPct>=100?'b-ok':(seoPct>=60?'b-info':(seoPct>=30?'b-warn':'b-bad'))}">${fmtY(seoData.totalActual)} / ${fmtY(seoData.totalTarget)} · ${seoPct}%</span>
+        </div>
+        <div class="tbl-wrap" style="padding:12px"><table style="width:100%;font-size:13px">
+          <thead><tr style="color:var(--text3);font-size:12px"><th style="text-align:left;padding:6px 12px">对接人</th><th class="tr" style="padding:6px 12px">实收</th><th class="tr" style="padding:6px 12px">目标</th><th style="width:40%;padding:6px 12px">进度</th><th class="tr" style="padding:6px 12px">完成率</th></tr></thead>
+          <tbody style="line-height:2.2">${personRows}</tbody>
+        </table></div>
+      </div>`;
+  }
 }
 
 function expCntMoney(){
