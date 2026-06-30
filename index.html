@@ -44371,15 +44371,15 @@ const MOCK_DATA = {
           "color": "#00BCD4"
         },
         {
-          "name": "刘知曲",
-          "actual": 0,
+          "name": "杨海瑞",
+          "actual": 200000,
           "target": 200000,
-          "newOrders": 0,
+          "newOrders": 3,
           "oldClients": 0,
           "color": "#888"
         },
         {
-          "name": "杨海瑞",
+          "name": "刘知曲",
           "actual": 0,
           "target": 200000,
           "newOrders": 0,
@@ -44417,14 +44417,14 @@ const MOCK_DATA = {
           "renewTarget": 1700000
         },
         {
-          "name": "刘知曲",
-          "newActual": 0,
+          "name": "杨海瑞",
+          "newActual": 200000,
           "newTarget": 200000,
           "renewActual": 0,
           "renewTarget": 0
         },
         {
-          "name": "杨海瑞",
+          "name": "刘知曲",
           "newActual": 0,
           "newTarget": 200000,
           "renewActual": 0,
@@ -44436,8 +44436,8 @@ const MOCK_DATA = {
           {
             "mode": "CPT",
             "label": "按时长计费",
-            "actual": 20735955,
-            "target": 19924421,
+            "actual": 20935955,
+            "target": 19925140,
             "mom": 0,
             "icon": "⏱️",
             "color": "#1E88E5"
@@ -44460,10 +44460,10 @@ const MOCK_DATA = {
           },
           {
             "name": "播放器",
-            "actual": 3010396,
+            "actual": 3210396,
             "target": 2400000,
             "mom": 0,
-            "clients": 12
+            "clients": 13
           },
           {
             "name": "直播",
@@ -50621,18 +50621,52 @@ const MOCK_DATA = {
             }
           ]
         },
-        "刘知曲": {
-          "industryDetails": [],
-          "modeDetails": [],
-          "clients": []
-        },
         "杨海瑞": {
+          "industryDetails": [
+            {
+              "industry": "播放器",
+              "amount": 200000,
+              "orders": 3
+            }
+          ],
+          "modeDetails": [
+            {
+              "mode": "CPT",
+              "amount": 200000,
+              "orders": 3
+            }
+          ],
+          "clients": [
+            {
+              "name": "宋锦瑟",
+              "type": "",
+              "contract": 122521,
+              "expireDate": "2026-07-30",
+              "status": "正常"
+            },
+            {
+              "name": "宋锦瑟",
+              "type": "",
+              "contract": 42941,
+              "expireDate": "2026-07-30",
+              "status": "正常"
+            },
+            {
+              "name": "宋锦瑟",
+              "type": "",
+              "contract": 34538,
+              "expireDate": "2026-07-30",
+              "status": "正常"
+            }
+          ]
+        },
+        "刘知曲": {
           "industryDetails": [],
           "modeDetails": [],
           "clients": []
         }
       },
-      "totalActual": 20814613,
+      "totalActual": 21014613,
       "totalTarget": 20000000,
       "expireToday": [],
       "expireSoon": [
@@ -59275,6 +59309,42 @@ const MOCK_DATA = {
           "expireDate": "2026-07-30",
           "daysLeft": 30,
           "contact": "阿杰"
+        },
+        {
+          "client": "宋锦瑟",
+          "group": "",
+          "displayName": "",
+          "sales": "杨海瑞",
+          "amount": 122521.0,
+          "tier": "实力客户",
+          "source": "六月",
+          "expireDate": "2026-07-30",
+          "daysLeft": 30,
+          "contact": "宋锦瑟"
+        },
+        {
+          "client": "宋锦瑟",
+          "group": "",
+          "displayName": "",
+          "sales": "杨海瑞",
+          "amount": 42941.0,
+          "tier": "实力客户",
+          "source": "六月",
+          "expireDate": "2026-07-30",
+          "daysLeft": 30,
+          "contact": "宋锦瑟"
+        },
+        {
+          "client": "宋锦瑟",
+          "group": "",
+          "displayName": "",
+          "sales": "杨海瑞",
+          "amount": 34538.0,
+          "tier": "实力客户",
+          "source": "六月",
+          "expireDate": "2026-07-30",
+          "daysLeft": 30,
+          "contact": "宋锦瑟"
         }
       ],
       "dailyByDate": {
@@ -59314,7 +59384,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59322,7 +59392,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59360,14 +59430,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -59381,8 +59451,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -59405,10 +59475,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -59463,7 +59533,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59471,7 +59541,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59509,14 +59579,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -59530,8 +59600,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -59554,10 +59624,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -59612,7 +59682,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59620,7 +59690,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59658,14 +59728,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -59679,8 +59749,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -59703,10 +59773,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -59761,7 +59831,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59769,7 +59839,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59807,14 +59877,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -59828,8 +59898,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -59852,10 +59922,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -59910,7 +59980,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59918,7 +59988,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -59956,14 +60026,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -59977,8 +60047,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60001,10 +60071,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60059,7 +60129,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60067,7 +60137,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60105,14 +60175,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60126,8 +60196,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60150,10 +60220,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60208,7 +60278,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60216,7 +60286,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60254,14 +60324,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60275,8 +60345,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60299,10 +60369,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60357,7 +60427,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60365,7 +60435,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60403,14 +60473,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60424,8 +60494,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60448,10 +60518,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60506,7 +60576,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60514,7 +60584,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60552,14 +60622,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60573,8 +60643,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60597,10 +60667,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60655,7 +60725,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60663,7 +60733,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60701,14 +60771,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60722,8 +60792,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60746,10 +60816,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60804,7 +60874,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60812,7 +60882,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60850,14 +60920,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -60871,8 +60941,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -60895,10 +60965,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -60953,7 +61023,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60961,7 +61031,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -60999,14 +61069,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61020,8 +61090,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61044,10 +61114,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61102,7 +61172,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61110,7 +61180,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61148,14 +61218,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61169,8 +61239,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61193,10 +61263,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61251,7 +61321,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61259,7 +61329,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61297,14 +61367,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61318,8 +61388,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61342,10 +61412,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61400,7 +61470,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61408,7 +61478,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61446,14 +61516,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61467,8 +61537,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61491,10 +61561,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61549,7 +61619,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61557,7 +61627,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61595,14 +61665,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61616,8 +61686,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61640,10 +61710,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61698,7 +61768,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61706,7 +61776,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61744,14 +61814,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61765,8 +61835,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61789,10 +61859,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61847,7 +61917,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61855,7 +61925,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -61893,14 +61963,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -61914,8 +61984,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -61938,10 +62008,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -61996,7 +62066,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62004,7 +62074,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62042,14 +62112,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62063,8 +62133,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62087,10 +62157,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62145,7 +62215,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62153,7 +62223,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62191,14 +62261,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62212,8 +62282,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62236,10 +62306,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62294,7 +62364,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62302,7 +62372,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62340,14 +62410,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62361,8 +62431,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62385,10 +62455,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62443,7 +62513,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62451,7 +62521,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62489,14 +62559,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62510,8 +62580,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62534,10 +62604,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62592,7 +62662,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62600,7 +62670,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62638,14 +62708,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62659,8 +62729,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62683,10 +62753,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62741,7 +62811,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62749,7 +62819,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62787,14 +62857,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62808,8 +62878,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62832,10 +62902,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -62890,7 +62960,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62898,7 +62968,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -62936,14 +63006,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -62957,8 +63027,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -62981,10 +63051,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -63039,7 +63109,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63047,7 +63117,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63085,14 +63155,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -63106,8 +63176,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -63130,10 +63200,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -63188,7 +63258,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63196,7 +63266,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63234,14 +63304,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -63255,8 +63325,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -63279,10 +63349,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -63337,7 +63407,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63345,7 +63415,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63383,14 +63453,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -63404,8 +63474,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -63428,10 +63498,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -63486,7 +63556,7 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63494,7 +63564,7 @@ const MOCK_DATA = {
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63532,14 +63602,14 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
+              "name": "杨海瑞",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
@@ -63553,8 +63623,8 @@ const MOCK_DATA = {
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -63577,10 +63647,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -63635,15 +63705,15 @@ const MOCK_DATA = {
               "color": "#00BCD4"
             },
             {
-              "name": "刘知曲",
-              "actual": 0,
+              "name": "杨海瑞",
+              "actual": 200000,
               "target": 200000,
-              "newOrders": 0,
+              "newOrders": 3,
               "oldClients": 0,
               "color": "#888"
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "actual": 0,
               "target": 200000,
               "newOrders": 0,
@@ -63681,29 +63751,29 @@ const MOCK_DATA = {
               "renewTarget": 1700000
             },
             {
-              "name": "刘知曲",
-              "newActual": 0,
+              "name": "杨海瑞",
+              "newActual": 200000,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             },
             {
-              "name": "杨海瑞",
+              "name": "刘知曲",
               "newActual": 0,
               "newTarget": 200000,
               "renewActual": 0,
               "renewTarget": 0
             }
           ],
-          "totalActual": 0,
+          "totalActual": 200000,
           "totalTarget": 666667,
           "adData": {
             "modes": [
               {
                 "mode": "CPT",
                 "label": "按时长计费",
-                "actual": 20735955,
-                "target": 19924421,
+                "actual": 20935955,
+                "target": 19925140,
                 "mom": 0,
                 "icon": "⏱️",
                 "color": "#1E88E5"
@@ -63726,10 +63796,10 @@ const MOCK_DATA = {
               },
               {
                 "name": "播放器",
-                "actual": 3010396,
+                "actual": 3210396,
                 "target": 2400000,
                 "mom": 0,
-                "clients": 12
+                "clients": 13
               },
               {
                 "name": "直播",
@@ -78237,6 +78307,45 @@ const MOCK_DATA = {
         "gap": 0.0,
         "payStatus": "已收款",
         "payDate": "2026-06-29"
+      },
+      {
+        "id": "",
+        "name": "宋锦瑟",
+        "product": "宋锦瑟",
+        "sales": "杨海瑞",
+        "reportCNY": 122521.0,
+        "recvUSD": 17938.64,
+        "rate": 6.83,
+        "recvCNY": 122521.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-06-30"
+      },
+      {
+        "id": "",
+        "name": "宋锦瑟",
+        "product": "宋锦瑟",
+        "sales": "杨海瑞",
+        "reportCNY": 42941.0,
+        "recvUSD": 6287.11,
+        "rate": 6.83,
+        "recvCNY": 42941.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-06-30"
+      },
+      {
+        "id": "",
+        "name": "宋锦瑟",
+        "product": "宋锦瑟",
+        "sales": "杨海瑞",
+        "reportCNY": 34538.0,
+        "recvUSD": 5056.8,
+        "rate": 6.83,
+        "recvCNY": 34538.0,
+        "gap": 0.0,
+        "payStatus": "已收款",
+        "payDate": "2026-06-30"
       }
     ],
     "platformSpend": [
@@ -126523,7 +126632,7 @@ const MOCK_DATA = {
     "buckets": [
       {
         "name": "当日付款",
-        "value": 861
+        "value": 864
       },
       {
         "name": "1-3天",
@@ -126570,6 +126679,11 @@ const MOCK_DATA = {
         "sales": "吴挺",
         "avgDays": 0.0,
         "count": 265
+      },
+      {
+        "sales": "杨海瑞",
+        "avgDays": 0.0,
+        "count": 3
       }
     ],
     "abnormal": [],
@@ -126604,8 +126718,8 @@ const MOCK_DATA = {
       },
       {
         "client": "X-chat",
-        "total": 582407,
-        "deals": 31,
+        "total": 625348,
+        "deals": 32,
         "avgDays": 0.0,
         "maxDays": 0
       },
@@ -126625,8 +126739,8 @@ const MOCK_DATA = {
       },
       {
         "client": "白嫖射",
-        "total": 377690,
-        "deals": 24,
+        "total": 412228,
+        "deals": 25,
         "avgDays": 0.0,
         "maxDays": 0
       },
@@ -126634,6 +126748,13 @@ const MOCK_DATA = {
         "client": "PH·Prem",
         "total": 341631,
         "deals": 40,
+        "avgDays": 0.0,
+        "maxDays": 0
+      },
+      {
+        "client": "稚嫩学园",
+        "total": 314741,
+        "deals": 37,
         "avgDays": 0.0,
         "maxDays": 0
       },
@@ -126655,13 +126776,6 @@ const MOCK_DATA = {
         "client": "黄片网盘",
         "total": 221644,
         "deals": 43,
-        "avgDays": 0.0,
-        "maxDays": 0
-      },
-      {
-        "client": "稚嫩学园",
-        "total": 192220,
-        "deals": 36,
         "avgDays": 0.0,
         "maxDays": 0
       },
@@ -126717,23 +126831,23 @@ const MOCK_DATA = {
     ]
   },
   "concentrationData": {
-    "top5ClientPct": 55.3,
+    "top5ClientPct": 54.8,
     "top5ClientThreshold": 40,
     "top5Clients": [
       {
         "name": "V",
         "amount": 5652991,
-        "pct": 27.3
+        "pct": 27.0
       },
       {
         "name": "阿忠",
         "amount": 2880004,
-        "pct": 13.9
+        "pct": 13.8
       },
       {
         "name": "As",
         "amount": 1380000,
-        "pct": 6.7
+        "pct": 6.6
       },
       {
         "name": "天下第一",
@@ -126775,23 +126889,23 @@ const MOCK_DATA = {
         "pct": 1.9
       }
     ],
-    "top1IndPct": 58.1,
+    "top1IndPct": 57.5,
     "top1IndThreshold": 50,
     "industries": [
       {
         "name": "棋牌",
         "amount": 12043074,
-        "pct": 58.1
+        "pct": 57.5
       },
       {
         "name": "约炮",
         "amount": 3672507,
-        "pct": 17.7
+        "pct": 17.5
       },
       {
         "name": "播放器",
-        "amount": 3010396,
-        "pct": 14.5
+        "amount": 3210396,
+        "pct": 15.3
       },
       {
         "name": "直播",
@@ -126801,7 +126915,7 @@ const MOCK_DATA = {
       {
         "name": "春药",
         "amount": 490000,
-        "pct": 2.4
+        "pct": 2.3
       }
     ]
   },
@@ -126810,15 +126924,15 @@ const MOCK_DATA = {
     "dayOfMonth": 30,
     "daysRemaining": 0,
     "team": {
-      "actual": 20814613,
+      "actual": 21014613,
       "target": 20000000,
-      "completion": 104.1,
-      "dailyAvg": 693820,
-      "forecast": 20814613,
-      "forecastPct": 104.1,
-      "gap": -814613,
+      "completion": 105.1,
+      "dailyAvg": 700487,
+      "forecast": 21014613,
+      "forecastPct": 105.1,
+      "gap": -1014613,
       "dailyNeed": 0,
-      "paceRatio": 104.1
+      "paceRatio": 105.1
     },
     "people": [
       {
@@ -126870,19 +126984,19 @@ const MOCK_DATA = {
         "paceRatio": 103.0
       },
       {
-        "name": "刘知曲",
-        "actual": 0,
+        "name": "杨海瑞",
+        "actual": 200000,
         "target": 200000,
-        "completion": 0.0,
-        "dailyAvg": 0,
-        "forecast": 0,
-        "forecastPct": 0.0,
-        "gap": 200000,
+        "completion": 100.0,
+        "dailyAvg": 6667,
+        "forecast": 200000,
+        "forecastPct": 100.0,
+        "gap": 0,
         "dailyNeed": 0,
-        "paceRatio": 0.0
+        "paceRatio": 100.0
       },
       {
-        "name": "杨海瑞",
+        "name": "刘知曲",
         "actual": 0,
         "target": 200000,
         "completion": 0.0,
@@ -126900,10 +127014,10 @@ const MOCK_DATA = {
     "prevMonth": "2026-05",
     "endDay": 30,
     "team": {
-      "cur": 20814613,
+      "cur": 21014613,
       "prev": 20580610,
-      "diff": 234002,
-      "pct": 1.1
+      "diff": 434002,
+      "pct": 2.1
     },
     "sales": [
       {
@@ -126933,6 +127047,13 @@ const MOCK_DATA = {
         "prev": 1904989,
         "diff": 875011,
         "pct": 45.9
+      },
+      {
+        "name": "杨海瑞",
+        "cur": 200000,
+        "prev": 0,
+        "diff": 200000,
+        "pct": 100
       }
     ],
     "industry": [
@@ -126952,10 +127073,10 @@ const MOCK_DATA = {
       },
       {
         "name": "播放器",
-        "cur": 3010396,
+        "cur": 3210396,
         "prev": 2475703,
-        "diff": 534693,
-        "pct": 21.6
+        "diff": 734693,
+        "pct": 29.7
       },
       {
         "name": "直播",
@@ -126982,10 +127103,10 @@ const MOCK_DATA = {
     "mode": [
       {
         "name": "CPT",
-        "cur": 20735955,
+        "cur": 20935955,
         "prev": 20508956,
-        "diff": 226999,
-        "pct": 1.1
+        "diff": 426999,
+        "pct": 2.1
       },
       {
         "name": "CPS",
@@ -127012,9 +127133,9 @@ const MOCK_DATA = {
       },
       {
         "name": "未分类",
-        "cur": 12984927,
+        "cur": 13184927,
         "prev": 0,
-        "diff": 12984927,
+        "diff": 13184927,
         "pct": 100
       },
       {
@@ -127298,10 +127419,10 @@ const MOCK_DATA = {
         "day": 30,
         "curDate": "2026-06-30",
         "prevDate": "2026-05-30",
-        "cur": 0,
+        "cur": 200000,
         "prev": 799992,
-        "diff": -799992,
-        "pct": -100.0
+        "diff": -599992,
+        "pct": -75.0
       }
     ],
     "weekly": [
@@ -127328,10 +127449,10 @@ const MOCK_DATA = {
       },
       {
         "week": "W4 (22-月末)",
-        "cur": 3855403,
+        "cur": 4055403,
         "prev": 4545494,
-        "diff": -690091,
-        "pct": -15.2
+        "diff": -490091,
+        "pct": -10.8
       }
     ]
   }
